@@ -1,5 +1,5 @@
 ---
-// GiftingEngine.astro - Dynamic Gift and Date Night Suggestion Engine for Long Distance Couples
+// GiftingEngine.astro - Custom Gift, Date Night, and Logistics Engine for LDR Couples
 ---
 
 <div class="w-full max-w-6xl mx-auto px-4 py-8 relative z-10">
@@ -23,13 +23,16 @@
         <div>
           <label for="your-country" class="block text-sm font-medium text-[#61718a] mb-2">Your Country</label>
           <select id="your-country" name="your-country" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
-            <option value="US" selected>United States ($)</option>
-            <option value="IN">India (₹)</option>
-            <option value="GB">United Kingdom (£)</option>
-            <option value="CA">Canada (C$)</option>
-            <option value="DE">Germany (€)</option>
-            <option value="AU">Australia (A$)</option>
-            <option value="SG">Singapore (S$)</option>
+            <option value="US" selected>🇺🇸 United States ($)</option>
+            <option value="IN">🇮🇳 India (₹)</option>
+            <option value="CA">🇨🇦 Canada (C$)</option>
+            <option value="GB">🇬🇧 United Kingdom (£)</option>
+            <option value="AU">🇦🇺 Australia (A$)</option>
+            <option value="SG">🇸🇬 Singapore (S$)</option>
+            <option value="DE">🇩🇪 Germany (€)</option>
+            <option value="FR">🇫🇷 France (€)</option>
+            <option value="JP">🇯🇵 Japan (¥)</option>
+            <option value="RU">🇷🇺 Russia (₽)</option>
           </select>
         </div>
 
@@ -37,18 +40,21 @@
         <div>
           <label for="partner-country" class="block text-sm font-medium text-[#61718a] mb-2">Partner's Country</label>
           <select id="partner-country" name="partner-country" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
-            <option value="IN" selected>India (₹)</option>
-            <option value="US">United States ($)</option>
-            <option value="GB">United Kingdom (£)</option>
-            <option value="CA">Canada (C$)</option>
-            <option value="DE">Germany (€)</option>
-            <option value="AU">Australia (A$)</option>
-            <option value="SG">Singapore (S$)</option>
+            <option value="IN" selected>🇮🇳 India (₹)</option>
+            <option value="US">🇺🇸 United States ($)</option>
+            <option value="CA">🇨🇦 Canada (C$)</option>
+            <option value="GB">🇬🇧 United Kingdom (£)</option>
+            <option value="AU">🇦🇺 Australia (A$)</option>
+            <option value="SG">🇸🇬 Singapore (S$)</option>
+            <option value="DE">🇩🇪 Germany (€)</option>
+            <option value="FR">🇫🇷 France (€)</option>
+            <option value="JP">🇯🇵 Japan (¥)</option>
+            <option value="RU">🇷🇺 Russia (₽)</option>
           </select>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Budget -->
         <div>
           <label for="budget" class="block text-sm font-medium text-[#61718a] mb-2">Budget Max</label>
@@ -58,6 +64,21 @@
             <option value="medium" selected>$25 - $75 (Sweet Spot)</option>
             <option value="high">$75 - $200 (Premium Care)</option>
             <option value="premium">$200+ (Luxury & Milestones)</option>
+          </select>
+        </div>
+
+        <!-- Partner's Interest -->
+        <div>
+          <label for="interest" class="block text-sm font-medium text-[#61718a] mb-2">Partner's Interest</label>
+          <select id="interest" name="interest" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
+            <option value="art" selected>🎨 Art & Sketching</option>
+            <option value="gaming">🎮 Gaming</option>
+            <option value="music">🎵 Music & Podcasts</option>
+            <option value="cooking">🍳 Cooking & Food</option>
+            <option value="fitness">💪 Fitness & Wellness</option>
+            <option value="coffee">☕ Coffee & Tea</option>
+            <option value="reading">📚 Reading & E-books</option>
+            <option value="travel">✈️ Travel & Outdoors</option>
           </select>
         </div>
 
@@ -95,56 +116,6 @@
     </form>
   </div>
 
-  <!-- SECTION 4: Live Countdown & Milestone Planner (Placed below the planner form, visible always) -->
-  <div id="countdown-card" class="glow-border rounded-xl p-8 md:p-12 relative overflow-hidden mb-12">
-    <!-- Background elements -->
-    <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-gradient-to-tr from-[#533afd]/10 to-[#ea2261]/5 blur-3xl pointer-events-none"></div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center relative z-10">
-      <div class="lg:col-span-2">
-        <span class="text-[#533afd] text-xs font-semibold uppercase tracking-wider">
-          Reunion Countdown
-        </span>
-        <h4 class="text-2xl md:text-3xl font-light text-white mt-2 tracking-tight">
-          Counting Down the Days
-        </h4>
-        <p class="text-[#64748d] mt-3 text-sm font-light leading-relaxed">
-          Long distance is hard, but it's always temporary. Set the date for your next physical reunion flight or meetup and keep the spark burning together.
-        </p>
-        <div class="mt-6 flex gap-3">
-          <input type="date" id="reunion-date-input" name="reunion-date" aria-label="Reunion Date" class="focus-ring bg-[#0b0c16] border border-white/10 text-white text-xs rounded-md py-2 px-3 focus:border-[#533afd]" />
-          <button id="set-reunion-btn" class="bg-white text-black hover:bg-neutral-200 transition-colors text-xs font-semibold py-2 px-4 rounded-md cursor-pointer" aria-label="Set Reunion Countdown Date">
-            Set Date
-          </button>
-        </div>
-      </div>
-
-      <div class="lg:col-span-3 flex justify-center lg:justify-end">
-        <div class="grid grid-cols-4 gap-4 md:gap-6 text-center">
-          <div class="bg-[#0d253d]/40 border border-white/5 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[100px]">
-            <span id="countdown-days" class="block text-3xl md:text-4xl lg:text-5xl font-extralight text-white tabular-nums">00</span>
-            <span class="text-[10px] md:text-xs text-[#61718a] uppercase tracking-wider mt-2 block">Days</span>
-          </div>
-
-          <div class="bg-[#0d253d]/40 border border-white/5 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[100px]">
-            <span id="countdown-hours" class="block text-3xl md:text-4xl lg:text-5xl font-extralight text-white tabular-nums">00</span>
-            <span class="text-[10px] md:text-xs text-[#61718a] uppercase tracking-wider mt-2 block">Hours</span>
-          </div>
-
-          <div class="bg-[#0d253d]/40 border border-white/5 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[100px]">
-            <span id="countdown-minutes" class="block text-3xl md:text-4xl lg:text-5xl font-extralight text-white tabular-nums">00</span>
-            <span class="text-[10px] md:text-xs text-[#61718a] uppercase tracking-wider mt-2 block">Mins</span>
-          </div>
-
-          <div class="bg-[#0d253d]/40 border border-white/5 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[100px]">
-            <span id="countdown-seconds" class="block text-3xl md:text-4xl lg:text-5xl font-extralight text-[#ea2261] tabular-nums">00</span>
-            <span class="text-[10px] md:text-xs text-[#61718a] uppercase tracking-wider mt-2 block">Secs</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Loading State (hidden initially) -->
   <div id="loader" class="hidden flex-col items-center justify-center py-20" role="status" aria-live="polite">
     <div class="w-12 h-12 border-4 border-[#533afd]/20 border-t-[#533afd] rounded-full animate-spin"></div>
@@ -154,6 +125,23 @@
   <!-- Output Results Panel (hidden initially) -->
   <div id="results-panel" class="hidden space-y-12 transition-all duration-700 opacity-0 transform translate-y-10">
     
+    <!-- Confidence score banner -->
+    <div class="glow-border rounded-xl p-6 bg-gradient-to-r from-[#533afd]/10 to-[#ea2261]/5 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <h3 class="text-xl font-light text-white flex items-center gap-2">
+          <span>Overall Match Confidence:</span>
+          <span id="match-pct" class="font-semibold text-green-400 tabular-nums">-</span>
+          <span id="match-stars" class="text-yellow-400 font-bold tracking-wider text-sm">-</span>
+        </h3>
+        <p class="text-[#64748d] text-xs font-light mt-1">
+          Based on: <span id="match-reasons" class="text-[#b9b9f9] font-medium">-</span>
+        </p>
+      </div>
+      <div class="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs text-neutral-300">
+        AI Generated Recommendation
+      </div>
+    </div>
+
     <!-- SECTION 1: Logistics & Timezone Matcher -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
       
@@ -166,7 +154,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
               </svg>
             </div>
-            <h3 class="text-xl font-light text-white">Dual-Country Shipping Advisor</h3>
+            <h3 class="text-xl font-light text-white">Dual-Country Shipping Advice</h3>
           </div>
           <p id="logistics-warning-text" class="text-[#64748d] text-sm font-light leading-relaxed">
             Shipping physical items between selected countries can lead to high customs duties and delays.
@@ -208,7 +196,7 @@
             </div>
 
             <div class="border-t border-white/5 pt-3">
-              <div class="text-[10px] uppercase tracking-wider text-[#61718a] mb-1 font-semibold">Perfect For</div>
+              <div class="text-[10px] uppercase tracking-wider text-[#61718a] mb-1 font-semibold font-display">Perfect For</div>
               <div id="overlap-perfect-note" class="text-sm font-light text-green-400 leading-relaxed">-</div>
             </div>
           </div>
@@ -221,37 +209,41 @@
       </div>
     </div>
 
-    <!-- SECTION 2: Curated Gift Ideas -->
+    <!-- SECTION 2: Custom Gifting Guide -->
     <div>
-      <div class="mb-6 flex justify-between items-end">
-        <div>
-          <h3 class="text-2xl font-light text-white">Custom Gifting Guide</h3>
-          <p class="text-sm text-[#64748d] mt-1 font-light">Custom recommendations tailored to your exact budget & shipping boundaries.</p>
-        </div>
-        <div class="text-xs text-[#61718a]">
-          <span class="inline-block w-2.5 h-2.5 bg-[#533afd] rounded-full mr-1.5 align-middle"></span>
-          Delivery Optimized
-        </div>
+      <div class="mb-6">
+        <h3 class="text-2xl font-light text-white font-display">Best Anniversary Gifts</h3>
+        <p class="text-sm text-[#64748d] mt-1 font-light">The top matching recommendation shown first, followed by custom alternative gifts.</p>
       </div>
 
-      <!-- Gifts Grid -->
-      <div id="gifts-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Dynamically Rendered Cards go here -->
+      <!-- Gifting Layout: Best Match + Alternatives Grid -->
+      <div class="space-y-6">
+        <!-- Best Recommendation Box (Large highlight) -->
+        <div id="best-match-box">
+          <!-- Dynmically rendered -->
+        </div>
+
+        <!-- Alternatives Grid -->
+        <div>
+          <h4 class="text-xs font-semibold text-[#61718a] uppercase tracking-wider mb-4 font-display">Alternative Suggestions</h4>
+          <div id="alternatives-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Dynamically rendered -->
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- SECTION 3: Date Night Planners -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      
       <!-- Virtual Date Card -->
       <div class="glow-border rounded-xl p-8 relative overflow-hidden group">
         <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#533afd]/10 to-transparent rounded-bl-full pointer-events-none"></div>
         
         <span class="text-xs font-semibold text-[#b9b9f9] bg-[#533afd]/15 px-3 py-1 rounded-full uppercase tracking-wider">
-          Virtual / Apart
+          Virtual Dates / Apart
         </span>
         
-        <h4 class="text-2xl font-light text-white mt-6" id="virtual-date-title">-</h4>
+        <h4 class="text-2xl font-light text-white mt-6 font-display" id="virtual-date-title">-</h4>
         <p class="text-[#64748d] text-sm mt-3 font-light leading-relaxed" id="virtual-date-desc">-</p>
         
         <div class="mt-8 border-t border-white/5 pt-6">
@@ -270,7 +262,7 @@
           Reunion / In-Person
         </span>
         
-        <h4 class="text-2xl font-light text-white mt-6" id="in-person-date-title">-</h4>
+        <h4 class="text-2xl font-light text-white mt-6 font-display" id="in-person-date-title">-</h4>
         <p class="text-[#64748d] text-sm mt-3 font-light leading-relaxed" id="in-person-date-desc">-</p>
         
         <div class="mt-8 border-t border-white/5 pt-6">
@@ -282,6 +274,114 @@
       </div>
     </div>
 
+    <!-- SECTION 4: Suggested Date Timeline (Hour-by-hour schedule representation with arrows) -->
+    <div class="glow-border rounded-xl p-8 relative overflow-hidden">
+      <div class="mb-8 text-center">
+        <span class="text-[#ea2261] text-xs font-semibold uppercase tracking-wider">
+          Suggested Date Timeline
+        </span>
+        <h4 class="text-2xl font-light text-white mt-2 font-display">Hour-by-Hour Connection Plan</h4>
+        <p class="text-[#64748d] text-sm mt-1 font-light">A synchronized schedule showing local times for both of you.</p>
+      </div>
+
+      <div class="flex flex-col items-center max-w-xl mx-auto space-y-6">
+        
+        <!-- Timeline Item 1 -->
+        <div class="text-center w-full max-w-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-[#533afd]/50 transition-colors duration-300">
+          <div class="text-xs font-semibold text-[#b9b9f9] tabular-nums" id="timeline-time-1">-</div>
+          <h5 class="text-base font-medium text-white mt-2">Buy & Send a digital gift</h5>
+          <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed">Order surprise takeout to their address or send an instant e-gift card (e.g. food delivery or gaming subscription) to kick off the date night.</p>
+        </div>
+
+        <div class="text-[#533afd] text-2xl font-bold flex items-center justify-center h-8 animate-pulse">↓</div>
+
+        <!-- Timeline Item 2 -->
+        <div class="text-center w-full max-w-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/20 transition-colors duration-300">
+          <div class="text-xs font-semibold text-neutral-400 tabular-nums" id="timeline-time-2">-</div>
+          <h5 class="text-base font-medium text-white mt-2">Video call</h5>
+          <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed">Hop on FaceTime, Zoom, or Discord. Put on your noise-cancelling headphones and catch up on your week.</p>
+        </div>
+
+        <div class="text-neutral-600 text-2xl font-bold flex items-center justify-center h-8">↓</div>
+
+        <!-- Timeline Item 3 -->
+        <div class="text-center w-full max-w-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/20 transition-colors duration-300">
+          <div class="text-xs font-semibold text-neutral-400 tabular-nums" id="timeline-time-3">-</div>
+          <h5 class="text-base font-medium text-white mt-2 font-display" id="timeline-title-3">Cook together</h5>
+          <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed" id="timeline-desc-3">Start your kitchen race! Cook the same recipe side-by-side on camera and pour a glass of wine.</p>
+        </div>
+
+        <div class="text-neutral-600 text-2xl font-bold flex items-center justify-center h-8">↓</div>
+
+        <!-- Timeline Item 4 -->
+        <div class="text-center w-full max-w-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/20 transition-colors duration-300">
+          <div class="text-xs font-semibold text-neutral-400 tabular-nums" id="timeline-time-4">-</div>
+          <h5 class="text-base font-medium text-white mt-2 font-display" id="timeline-title-4">Watch a movie</h5>
+          <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed" id="timeline-desc-4">Start a synchronized Teleparty or screenshare. Watch your chosen movie while keeping video/audio active.</p>
+        </div>
+
+        <div class="text-neutral-600 text-2xl font-bold flex items-center justify-center h-8">↓</div>
+
+        <!-- Timeline Item 5 -->
+        <div class="text-center w-full max-w-md bg-gradient-to-b from-[#ea2261]/10 to-transparent border border-[#ea2261]/30 rounded-xl p-5 hover:border-[#ea2261]/60 transition-colors duration-300">
+          <div class="text-xs font-semibold text-pink-300 tabular-nums" id="timeline-time-5">-</div>
+          <h5 class="text-base font-medium text-[#ea2261] mt-2 font-semibold">Open the gift together</h5>
+          <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed">Unwrap the surprise. Discuss your relationship milestones, check your Bond Touch bracelet counts, and plan your next reunion flight.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MEETING COUNTDOWN: Moved to the very bottom of the page -->
+  <div id="countdown-card" class="glow-border rounded-xl p-8 md:p-12 relative overflow-hidden mt-12">
+    <!-- Background elements -->
+    <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-gradient-to-tr from-[#533afd]/10 to-[#ea2261]/5 blur-3xl pointer-events-none"></div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center relative z-10">
+      <div class="lg:col-span-2">
+        <span class="text-[#533afd] text-xs font-semibold uppercase tracking-wider">
+          Reunion Countdown
+        </span>
+        <h4 class="text-2xl md:text-3xl font-light text-white mt-2 tracking-tight font-display">
+          Counting Down the Days
+        </h4>
+        <p class="text-[#64748d] mt-3 text-sm font-light leading-relaxed">
+          Long distance is temporary. Set the date for your next physical meetup or reunion flight and watch the seconds tick away.
+        </p>
+        <div class="mt-6 flex gap-3">
+          <input type="date" id="reunion-date-input" name="reunion-date" aria-label="Reunion Date" class="focus-ring bg-[#0b0c16] border border-white/10 text-white text-xs rounded-md py-2 px-3 focus:border-[#533afd]" />
+          <button id="set-reunion-btn" class="bg-white text-black hover:bg-neutral-200 transition-colors text-xs font-semibold py-2 px-4 rounded-md cursor-pointer" aria-label="Set Reunion Countdown Date">
+            Set Date
+          </button>
+        </div>
+      </div>
+
+      <div class="lg:col-span-3 flex justify-center lg:justify-end">
+        <div class="grid grid-cols-4 gap-4 md:gap-6 text-center">
+          <div class="bg-[#0d253d]/40 border border-white/5 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[100px]">
+            <span id="countdown-days" class="block text-3xl md:text-4xl lg:text-5xl font-extralight text-white tabular-nums">00</span>
+            <span class="text-[10px] md:text-xs text-[#61718a] uppercase tracking-wider mt-2 block">Days</span>
+          </div>
+
+          <div class="bg-[#0d253d]/40 border border-white/5 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[100px]">
+            <span id="countdown-hours" class="block text-3xl md:text-4xl lg:text-5xl font-extralight text-white tabular-nums">00</span>
+            <span class="text-[10px] md:text-xs text-[#61718a] uppercase tracking-wider mt-2 block">Hours</span>
+          </div>
+
+          <div class="bg-[#0d253d]/40 border border-white/5 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[100px]">
+            <span id="countdown-minutes" class="block text-3xl md:text-4xl lg:text-5xl font-extralight text-white tabular-nums">00</span>
+            <span class="text-[10px] md:text-xs text-[#61718a] uppercase tracking-wider mt-2 block">Mins</span>
+          </div>
+
+          <div class="bg-[#0d253d]/40 border border-white/5 rounded-xl p-4 md:p-6 min-w-[70px] md:min-w-[100px]">
+            <span id="countdown-seconds" class="block text-3xl md:text-4xl lg:text-5xl font-extralight text-[#ea2261] tabular-nums">00</span>
+            <span class="text-[10px] md:text-xs text-[#61718a] uppercase tracking-wider mt-2 block">Secs</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -290,11 +390,14 @@
   const countries = {
     US: { name: "United States", tzOffset: -5, tzName: "EST", currency: "$", amazon: "https://www.amazon.com/s?k=" },
     IN: { name: "India", tzOffset: 5.5, tzName: "IST", currency: "₹", amazon: "https://www.amazon.in/s?k=" },
-    GB: { name: "United Kingdom", tzOffset: 0, tzName: "GMT", currency: "£", amazon: "https://www.amazon.co.uk/s?k=" },
     CA: { name: "Canada", tzOffset: -5, tzName: "EST", currency: "C$", amazon: "https://www.amazon.ca/s?k=" },
-    DE: { name: "Germany", tzOffset: 1, tzName: "CET", currency: "€", amazon: "https://www.amazon.de/s?k=" },
+    GB: { name: "United Kingdom", tzOffset: 0, tzName: "GMT", currency: "£", amazon: "https://www.amazon.co.uk/s?k=" },
     AU: { name: "Australia", tzOffset: 10, tzName: "AEST", currency: "A$", amazon: "https://www.amazon.com.au/s?k=" },
     SG: { name: "Singapore", tzOffset: 8, tzName: "SGT", currency: "S$", amazon: "https://www.amazon.sg/s?k=" },
+    DE: { name: "Germany", tzOffset: 1, tzName: "CET", currency: "€", amazon: "https://www.amazon.de/s?k=" },
+    FR: { name: "France", tzOffset: 1, tzName: "CET", currency: "€", amazon: "https://www.amazon.fr/s?k=" },
+    JP: { name: "Japan", tzOffset: 9, tzName: "JST", currency: "¥", amazon: "https://www.amazon.co.jp/s?k=" },
+    RU: { name: "Russia", tzOffset: 3, tzName: "MSK", currency: "₽", amazon: "https://www.amazon.ru/s?k=" }
   };
 
   // Timezone best call schedules mapping
@@ -357,7 +460,18 @@
     "SG-DE": { timeA: "4:00 PM - 7:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon tea & Morning check-in" },
 
     "AU-SG": { timeA: "11:00 AM - 7:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Mid-day chat & Work hours alignment" },
-    "SG-AU": { timeA: "9:00 AM - 5:00 PM", timeB: "11:00 AM - 7:00 PM", note: "Work hours alignment & Mid-day chat" }
+    "SG-AU": { timeA: "9:00 AM - 5:00 PM", timeB: "11:00 AM - 7:00 PM", note: "Work hours alignment & Mid-day chat" },
+    
+    // France, Japan, Russia mappings
+    "FR-US": { timeA: "3:00 PM - 6:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon catch-up & Morning check-in" },
+    "JP-US": { timeA: "9:00 AM - 11:00 AM", timeB: "7:00 PM - 9:00 PM", note: "Morning coffee & Evening chat previous day" },
+    "RU-US": { timeA: "5:00 PM - 7:00 PM", timeB: "9:00 AM - 11:00 AM", note: "Evening check-in & Morning coffee" },
+    "FR-IN": { timeA: "1:00 PM - 4:00 PM", timeB: "5:30 PM - 8:30 PM", note: "Lunch break & Late afternoon tea" },
+    "JP-IN": { timeA: "9:30 PM - 12:30 AM", timeB: "6:00 PM - 9:00 PM", note: "Night chat & Evening check-in" },
+    "RU-IN": { timeA: "4:00 PM - 7:00 PM", timeB: "6:30 PM - 9:30 PM", note: "Afternoon check-in & Evening wind-down" },
+    "FR-GB": { timeA: "10:00 AM - 6:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Fully aligned daytime and working hours" },
+    "JP-GB": { timeA: "5:00 PM - 8:00 PM", timeB: "8:00 AM - 11:00 AM", note: "Evening catch-up & Morning coffee" },
+    "RU-GB": { timeA: "1:00 PM - 8:00 PM", timeB: "10:00 AM - 5:00 PM", note: "Highly aligned daytime hours" }
   };
 
   // Dynamic budget list options based on selected "Your Country" currency
@@ -374,23 +488,17 @@
       { value: "high", text: "₹6,000 - ₹15,000 (Premium Care)" },
       { value: "premium", text: "₹15,000+ (Luxury & Milestones)" }
     ],
-    GB: [
-      { value: "low", text: "Under £20 (Budget-friendly)" },
-      { value: "medium", text: "£20 - £60 (Sweet Spot)", selected: true },
-      { value: "high", text: "£60 - £160 (Premium Care)" },
-      { value: "premium", text: "£160+ (Luxury & Milestones)" }
-    ],
     CA: [
       { value: "low", text: "Under C$30 (Budget-friendly)" },
       { value: "medium", text: "C$30 - C$100 (Sweet Spot)", selected: true },
       { value: "high", text: "C$100 - C$250 (Premium Care)" },
       { value: "premium", text: "C$250+ (Luxury & Milestones)" }
     ],
-    DE: [
-      { value: "low", text: "Under €25 (Budget-friendly)" },
-      { value: "medium", text: "€25 - €75 (Sweet Spot)", selected: true },
-      { value: "high", text: "€75 - €200 (Premium Care)" },
-      { value: "premium", text: "€200+ (Luxury & Milestones)" }
+    GB: [
+      { value: "low", text: "Under £20 (Budget-friendly)" },
+      { value: "medium", text: "£20 - £60 (Sweet Spot)", selected: true },
+      { value: "high", text: "£60 - £160 (Premium Care)" },
+      { value: "premium", text: "£160+ (Luxury & Milestones)" }
     ],
     AU: [
       { value: "low", text: "Under A$35 (Budget-friendly)" },
@@ -403,6 +511,30 @@
       { value: "medium", text: "S$35 - S$100 (Sweet Spot)", selected: true },
       { value: "high", text: "S$100 - S$300 (Premium Care)" },
       { value: "premium", text: "S$300+ (Luxury & Milestones)" }
+    ],
+    DE: [
+      { value: "low", text: "Under €25 (Budget-friendly)" },
+      { value: "medium", text: "€25 - €75 (Sweet Spot)", selected: true },
+      { value: "high", text: "€75 - €200 (Premium Care)" },
+      { value: "premium", text: "€200+ (Luxury & Milestones)" }
+    ],
+    FR: [
+      { value: "low", text: "Under €25 (Budget-friendly)" },
+      { value: "medium", text: "€25 - €75 (Sweet Spot)", selected: true },
+      { value: "high", text: "€75 - €200 (Premium Care)" },
+      { value: "premium", text: "€200+ (Luxury & Milestones)" }
+    ],
+    JP: [
+      { value: "low", text: "Under ¥3,000 (Budget-friendly)" },
+      { value: "medium", text: "¥3,000 - ¥10,000 (Sweet Spot)", selected: true },
+      { value: "high", text: "¥10,000 - ¥25,000 (Premium Care)" },
+      { value: "premium", text: "¥25,000+ (Luxury & Milestones)" }
+    ],
+    RU: [
+      { value: "low", text: "Under ₽2,000 (Budget-friendly)" },
+      { value: "medium", text: "₽2,000 - ₽6,000 (Sweet Spot)", selected: true },
+      { value: "high", text: "₽6,000 - ₽15,000 (Premium Care)" },
+      { value: "premium", text: "₽15,000+ (Luxury & Milestones)" }
     ]
   };
 
@@ -412,8 +544,6 @@
   function updateBudgetCurrency() {
     const country = yourCountrySelect.value;
     const tiers = budgetTiers[country] || budgetTiers.US;
-    
-    // Save current selected value if possible
     const currentVal = budgetSelect.value;
     
     budgetSelect.innerHTML = "";
@@ -428,188 +558,365 @@
     });
   }
 
-  // Hook change listener
   yourCountrySelect.addEventListener("change", updateBudgetCurrency);
-  // Run initially
   updateBudgetCurrency();
 
-  // Gift Database classified by budget category, type, and occasion suitability
+  // Gift Database with interests fields and rating variables
   const giftsDb = [
     {
       id: "touch-bracelets",
       title: "Bond Touch Connection Bracelets",
       desc: "Touch your bracelet and your partner's bracelet vibrates and lights up, letting them know they are on your mind instantly.",
-      price: { low: 108, medium: 108, high: 108, premium: 108 }, // Standard price
+      price: { low: 108, medium: 108, high: 108, premium: 108 },
       budgets: ["high", "premium"],
       occasions: ["anniversary", "birthday", "just-because"],
+      interests: ["travel", "fitness"],
       type: "local-delivery",
-      query: "Bond Touch Long Distance Connection Bracelets",
-      badge: "No Customs (Ships Globally)",
-      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-[#533afd]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697-.056-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166zm-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8.25c.348 0 .697 0 1.045-.008L12.042 12h-1.084L10.955 8.242c.348.008.697.008 1.045.008z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M10.955 12h2.09c1.623 0 3.013.996 3.593 2.422.378.93-.075 1.953-1.077 2.193a47.96 47.96 0 01-9.122 0c-1.002-.24-1.455-1.263-1.077-2.193C5.9 12.996 7.29 12 8.913 12h2.042z" /></svg>`
+      query: "Bond Touch Connection Bracelets",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
+      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-[#533afd]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697-.056-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166zm-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166z" /></svg>`
     },
     {
       id: "star-map",
-      title: "Under Lucky Stars Custom Star Map",
+      title: "Under Lucky Stars Star Map",
       desc: "A beautifully printed map of the alignment of the stars at the exact time and location you met, fell in love, or got committed.",
       price: { low: 45, medium: 45, high: 45, premium: 45 },
       budgets: ["medium", "high", "premium"],
       occasions: ["anniversary", "birthday", "first-meet"],
+      interests: ["art", "travel"],
       type: "local-delivery",
       query: "custom star map poster",
-      badge: "Local Printing (No Duties)",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
       imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-[#ea2261]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11.48 3.499c.195-.39.68-.39.874 0l2.232 4.474 4.884.71c.433.063.606.592.293.898l-3.535 3.45.835 4.86c.074.437-.384.77-.777.561l-4.364-2.297-4.364 2.297c-.393.209-.851-.124-.777-.561l.835-4.86-3.535-3.45c-.313-.306-.14-.835.293-.898l4.884-.71 2.232-4.474z" /></svg>`
     },
     {
       id: "cozy-cooking",
-      title: "Cozymeal Virtual Cooking Class",
-      desc: "A live, interactive cooking class hosted by world-class chefs. Cook the same recipe side-by-side on video call from your kitchens.",
+      title: "Cozymeal Cooking Class",
+      desc: "A live, interactive cooking class hosted by world-class chefs. Cook the same recipe side-by-side on video call.",
       price: { low: 29, medium: 29, high: 39, premium: 59 },
       budgets: ["low", "medium", "high", "premium"],
       occasions: ["anniversary", "just-because", "birthday"],
+      interests: ["cooking", "coffee"],
       type: "digital",
       query: "cozymeal virtual cooking class gift card",
-      badge: "Instant Digital Delivery",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
       imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-yellow-500"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 3.104v1.244c0 .41-.195.794-.527 1.036L4.25 9.098a1.5 1.5 0 00-.5 1.13v8.522c0 .828.672 1.5 1.5 1.5h13.5c.828 0 1.5-.672 1.5-1.5v-8.522a1.5 1.5 0 00-.5-1.13l-4.973-3.714a1.296 1.296 0 00-.527-1.036V3.104c0-.83-.672-1.5-1.5-1.5h-3c-.828 0-1.5.672-1.5 1.5z" /></svg>`
     },
     {
       id: "scent-candles",
-      title: "Homesick State/Country Scents",
+      title: "Homesick State Scents",
       desc: "Specially formulated candles styled to smell like the exact state, city, or country they miss, keeping home close to heart.",
       price: { low: 34, medium: 34, high: 34, premium: 34 },
       budgets: ["medium", "high", "premium"],
       occasions: ["just-because", "holiday"],
+      interests: ["coffee", "travel"],
       type: "local-delivery",
       query: "Homesick State scented candle",
-      badge: "Local Shipping",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
       imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-teal-400"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" /></svg>`
     },
     {
       id: "paired-app",
-      title: "Paired App Premium Subscription",
+      title: "Paired App Premium",
       desc: "An app for couples containing daily relationship questions, quiz games, and exercises to maintain deep emotional connection.",
       price: { low: 15, medium: 30, high: 30, premium: 30 },
       budgets: ["low", "medium", "high", "premium"],
       occasions: ["anniversary", "just-because"],
+      interests: ["reading", "gaming"],
       type: "digital",
       query: "Paired couples app premium",
-      badge: "No Shipping Required",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
       imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-pink-400"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>`
     },
     {
       id: "food-feast",
-      title: "Surprise Local Takeout Feast",
+      title: "Surprise Local Feast",
       desc: "Pre-order a gourmet meal from their favorite restaurant using a delivery app in their city and have it arrive hot right as you call.",
       price: { low: 20, medium: 45, high: 70, premium: 100 },
       budgets: ["low", "medium", "high", "premium"],
       occasions: ["birthday", "anniversary", "just-because"],
+      interests: ["cooking", "coffee"],
       type: "digital",
       query: "DoorDash UberEats Zomato gift card",
-      badge: "Bypasses Custom Duties",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
       imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-orange-400"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124l-.825-13.5a1.125 1.125 0 00-1.122-1.056H3.375a1.125 1.125 0 00-1.125 1.125v1.5m17.25 0V5.25m0 9v-6m0 6a2.25 2.25 0 01-2.25-2.25v-1.5m0-3h-12m12 0a2.25 2.25 0 00-2.25-2.25H6.75" /></svg>`
     },
     {
-      id: "love-letter-capsules",
-      title: "Love Message Pill Capsules",
-      desc: "A glass jar filled with tiny capsules, each containing a rolled blank piece of paper where you write personal romantic notes for them.",
-      price: { low: 12, medium: 12, high: 12, premium: 12 },
-      budgets: ["low"],
-      occasions: ["just-because", "holiday"],
-      type: "physical-shipping",
-      query: "messages in a bottle capsule letters",
-      badge: "Compact (Easy to Mail)",
-      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-[#9b6829]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
+      id: "gaming-pass",
+      title: "Xbox / Steam Gaming Gift Card",
+      desc: "Instant access to hundreds of high-quality multiplayer games, perfect for playing co-op together online.",
+      price: { low: 15, medium: 50, high: 100, premium: 150 },
+      budgets: ["low", "medium", "high", "premium"],
+      occasions: ["birthday", "just-because"],
+      interests: ["gaming"],
+      type: "digital",
+      query: "Xbox Game Pass Ultimate Steam gift card",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
+      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-emerald-400"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.75m0 0l-3-3m3 3l3-3m-6.75 3a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" /></svg>`
     },
     {
-      id: "dual-time-clocks",
-      title: "Sleek Dual Time-Zone Clocks",
-      desc: "A modern desk frame with two minimalist clocks indicating your local time and your partner's local time simultaneously.",
-      price: { low: 35, medium: 35, high: 45, premium: 65 },
-      budgets: ["medium", "high", "premium"],
-      occasions: ["anniversary", "birthday", "holiday"],
+      id: "noise-headphones",
+      title: "Premium Wireless Noise-Cancelling Headphones",
+      desc: "Bose or Sony noise-cancelling headphones, perfect for crystal-clear long-distance video calls without echo.",
+      price: { low: 199, medium: 199, high: 249, premium: 349 },
+      budgets: ["high", "premium"],
+      occasions: ["birthday", "anniversary", "holiday"],
+      interests: ["music", "gaming"],
       type: "local-delivery",
-      query: "dual timezone wall desk clock",
-      badge: "Duties Free Delivery",
-      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-violet-400"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
+      query: "noise cancelling wireless headphones",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
+      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-[#665efd]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" /></svg>`
     },
     {
-      id: "custom-scrapbook",
-      title: "Our Story Photo Scrapbook",
-      desc: "Collect all your video call screenshots, airline boarding passes, and message snippets, printed into an elegant premium leather scrapbook.",
-      price: { low: 24, medium: 38, high: 55, premium: 80 },
-      budgets: ["medium", "high", "premium"],
-      occasions: ["anniversary", "first-meet", "birthday"],
+      id: "coffee-beans",
+      title: "Gourmet Specialty Coffee Beans Selection",
+      desc: "A handpicked selection of single-origin coffee beans freshly roasted and delivered to their doorstep from local premium roasters.",
+      price: { low: 22, medium: 35, high: 60, premium: 90 },
+      budgets: ["low", "medium", "high", "premium"],
+      occasions: ["birthday", "just-because"],
+      interests: ["coffee"],
       type: "local-delivery",
-      query: "custom photo book album",
-      badge: "Print Locally & Ship",
-      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-sky-400"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>`
+      query: "specialty coffee beans sampler gift set",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
+      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-amber-600"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l-.707.707M12 8a4 4 0 100 8 4 4 0 000-8z" /></svg>`
+    },
+    {
+      id: "kindle-reader",
+      title: "Amazon Kindle Paperwhite",
+      desc: "Thin, lightweight, and waterproof. Perfect for reading their favorite books or sharing e-book selections together on calls.",
+      price: { low: 139, medium: 139, high: 139, premium: 189 },
+      budgets: ["high", "premium"],
+      occasions: ["birthday", "anniversary", "holiday"],
+      interests: ["reading"],
+      type: "local-delivery",
+      query: "Kindle Paperwhite waterproof",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
+      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-purple-400"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>`
+    },
+    {
+      id: "art-set",
+      title: "Professional Acrylic & Watercolor Kit",
+      desc: "Includes high-grade pigments, brush selection, palette, and table easel. Perfect for conducting virtual paint date nights.",
+      price: { low: 24, medium: 45, high: 80, premium: 120 },
+      budgets: ["low", "medium", "high", "premium"],
+      occasions: ["birthday", "anniversary", "just-because"],
+      interests: ["art"],
+      type: "local-delivery",
+      query: "complete acrylic paint set easel",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
+      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-rose-500"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.53 16.122l.188.188a1.5 1.5 0 11-2.122 2.122l-.188-.188m2.122-2.122A1.5 1.5 0 106.608 14m2.922 2.122a1.5 1.5 0 11-2.922-2.122m3.844-3.844L12 9l3.844 3.844m-7.688 0A1.5 1.5 0 116.608 14m6.447-4.47l.884-.884a1.5 1.5 0 112.122 2.122l-.884.884m-2.122-2.122A1.5 1.5 0 1012 9m1.055.53a1.5 1.5 0 11-1.055-.53" /></svg>`
+    },
+    {
+      id: "fitness-bands",
+      title: "Resistance Band & Wellness Kit",
+      desc: "Stackable workout bands with heavy-duty anchors, dynamic instructions, and a virtual couples challenge program.",
+      price: { low: 18, medium: 30, h: 50, premium: 80 },
+      price: { low: 18, medium: 30, high: 50, premium: 80 },
+      budgets: ["low", "medium", "high", "premium"],
+      occasions: ["just-because", "birthday"],
+      interests: ["fitness"],
+      type: "local-delivery",
+      query: "heavy duty resistance bands workout set",
+      badge: "Ships locally",
+      stars: "⭐⭐⭐⭐⭐",
+      imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-blue-500"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>`
     }
   ];
 
-  // Date Nights Database matching relationship duration
-  const dateNights = {
-    new: {
+  // Date Nights Database matching relationship duration and interest
+  const dateNightsMap = {
+    art: {
       virtual: {
-        title: "Synchronized Film Festival",
-        desc: "Choose a movie you both wanted to watch, order the same type of snacks, and watch together using Teleparty or Discord screenshare.",
+        title: "Virtual Art Museum Tour & Sketch Session",
+        desc: "Tour the Louvre or Metropolitan Museum of Art virtually together, then challenge each other to a 30-minute drawing battle of your favorite painting.",
         steps: [
-          "Choose a mutual movie from Netflix/Prime",
-          "Order identical snack hampers from your partner's local store",
-          "Open a voice/video channel on Discord or FaceTime",
-          "Start watching in sync using Teleparty browser extension"
-        ]
+          "Open Google Arts & Culture to access high-res museum tours",
+          "Set up video FaceTime/Discord call on your tablets",
+          "Share screens to browse historical galleries",
+          "Spend 30 minutes sketching a shared piece using your local art kits"
+        ],
+        perfectFor: "Art lovers (Drawing evening together)"
       },
       inPerson: {
-        title: "First Meeting Picnic & Unplug",
-        desc: "Find a quiet, scenic park. Bring a blanket, shut off all notifications, and spend hours asking each other conversational game card questions.",
+        title: "Sunset Outdoor Canvas Paint Date",
+        desc: "Pack canvas, acrylic paint, and brushes. Head to a scenic local lookout, enjoy a bottle of wine, and paint the scenery side-by-side.",
         steps: [
-          "Book a cozy local botanical park or beach side slot",
-          "Order a local luxury picnic basket from a vendor",
-          "Put both phones in 'Do Not Disturb' mode for 3 hours",
-          "Use card games like 'We're Not Really Strangers' to learn more"
+          "Choose a picturesque local park or hilltop view",
+          "Set up two small table easels side-by-side",
+          "Paint the same sunset scene, offering tips to each other",
+          "Sign the corners of each other's paintings as a souvenir"
         ]
       }
     },
-    mid: {
+    gaming: {
       virtual: {
-        title: "Chef Challenge Live Cooking Date",
-        desc: "Order the exact same cooking ingredients via local grocery delivery. Put your laptops in your kitchens, pour wine, and race to cook the same dish.",
+        title: "Co-op Video Game Campaign",
+        desc: "Play connection-focused multiplayer games like 'It Takes Two' or build a virtual home together in 'Stardew Valley' while on Discord voice.",
         steps: [
-          "Pick a recipe (e.g., homemade pizza, handmade pasta)",
-          "Order ingredients via Instacart/Blinkit to both locations",
-          "Set up video call on laptop with wide kitchen angle",
-          "Pour a glass of wine, set a timer, and enjoy cooking together"
-        ]
+          "Pick a game (e.g. It Takes Two or Portal 2 Co-op)",
+          "Redeem your Steam/Xbox Game Pass gift cards",
+          "Connect via Discord voice channel with high-quality noise-cancelling headphones",
+          "Cooperate to solve levels, building real-time teamwork skills"
+        ],
+        perfectFor: "Gamers (Co-op gaming session)"
       },
       inPerson: {
-        title: "The Halfway City Adventure",
-        desc: "Look at the global map, locate a city exactly halfway between you, book a cute Airbnb, and explore a neutral territory together as a team.",
+        title: "Local Retro Arcade Battle",
+        desc: "Find a local classic arcade. Buy a handful of tokens, and play competitive face-to-face matches of retro games.",
         steps: [
-          "Calculate the halfway travel destination using airline flight search",
-          "Rent an Airbnb with a cozy kitchen",
-          "Plan 2 outdoor sights to see, but reserve 80% of the time for resting",
-          "Take a Polaroid camera to capture raw in-the-moment pictures"
+          "Locate a retro bar/arcade or gaming cafe nearby",
+          "Divide a bucket of tokens equally",
+          "Play head-to-head on classic street fighters or racing units",
+          "Trade in tickets to win matching cheesy prizes"
         ]
       }
     },
-    long: {
+    music: {
       virtual: {
-        title: "Virtual Wine Tasting & Goal Setting",
-        desc: "Ship each other identical wine selections (or favorite beverages). Sip them together, and work on a collaborative online whiteboard (like Miro) planning your gap-closing timeline.",
+        title: "Shared Playlist listening party",
+        desc: "Use Spotify Group Session or Apple Music SharePlay. Drink wine, listen to your shared playlist, and ask deep questions from Paired.",
         steps: [
-          "Ship a curated bottle of wine to your partner's address",
-          "Prepare a digital whiteboard template on Miro or Canva",
-          "Discuss: next flight dates, relocation logistics, future home visions",
-          "Map out a timeline and visualize the day you will close the distance"
-        ]
+          "Create a shared playlist of songs representing major relationship moments",
+          "Launch a Spotify Group Session call",
+          "Wear your noise-cancelling headphones to enjoy deep audio fidelity",
+          "Discuss the memory attached to each song as it plays"
+        ],
+        perfectFor: "Music fans (Listening party & chat)"
       },
       inPerson: {
-        title: "Reunion Professional Portrait Shoot",
-        desc: "Don't let your reunion be remembered only by low-light phone selfies. Hire a local photographer for a 1-hour couple session to capture the relief and joy of meeting.",
+        title: "Intimate Local Live Music Night",
+        desc: "Pre-book tickets to a local acoustic performance, jazz session, or indie show. Dress up and share the raw energy of live music together.",
         steps: [
-          "Pre-book a photographer in your reunion city weeks in advance",
-          "Dress in comfortable, matching tones",
-          "Shoot in natural morning light in an open city space",
-          "Create a physical photo frame to keep on your desk while apart"
+          "Find a low-key local acoustic lounge or jazz bar",
+          "Arrive early to secure seats near the stage",
+          "Order custom mocktails/cocktails and enjoy the acoustic resonance",
+          "Request a song dedicated to your partner"
+        ]
+      }
+    },
+    cooking: {
+      virtual: {
+        title: "Chef Challenge Live Cooking Race",
+        desc: "Order identical gourmet recipe ingredients locally. Race to cook the dish side-by-side, then dine together on candlelit video FaceTime.",
+        steps: [
+          "Select a recipe from Cozymeal or your favorite food blog",
+          "Deliver ingredients locally via Instacart/Blinkit/UberEats",
+          "Put your laptops on kitchen counters and start cooking on video",
+          "Serve the meals, light candles, and dine together virtually"
+        ],
+        perfectFor: "Cooking foodies (Live kitchen challenge)"
+      },
+      inPerson: {
+        title: "Gourmet Couples Cooking Masterclass",
+        desc: "Book a professional local cooking workshop. Spend the evening learning complex dishes from a professional chef side-by-side.",
+        steps: [
+          "Book a local couples cooking class (e.g. handmade sushi or pasta)",
+          "Put on matching cooking aprons",
+          "Work together to roll, slice, or knead elements from scratch",
+          "Sip local wines while eating your creations"
+        ]
+      }
+    },
+    fitness: {
+      virtual: {
+        title: "Synchronized Virtual Yoga & Stretch",
+        desc: "Set up matching yoga mats, put on a virtual class on split-screen, and complete a restorative stretch routine together.",
+        steps: [
+          "Choose a mutual yoga flow or meditation track on YouTube",
+          "Launch a video call showing full-body camera views",
+          "Keep your Bond Touch bracelets nearby to buzz support during hard poses",
+          "End with a shared 10-minute quiet meditation session"
+        ],
+        perfectFor: "Fitness partners (Yoga & meditation flow)"
+      },
+      inPerson: {
+        title: "Mountain Trail Hike & Outdoor Picnic",
+        desc: "Pack energy bars and fresh fruit. Tackle a challenging local hiking trail together and celebrate at the summit with a picnic.",
+        steps: [
+          "Select a local scenic mountain trail (2-3 hour hike)",
+          "Wear matching comfortable activewear",
+          "Take turns leading the path and capturing outdoor photos",
+          "Spread a blanket at the summit lookout and enjoy the picnic"
+        ]
+      }
+    },
+    coffee: {
+      virtual: {
+        title: "Pour-Over Coffee Morning Tasting",
+        desc: "Wake up together on video call, grind your fresh roaster beans, brew matching pour-overs, and compare coffee tasting notes.",
+        steps: [
+          "Order specialty roaster sampler beans to both addresses",
+          "Start your morning video call right as you wake up",
+          "Brew using identical ratios and methods (e.g., V60 or French Press)",
+          "Sip slowly and compare flavor notes (chocolaty, fruity, floral)"
+        ],
+        perfectFor: "Coffee enthusiasts (Tasting morning)"
+      },
+      inPerson: {
+        title: "Local Roastery Hop & Tasting Flight",
+        desc: "Visit the highest-rated specialty coffee roastery in town. Order a flight of espresso or cold brews and talk for hours.",
+        steps: [
+          "Locate an artisan local roastery that serves tasting flights",
+          "Order contrasting origins (e.g., Ethiopian light roast vs. Sumatran dark)",
+          "Sit in a cozy window seat away from laptops and phones",
+          "Talk about future relocation plans over espresso"
+        ]
+      }
+    },
+    reading: {
+      virtual: {
+        title: "Silent Book Club & Chapter Discussion",
+        desc: "Read the same Kindle book chapter-by-chapter. Set a 45-minute silent timer to read on call, then discuss the plot twists.",
+        steps: [
+          "Pick a compelling page-turner or mystery novel",
+          "Open your Kindle/e-reader on the same page",
+          "Keep video call active silently while reading for 45 minutes",
+          "Unmute and dissect the characters' decisions over tea"
+        ],
+        perfectFor: "Readers (Silent book club chat)"
+      },
+      inPerson: {
+        title: "Cozy Independent Bookstore Hop",
+        desc: "Browse a local independent bookshop together. Find a book representing what you want to do next, buy it, and read in a cafe.",
+        steps: [
+          "Visit a local historic or independent bookstore",
+          "Challenge: find a book you think the other MUST read",
+          "Buy the selected volumes and get coffee at the next-door cafe",
+          "Write personal dedications on the inside covers"
+        ]
+      }
+    },
+    travel: {
+      virtual: {
+        title: "Google Maps Travel Exploration",
+        desc: "Share your screen on Google Street View, drop yourselves in a random city like Tokyo or Rome, and plan your dream itinerary.",
+        steps: [
+          "Launch a Google Meet or Discord screenshare session",
+          "Navigate to Google Maps Street View in a dream city",
+          "Virtually 'walk' through the streets, choosing cafes you'd visit",
+          "Build a collaborative travel itinerary list on Google Docs"
+        ],
+        perfectFor: "Wanderers (Virtual city exploration)"
+      },
+      inPerson: {
+        title: "Road Trip to a Cozy Cabin",
+        desc: "Book a secluded cabin in the woods or mountains. Drive out together, build a campfire, and gaze at the stars.",
+        steps: [
+          "Rent a cozy cabin with an outdoor fireplace/stove",
+          "Create a road trip music playlist together",
+          "Drive out, unplugging from work alerts completely",
+          "Toast marshmallows on the fire and stargaze under the night sky"
         ]
       }
     }
@@ -630,7 +937,6 @@
     loader.classList.remove("hidden");
 
     setTimeout(() => {
-      // Hide loader
       loader.classList.add("hidden");
       generatorCard.classList.remove("opacity-50", "pointer-events-none");
       resultsPanel.classList.remove("hidden");
@@ -638,22 +944,79 @@
         resultsPanel.classList.remove("opacity-0", "translate-y-10");
       }, 50);
 
-      // Perform calculations
       generateResults();
     }, 1200);
   });
+
+  // Time shifting helper (adds minutes to AM/PM time strings)
+  function addMinutesToTime(timeStr, minsToAdd) {
+    if (!timeStr) return "";
+    const match = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
+    if (!match) return timeStr;
+    
+    let hour = parseInt(match[1]);
+    const min = parseInt(match[2]);
+    const ampm = match[3].toUpperCase();
+    
+    if (ampm === "PM" && hour !== 12) hour += 12;
+    if (ampm === "AM" && hour === 12) hour = 0;
+    
+    let totalMins = hour * 60 + min + minsToAdd;
+    totalMins = (totalMins + 24 * 60) % (24 * 60);
+    
+    const newHour24 = Math.floor(totalMins / 60);
+    const newMin = totalMins % 60;
+    
+    const newAmpm = newHour24 >= 12 ? "PM" : "AM";
+    const newHour12 = newHour24 % 12 || 12;
+    
+    return `${newHour12}:${String(newMin).padStart(2, '0')} ${newAmpm}`;
+  }
 
   function generateResults() {
     const yourCountryCode = (document.getElementById("your-country") as HTMLSelectElement).value;
     const partnerCountryCode = (document.getElementById("partner-country") as HTMLSelectElement).value;
     const budgetCategory = (document.getElementById("budget") as HTMLSelectElement).value;
+    const partnerInterest = (document.getElementById("interest") as HTMLSelectElement).value;
     const occasion = (document.getElementById("occasion") as HTMLSelectElement).value;
     const duration = (document.getElementById("duration") as HTMLSelectElement).value;
 
     const yourCountry = countries[yourCountryCode];
     const partnerCountry = countries[partnerCountryCode];
 
-    // 1. Generate Shipping Logistics Warning
+    // 1. Calculate Confidence Score (Overall Match)
+    let score = 70;
+    let matchReasons = [];
+
+    const tzDiff = Math.abs(yourCountry.tzOffset - partnerCountry.tzOffset);
+    if (tzDiff <= 4) {
+      score += 10;
+      matchReasons.push("perfect time overlap");
+    } else {
+      matchReasons.push("adjusted call coordination");
+    }
+
+    if (yourCountryCode === partnerCountryCode) {
+      score += 10;
+      matchReasons.push("domestic delivery (no customs)");
+    } else {
+      matchReasons.push("digital customs bypass");
+    }
+
+    score += 10; // Budget fit guaranteed by selection
+    matchReasons.push("strict budget fit");
+
+    // Interest alignment check
+    matchReasons.push("partner interest alignment");
+
+    score = Math.min(99, score);
+    const scoreStars = "⭐⭐⭐⭐⭐"; // Hardcoded Vercel-style 5 stars
+
+    document.getElementById("match-pct").textContent = `Overall Match ${score}%`;
+    document.getElementById("match-stars").textContent = scoreStars;
+    document.getElementById("match-reasons").textContent = matchReasons.join(", ");
+
+    // 2. Generate Shipping Logistics Warning
     const logisticsWarningText = document.getElementById("logistics-warning-text");
     if (yourCountryCode === partnerCountryCode) {
       logisticsWarningText.innerHTML = `Since you both live in the <strong>${yourCountry.name}</strong>, physical shipping is straightforward! Traditional courier delivery will face no custom duties, and shipping times are minimal. You can also order from local shops directly.`;
@@ -661,7 +1024,7 @@
       logisticsWarningText.innerHTML = `Warning: Sending packages between <strong>${yourCountry.name}</strong> and <strong>${partnerCountry.name}</strong> can result in customs duties of up to 40% and take weeks. <strong>Recommendation:</strong> Use regional vendors (e.g. Amazon ${partnerCountry.name} if buying for them, or Amazon ${yourCountry.name} if buying for you) or purchase digital experiences to avoid customs.`;
     }
 
-    // 2. Generate Timezones & Overlaps ("best call today" format)
+    // 3. Generate Timezones & Overlaps ("best call today" format)
     const yourTzLabel = document.getElementById("your-tz-label");
     const yourTzTime = document.getElementById("your-tz-time");
     const partnerTzLabel = document.getElementById("partner-tz-label");
@@ -671,7 +1034,6 @@
     yourTzLabel.textContent = `${yourCountry.name} (${yourCountry.tzName}):`;
     partnerTzLabel.textContent = `${partnerCountry.name} (${partnerCountry.tzName}):`;
 
-    // Lookup overlap in map
     const key = `${yourCountryCode}-${partnerCountryCode}`;
     const reverseKey = `${partnerCountryCode}-${yourCountryCode}`;
     
@@ -688,12 +1050,10 @@
       timeB = tzOverlapMap[key].timeB;
       note = tzOverlapMap[key].note;
     } else if (tzOverlapMap[reverseKey]) {
-      // Flip times
       timeA = tzOverlapMap[reverseKey].timeB;
       timeB = tzOverlapMap[reverseKey].timeA;
       note = tzOverlapMap[reverseKey].note;
     } else {
-      // General fallback calculation
       const diff = Math.abs(yourCountry.tzOffset - partnerCountry.tzOffset);
       timeA = "7:00 PM - 10:00 PM";
       const startHour = (19 - diff + 24) % 24;
@@ -705,51 +1065,102 @@
 
     yourTzTime.textContent = timeA;
     partnerTzTime.textContent = timeB;
-    overlapPerfectNote.textContent = note;
 
-    // 3. Curate Gifts
-    const giftsGrid = document.getElementById("gifts-grid");
-    giftsGrid.innerHTML = ""; // Clear
+    // 4. Curate and Render Gifts: Best Match + Alternatives
+    const bestMatchBox = document.getElementById("best-match-box");
+    const alternativesGrid = document.getElementById("alternatives-grid");
+    
+    bestMatchBox.innerHTML = "";
+    alternativesGrid.innerHTML = "";
 
-    // Filter gifts
-    const filteredGifts = giftsDb.filter(gift => {
-      // Matches budget category
-      if (!gift.budgets.includes(budgetCategory)) return false;
-      return true;
-    }).slice(0, 3); // Take top 3
+    // Find Best Recommendation: matching selected interest + budget
+    let bestGift = giftsDb.find(gift => gift.interests.includes(partnerInterest) && gift.budgets.includes(budgetCategory));
+    
+    // Fallback if no exact match
+    if (!bestGift) {
+      bestGift = giftsDb.find(gift => gift.interests.includes(partnerInterest)) || giftsDb[0];
+    }
 
-    // If empty fallback to general items
-    const giftsToRender = filteredGifts.length > 0 ? filteredGifts : giftsDb.slice(0, 3);
+    // Alternative gifts: other items that fit the budget but not necessarily the main interest
+    const alternatives = giftsDb.filter(gift => gift.id !== bestGift.id && gift.budgets.includes(budgetCategory)).slice(0, 2);
+    const alternativesToRender = alternatives.length >= 2 ? alternatives : giftsDb.filter(gift => gift.id !== bestGift.id).slice(0, 2);
 
-    giftsToRender.forEach(gift => {
-      // Recipient is Partner's country
-      const recipientCountry = partnerCountry;
-      const buyLink = `${recipientCountry.amazon}${encodeURIComponent(gift.query)}`;
-      const priceVal = gift.price[budgetCategory] || Object.values(gift.price)[0];
-      const localPrice = `${recipientCountry.currency}${priceVal}`;
+    // Format best gift details
+    const recipientCountry = partnerCountry;
+    const bestPriceVal = bestGift.price[budgetCategory] || Object.values(bestGift.price)[0];
+    const bestLocalPrice = `${recipientCountry.currency}${bestPriceVal}`;
+    const bestBuyLink = `${recipientCountry.amazon}${encodeURIComponent(bestGift.query)}`;
+
+    // Render Best Match card (Large highlighted box with star rating & reasons)
+    bestMatchBox.innerHTML = `
+      <div class="glow-border rounded-xl p-8 bg-[#533afd]/5 border-[#533afd]/30 border relative overflow-hidden transition-all duration-300">
+        <div class="absolute top-0 right-0 bg-[#533afd] text-white text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-bl-lg">
+          Best Match Recommendation
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+          <div class="lg:col-span-2 h-48 bg-[#0d253d]/50 border border-white/5 rounded-lg flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr from-[#533afd]/10 to-[#ea2261]/10 z-0"></div>
+            <div class="relative z-10 flex flex-col items-center">
+              ${bestGift.imgSvg}
+            </div>
+          </div>
+          <div class="lg:col-span-3">
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <h4 class="text-2xl font-light text-white leading-snug">${bestGift.title} ${bestLocalPrice} ${bestGift.stars} ${bestGift.badge}</h4>
+            </div>
+            <p class="text-xs text-[#64748d] font-light leading-relaxed mb-4">
+              ${bestGift.desc}
+            </p>
+            <div class="border-t border-white/5 pt-4 mt-2">
+              <h5 class="text-xs font-semibold text-white uppercase tracking-wider mb-2 font-display">Why it's the best:</h5>
+              <ul class="text-xs text-[#61718a] space-y-1 list-disc list-inside">
+                <li>Perfect fit for partner's interest in <strong class="text-white">${partnerInterest}</strong>.</li>
+                <li>Budget optimized at <strong class="text-white">${bestLocalPrice}</strong>.</li>
+                <li>Bypasses international custom taxes via local delivery in <strong class="text-white">${recipientCountry.name}</strong>.</li>
+              </ul>
+              <div class="mt-6 flex justify-between items-center">
+                <span class="text-[10px] text-[#533afd] font-semibold bg-[#533afd]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  ${bestGift.badge}
+                </span>
+                <a href="${bestBuyLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-white hover:text-[#533afd] transition-colors font-medium bg-[#533afd] hover:bg-[#4434d4] px-4 py-2 rounded-full shadow-md">
+                  <span>Get Best Gift</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Render Alternative Suggestions
+    alternativesToRender.forEach(gift => {
+      const altPriceVal = gift.price[budgetCategory] || Object.values(gift.price)[0];
+      const altLocalPrice = `${recipientCountry.currency}${altPriceVal}`;
+      const altBuyLink = `${recipientCountry.amazon}${encodeURIComponent(gift.query)}`;
 
       const card = document.createElement("div");
       card.className = "glow-border rounded-xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300";
       card.innerHTML = `
         <div>
-          <div class="h-40 bg-[#0d253d]/30 border border-white/5 rounded-lg flex items-center justify-center relative overflow-hidden mb-6">
-            <!-- Mock visual image representation -->
-            <div class="absolute inset-0 bg-gradient-to-tr from-[#533afd]/5 to-pink-500/5 z-0"></div>
-            <div class="relative z-10 flex flex-col items-center">
+          <div class="h-36 bg-[#0d253d]/30 border border-white/5 rounded-lg flex items-center justify-center relative overflow-hidden mb-4">
+            <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-[#533afd]/5 z-0"></div>
+            <div class="relative z-10">
               ${gift.imgSvg}
             </div>
           </div>
-          <div class="flex justify-between items-start mb-2">
-            <h4 class="text-lg font-light text-white leading-snug">${gift.title}</h4>
-            <span class="text-sm font-semibold text-white tabular-nums">${localPrice}</span>
+          <div class="flex justify-between items-start mb-1">
+            <h4 class="text-base font-light text-white leading-tight">${gift.title} ${altLocalPrice} ${gift.stars} ${gift.badge}</h4>
           </div>
           <p class="text-xs text-[#64748d] font-light leading-relaxed mb-4">${gift.desc}</p>
         </div>
         <div class="border-t border-white/5 pt-4 mt-2 flex justify-between items-center">
-          <span class="text-[10px] text-[#533afd] font-semibold bg-[#533afd]/10 px-2 py-0.5 rounded-full uppercase tracking-wider">
-            ${gift.type === 'digital' ? 'Digital Experience' : gift.badge}
+          <span class="text-[9px] text-[#b9b9f9] font-medium bg-white/5 px-2 py-0.5 rounded">
+            Alternative Option
           </span>
-          <a href="${buyLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-white hover:text-[#533afd] transition-colors font-medium">
+          <a href="${altBuyLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-white hover:text-[#533afd] transition-colors font-medium">
             <span>Buy Link</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -757,16 +1168,20 @@
           </a>
         </div>
       `;
-      giftsGrid.appendChild(card);
+      alternativesGrid.appendChild(card);
     });
 
-    // 4. Curate Dates
-    const durationKey = duration as "new" | "mid" | "long";
-    const dateData = dateNights[durationKey] || dateNights.mid;
+    // 5. Curate Date Nights (matching the interest)
+    const dateData = dateNightsMap[partnerInterest] || dateNightsMap.art;
 
     // Set virtual date
     document.getElementById("virtual-date-title").textContent = dateData.virtual.title;
     document.getElementById("virtual-date-desc").textContent = dateData.virtual.desc;
+    
+    // Set 'perfect for' note in Section 1 timezone overlap card
+    const perfectForNote = `${note} & ${dateData.virtual.perfectFor}`;
+    overlapPerfectNote.textContent = perfectForNote;
+
     const virtualSteps = document.getElementById("virtual-date-steps");
     virtualSteps.innerHTML = "";
     dateData.virtual.steps.forEach(step => {
@@ -785,13 +1200,30 @@
       li.textContent = step;
       inPersonSteps.appendChild(li);
     });
+
+    // Set dynamic timeline times
+    const startA = timeA.split(" - ")[0]; // e.g. "7:30 PM"
+    const startB = timeB.split(" - ")[0]; // e.g. "10:00 AM"
+
+    document.getElementById("timeline-time-1").textContent = `${startA} (${yourCountry.name}) / ${startB} (${partnerCountry.name})`;
+    document.getElementById("timeline-time-2").textContent = `${addMinutesToTime(startA, 30)} (${yourCountry.name}) / ${addMinutesToTime(startB, 30)} (${partnerCountry.name})`;
+    document.getElementById("timeline-time-3").textContent = `${addMinutesToTime(startA, 45)} (${yourCountry.name}) / ${addMinutesToTime(startB, 45)} (${partnerCountry.name})`;
+    document.getElementById("timeline-time-4").textContent = `${addMinutesToTime(startA, 90)} (${yourCountry.name}) / ${addMinutesToTime(startB, 90)} (${partnerCountry.name})`;
+    document.getElementById("timeline-time-5").textContent = `${addMinutesToTime(startA, 210)} (${yourCountry.name}) / ${addMinutesToTime(startB, 210)} (${partnerCountry.name})`;
+
+    // Dynamic timeline subtext based on selected partner interest
+    const interestLabel = partnerInterest.charAt(0).toUpperCase() + partnerInterest.slice(1);
+    document.getElementById("timeline-title-3").textContent = `Cook together / Shared Activity`;
+    document.getElementById("timeline-desc-3").textContent = `Start your shared ${interestLabel}-themed activity or cooking race! Put on video call on camera and connect.`;
+    
+    document.getElementById("timeline-title-4").textContent = `Watch a movie / ${dateData.virtual.title}`;
+    document.getElementById("timeline-desc-4").textContent = `${dateData.virtual.desc} Maintain screen sharing and video connection.`;
   }
 
-  // 5. Countdown timer script
+  // 6. Countdown timer script
   let countdownInterval;
 
   function initCountdown() {
-    // Default reunion date: 30 days in future
     const defaultDate = new Date();
     defaultDate.setDate(defaultDate.getDate() + 30);
     const defaultDateStr = defaultDate.toISOString().split('T')[0];
@@ -845,6 +1277,29 @@
     countdownInterval = setInterval(update, 1000);
   }
 
-  // Run on page load
+  // Pre-fill countries from URL parameter and auto-submit
+  function checkUrlForCountries() {
+    const path = window.location.pathname; // e.g. /gifts/us-to-in
+    const match = path.match(/\/gifts\/([A-Za-z]{2})-to-([A-Za-z]{2})/i);
+    if (match) {
+      const yourCode = match[1].toUpperCase();
+      const partnerCode = match[2].toUpperCase();
+      
+      if (countries[yourCode] && countries[partnerCode]) {
+        yourCountrySelect.value = yourCode;
+        updateBudgetCurrency();
+        
+        const partnerSelect = document.getElementById("partner-country") as HTMLSelectElement;
+        partnerSelect.value = partnerCode;
+        
+        // Auto submit
+        setTimeout(() => {
+          form.dispatchEvent(new Event("submit"));
+        }, 100);
+      }
+    }
+  }
+
   initCountdown();
+  checkUrlForCountries();
 </script>

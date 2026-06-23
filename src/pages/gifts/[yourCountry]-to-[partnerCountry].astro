@@ -1,0 +1,402 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import GiftingEngine from "../../components/GiftingEngine.astro";
+
+// getStaticPaths generates routes at build time for all 100 possible country-pair combinations
+export async function getStaticPaths() {
+  const countriesList = ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"];
+  const paths = [];
+  
+  for (const yourCountry of countriesList) {
+    for (const partnerCountry of countriesList) {
+      paths.push({
+        params: { 
+          yourCountry: yourCountry.toLowerCase(), 
+          partnerCountry: partnerCountry.toLowerCase() 
+        }
+      });
+    }
+  }
+  
+  return paths;
+}
+
+const { yourCountry, partnerCountry } = Astro.params;
+
+// Country database mapping for static metadata
+const countriesMap = {
+  us: { name: "United States", tzName: "EST", tzOffset: -5, currency: "$", currencyName: "USD" },
+  in: { name: "India", tzName: "IST", tzOffset: 5.5, currency: "₹", currencyName: "INR" },
+  ca: { name: "Canada", tzName: "EST", tzOffset: -5, currency: "C$", currencyName: "CAD" },
+  gb: { name: "United Kingdom", tzName: "GMT", tzOffset: 0, currency: "£", currencyName: "GBP" },
+  au: { name: "Australia", tzName: "AEST", tzOffset: 10, currency: "A$", currencyName: "AUD" },
+  sg: { name: "Singapore", tzName: "SGT", tzOffset: 8, currency: "S$", currencyName: "SGD" },
+  de: { name: "Germany", tzName: "CET", tzOffset: 1, currency: "€", currencyName: "EUR" },
+  fr: { name: "France", tzName: "CET", tzOffset: 1, currency: "€", currencyName: "EUR" },
+  jp: { name: "Japan", tzName: "JST", tzOffset: 9, currency: "¥", currencyName: "JPY" },
+  ru: { name: "Russia", tzName: "MSK", tzOffset: 3, currency: "₽", currencyName: "RUB" }
+};
+
+const yourCountryCode = yourCountry.toUpperCase();
+const partnerCountryCode = partnerCountry.toUpperCase();
+
+const countryA = countriesMap[yourCountry];
+const countryB = countriesMap[partnerCountry];
+
+const titleText = `Gift Ideas for ${countryA.name} → ${countryB.name} Couples`;
+const seoDescription = `Explore shipping-optimized gifts, virtual date nights, and timezone call times for couples in ${countryA.name} and ${countryB.name}. Banish distance with Will Meet Soon.`;
+
+// Timezone best call schedules mapping for static rendering
+const tzOverlapMap = {
+  "IN-US": { timeA: "7:30 PM - 10:30 PM", timeB: "10:00 AM - 1:00 PM", note: "Post-dinner wind-down & Morning coffee check-in" },
+  "US-IN": { timeA: "10:00 AM - 1:00 PM", timeB: "7:30 PM - 10:30 PM", note: "Morning coffee & Post-dinner catch-up" },
+  
+  "IN-GB": { timeA: "6:00 PM - 9:00 PM", timeB: "12:30 PM - 3:30 PM", note: "Evening wind-down & Late lunch break chat" },
+  "GB-IN": { timeA: "12:30 PM - 3:30 PM", timeB: "6:00 PM - 9:00 PM", note: "Late lunch break & Evening wind-down" },
+
+  "US-GB": { timeA: "9:00 AM - 12:00 PM", timeB: "2:00 PM - 5:00 PM", note: "Morning check-in & Afternoon chat" },
+  "GB-US": { timeA: "2:00 PM - 5:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Afternoon chat & Morning check-in" },
+
+  "US-DE": { timeA: "9:00 AM - 12:00 PM", timeB: "3:00 PM - 6:00 PM", note: "Morning catch-up & Late afternoon break" },
+  "DE-US": { timeA: "3:00 PM - 6:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon break & Morning catch-up" },
+
+  "US-CA": { timeA: "9:00 AM - 5:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Fully aligned daytime working and awake hours" },
+  "CA-US": { timeA: "9:00 AM - 5:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Fully aligned daytime working and awake hours" },
+
+  "US-AU": { timeA: "7:00 PM - 10:00 PM", timeB: "10:00 AM - 1:00 PM", note: "Evening wind-down & Morning coffee next day" },
+  "AU-US": { timeA: "10:00 AM - 1:00 PM", timeB: "7:00 PM - 10:00 PM", note: "Morning coffee & Evening wind-down previous day" },
+
+  "US-SG": { timeA: "8:00 PM - 10:00 PM", timeB: "9:00 AM - 11:00 AM", note: "Night chat & Morning check-in next day" },
+  "SG-US": { timeA: "9:00 AM - 11:00 AM", timeB: "8:00 PM - 10:00 PM", note: "Morning check-in & Night chat previous day" },
+
+  "IN-CA": { timeA: "7:30 PM - 10:30 PM", timeB: "10:00 AM - 1:00 PM", note: "Post-dinner catch up & Morning check-in" },
+  "CA-IN": { timeA: "10:00 AM - 1:00 PM", timeB: "7:30 PM - 10:30 PM", note: "Morning check-in & Post-dinner catch up" },
+
+  "IN-DE": { timeA: "5:30 PM - 8:30 PM", timeB: "2:00 PM - 5:00 PM", note: "Late afternoon tea & Lunch break" },
+  "DE-IN": { timeA: "2:00 PM - 5:00 PM", timeB: "5:30 PM - 8:30 PM", note: "Lunch break & Late afternoon tea" },
+
+  "IN-AU": { timeA: "2:00 PM - 5:00 PM", timeB: "6:30 PM - 9:30 PM", note: "Afternoon check-in & Evening wind-down" },
+  "AU-IN": { timeA: "6:30 PM - 9:30 PM", timeB: "2:00 PM - 5:00 PM", note: "Evening wind-down & Afternoon check-in" },
+
+  "IN-SG": { timeA: "10:00 AM - 6:00 PM", timeB: "12:30 PM - 8:30 PM", note: "Mid-day chat & Afternoon tea" },
+  "SG-IN": { timeA: "12:30 PM - 8:30 PM", timeB: "10:00 AM - 6:00 PM", note: "Afternoon tea & Mid-day chat" },
+
+  "GB-DE": { timeA: "9:00 AM - 5:00 PM", timeB: "10:00 AM - 6:00 PM", note: "Fully aligned daytime and working hours" },
+  "DE-GB": { timeA: "10:00 AM - 6:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Fully aligned daytime and working hours" },
+
+  "GB-AU": { timeA: "8:00 AM - 11:00 AM", timeB: "6:00 PM - 9:00 PM", note: "Morning coffee & Evening catch-up" },
+  "AU-GB": { timeA: "6:00 PM - 9:00 PM", timeB: "8:00 AM - 11:00 AM", note: "Evening catch-up & Morning coffee" },
+
+  "GB-SG": { timeA: "9:00 AM - 12:00 PM", timeB: "5:00 PM - 8:00 PM", note: "Morning check-in & Evening wind-down" },
+  "SG-GB": { timeA: "5:00 PM - 8:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Evening wind-down & Morning check-in" },
+
+  "CA-DE": { timeA: "9:00 AM - 12:00 PM", timeB: "3:00 PM - 6:00 PM", note: "Morning coffee & Late afternoon break" },
+  "DE-CA": { timeA: "3:00 PM - 6:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon break & Morning coffee" },
+
+  "CA-AU": { timeA: "7:00 PM - 10:00 PM", timeB: "10:00 AM - 1:00 PM", note: "Evening wind-down & Morning coffee next day" },
+  "AU-CA": { timeA: "10:00 AM - 1:00 PM", timeB: "7:00 PM - 10:00 PM", note: "Morning coffee & Evening wind-down previous day" },
+
+  "CA-SG": { timeA: "8:00 PM - 10:00 PM", timeB: "9:00 AM - 11:00 AM", note: "Night chat & Morning check-in next day" },
+  "SG-CA": { timeA: "9:00 AM - 11:00 AM", timeB: "8:00 PM - 10:00 PM", note: "Morning check-in & Night chat previous day" },
+
+  "DE-AU": { timeA: "8:00 AM - 11:00 AM", timeB: "4:00 PM - 7:00 PM", note: "Morning catch-up & Late afternoon tea" },
+  "AU-DE": { timeA: "4:00 PM - 7:00 PM", timeB: "8:00 AM - 11:00 AM", note: "Late afternoon tea & Morning catch-up" },
+
+  "DE-SG": { timeA: "9:00 AM - 12:00 PM", timeB: "4:00 PM - 7:00 PM", note: "Morning check-in & Late afternoon tea" },
+  "SG-DE": { timeA: "4:00 PM - 7:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon tea & Morning check-in" },
+
+  "AU-SG": { timeA: "11:00 AM - 7:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Mid-day chat & Work hours alignment" },
+  "SG-AU": { timeA: "9:00 AM - 5:00 PM", timeB: "11:00 AM - 7:00 PM", note: "Work hours alignment & Mid-day chat" },
+  
+  "FR-US": { timeA: "3:00 PM - 6:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon catch-up & Morning check-in" },
+  "JP-US": { timeA: "9:00 AM - 11:00 AM", timeB: "7:00 PM - 9:00 PM", note: "Morning coffee & Evening chat previous day" },
+  "RU-US": { timeA: "5:00 PM - 7:00 PM", timeB: "9:00 AM - 11:00 AM", note: "Evening check-in & Morning coffee" },
+  "FR-IN": { timeA: "1:00 PM - 4:00 PM", timeB: "5:30 PM - 8:30 PM", note: "Lunch break & Late afternoon tea" },
+  "JP-IN": { timeA: "9:30 PM - 12:30 AM", timeB: "6:00 PM - 9:00 PM", note: "Night chat & Evening check-in" },
+  "RU-IN": { timeA: "4:00 PM - 7:00 PM", timeB: "6:30 PM - 9:30 PM", note: "Afternoon check-in & Evening wind-down" },
+  "FR-GB": { timeA: "10:00 AM - 6:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Fully aligned daytime and working hours" },
+  "JP-GB": { timeA: "5:00 PM - 8:00 PM", timeB: "8:00 AM - 11:00 AM", note: "Evening catch-up & Morning coffee" },
+  "RU-GB": { timeA: "1:00 PM - 8:00 PM", timeB: "10:00 AM - 5:00 PM", note: "Highly aligned daytime hours" }
+};
+
+// Compute difference and times statically
+const keyStr = `${yourCountryCode}-${partnerCountryCode}`;
+const reverseKeyStr = `${partnerCountryCode}-${yourCountryCode}`;
+
+let staticTimeA = "9:00 AM - 10:00 PM";
+let staticTimeB = "9:00 AM - 10:00 PM";
+let staticOverlapNote = "Fully synchronized local schedules";
+
+if (yourCountryCode === partnerCountryCode) {
+  staticTimeA = "9:00 AM - 10:00 PM";
+  staticTimeB = "9:00 AM - 10:00 PM";
+  staticOverlapNote = "You live in the same country! Pick any local time.";
+} else if (tzOverlapMap[keyStr]) {
+  staticTimeA = tzOverlapMap[keyStr].timeA;
+  staticTimeB = tzOverlapMap[keyStr].timeB;
+  staticOverlapNote = tzOverlapMap[keyStr].note;
+} else if (tzOverlapMap[reverseKeyStr]) {
+  staticTimeA = tzOverlapMap[reverseKeyStr].timeB;
+  staticTimeB = tzOverlapMap[reverseKeyStr].timeA;
+  staticOverlapNote = tzOverlapMap[reverseKeyStr].note;
+} else {
+  const diff = Math.abs(countryA.tzOffset - countryB.tzOffset);
+  staticTimeA = "7:00 PM - 10:00 PM";
+  const startHour = (19 - diff + 24) % 24;
+  const endHour = (22 - diff + 24) % 24;
+  const formatHour = (h) => `${h % 12 || 12}:00 ${h >= 12 ? 'PM' : 'AM'}`;
+  staticTimeB = `${formatHour(startHour)} - ${formatHour(endHour)}`;
+  staticOverlapNote = `Adjusted call hours with a ${diff}h timezone difference.`;
+}
+
+// Time shifting helper (adds minutes to AM/PM time strings)
+function addMinutesToTime(timeStr, minsToAdd) {
+  if (!timeStr) return "";
+  const match = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!match) return timeStr;
+  
+  let hour = parseInt(match[1]);
+  const min = parseInt(match[2]);
+  const ampm = match[3].toUpperCase();
+  
+  if (ampm === "PM" && hour !== 12) hour += 12;
+  if (ampm === "AM" && hour === 12) hour = 0;
+  
+  let totalMins = hour * 60 + min + minsToAdd;
+  totalMins = (totalMins + 24 * 60) % (24 * 60);
+  
+  const newHour24 = Math.floor(totalMins / 60);
+  const newMin = totalMins % 60;
+  
+  const newAmpm = newHour24 >= 12 ? "PM" : "AM";
+  const newHour12 = newHour24 % 12 || 12;
+  
+  return `${newHour12}:${String(newMin).padStart(2, '0')} ${newAmpm}`;
+}
+
+const staticTimeAStart = staticTimeA.split(" - ")[0];
+const staticTimeBStart = staticTimeB.split(" - ")[0];
+
+const staticTimeA30 = addMinutesToTime(staticTimeAStart, 30);
+const staticTimeB30 = addMinutesToTime(staticTimeBStart, 30);
+
+const staticTimeA45 = addMinutesToTime(staticTimeAStart, 45);
+const staticTimeB45 = addMinutesToTime(staticTimeBStart, 45);
+
+const staticTimeA90 = addMinutesToTime(staticTimeAStart, 90);
+const staticTimeB90 = addMinutesToTime(staticTimeBStart, 90);
+
+const staticTimeA210 = addMinutesToTime(staticTimeAStart, 210);
+const staticTimeB210 = addMinutesToTime(staticTimeBStart, 210);
+
+const tzDifferenceHours = Math.abs(countryA.tzOffset - countryB.tzOffset);
+---
+
+<Layout title={`${titleText} | Will Meet Soon`} description={seoDescription}>
+  <div class="min-h-screen relative overflow-hidden flex flex-col justify-between">
+    
+    <!-- Grid overlay and blur backdrop -->
+    <div class="absolute inset-0 grid-overlay z-0 pointer-events-none"></div>
+    <div class="gradient-blur-mesh"></div>
+
+    <!-- Header Navbar -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-6 flex items-center justify-between relative z-10">
+      <a href="/" class="flex items-center gap-2 group focus-ring rounded-md">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[#533afd] group-hover:text-white transition-colors duration-300" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+        </svg>
+        <span class="text-sm font-semibold tracking-[0.1em] text-white uppercase font-display">
+          Will Meet Soon
+        </span>
+      </a>
+      
+      <div class="hidden sm:flex items-center gap-4 text-xs font-light text-[#61718a]">
+        <a href="/" class="hover:text-white transition-colors">← Back to Home</a>
+        <span class="w-1.5 h-1.5 bg-[#533afd] rounded-full"></span>
+        <span class="hover:text-white transition-colors cursor-default select-none">{countryA.name} to {countryB.name}</span>
+      </div>
+    </header>
+
+    <!-- Page Body -->
+    <main class="flex-grow relative z-10 py-12">
+      <!-- SEO Friendly Heading -->
+      <div class="w-full max-w-4xl mx-auto px-6 text-center mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10 mb-6">
+          <span class="text-[10px] md:text-xs font-medium text-neutral-300 tracking-wider uppercase">
+            Couples Route: {yourCountryCode} to {partnerCountryCode}
+          </span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-[-1.8px] leading-[1.05] text-balance">
+          {titleText}
+        </h1>
+        <p class="text-base md:text-lg font-light text-[#64748d] max-w-2xl mx-auto mt-4 leading-relaxed text-pretty">
+          A dedicated portal for long-distance relationships between <strong>{countryA.name}</strong> and <strong>{countryB.name}</strong>. Get customs-optimized gift recommendations, timezone overlap hours, and interactive virtual date ideas.
+        </p>
+      </div>
+
+      <!-- Static content that Google will index on this specific page -->
+      <section class="w-full max-w-4xl mx-auto px-6 mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 border-b border-white/5 pb-12">
+        
+        <!-- Best Anniversary Gifts -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-light text-white">Best Anniversary Gifts</h2>
+          <p class="text-xs text-[#64748d] font-light leading-relaxed">
+            Anniversaries are major milestones for long-distance couples. To celebrate your special connection between <strong>{countryA.name}</strong> and <strong>{countryB.name}</strong>, we recommend ordering digital gifts or locally-fulfilled products. Sourcing within <strong>{countryB.name}</strong> avoids customs delays (which can last weeks) and steep import duty taxes (which can range up to 40%).
+          </p>
+          <ul class="text-xs text-[#61718a] space-y-2 list-none">
+            <li class="flex items-center gap-2">
+              <span class="text-[#533afd]">&bull;</span>
+              <span><strong class="text-white">Custom Star Map Poster</strong> ({countryB.currency}45) &ndash; ⭐⭐⭐⭐⭐ Printed and shipped locally within {countryB.name}.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-[#533afd]">&bull;</span>
+              <span><strong class="text-white">Bond Touch bracelets</strong> ({countryB.currency}108) &ndash; ⭐⭐⭐⭐⭐ Stay in touch with real-time vibrations.</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="text-[#533afd]">&bull;</span>
+              <span><strong class="text-white">Virtual Cooking Class</strong> ({countryB.currency}39) &ndash; ⭐⭐⭐⭐⭐ High-fidelity online interactive dinner.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Timezone -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-light text-white">Timezone</h2>
+          <p class="text-xs text-[#64748d] font-light leading-relaxed">
+            Coordinating schedules between <strong>{countryA.name}</strong> ({countryA.tzName}) and <strong>{countryB.name}</strong> ({countryB.tzName}) calls for synchronized check-ins. The time difference is <strong class="text-white">{tzDifferenceHours} hours</strong>.
+          </p>
+          <div class="p-4 rounded-lg bg-[#0d253d]/30 border border-white/5 space-y-2 text-xs">
+            <div class="flex justify-between items-center">
+              <span class="text-[#61718a] font-light">{countryA.name} ({countryA.tzName}):</span>
+              <span class="font-medium text-white">{staticTimeA}</span>
+            </div>
+            <div class="flex justify-between items-center">
+              <span class="text-[#61718a] font-light">{countryB.name} ({countryB.tzName}):</span>
+              <span class="font-medium text-white">{staticTimeB}</span>
+            </div>
+            <div class="border-t border-white/5 pt-2 mt-2">
+              <span class="text-[10px] uppercase font-semibold text-[#533afd] block font-display">Best Call Window</span>
+              <span class="text-green-400 font-light mt-0.5 block">{staticOverlapNote}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shipping Advice -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-light text-white">Shipping Advice</h2>
+          <p class="text-xs text-[#64748d] font-light leading-relaxed">
+            Sending a package directly from <strong>{countryA.name}</strong> to <strong>{countryB.name}</strong> is rarely the best option due to complex customs clearance checks and heavy duties.
+          </p>
+          <p class="text-xs text-[#64748d] font-light leading-relaxed">
+            <strong class="text-white">Shipping Tip:</strong> Avoid cross-border courier routes completely. Log in to localized versions of e-commerce sites (e.g. Amazon {countryB.name}) and order directly to your partner's address using their local currency ({countryB.currencyName} / {countryB.currency}).
+          </p>
+        </div>
+
+        <!-- Virtual Dates -->
+        <div class="space-y-4">
+          <h2 class="text-xl font-light text-white">Virtual Dates</h2>
+          <p class="text-xs text-[#64748d] font-light leading-relaxed">
+            Maintain relationship intimacy across borders with synchronized remote date nights. Great virtual dates for couples in <strong>{countryA.name}</strong> and <strong>{countryB.name}</strong> include:
+          </p>
+          <ul class="text-xs text-[#61718a] space-y-2 list-none">
+            <li class="flex items-start gap-2">
+              <span class="text-[#ea2261] mt-0.5">&rarr;</span>
+              <span><strong class="text-white">Live Cooking Challenge:</strong> Brew coffee or cook a gourmet recipe side-by-side on camera.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#ea2261] mt-0.5">&rarr;</span>
+              <span><strong class="text-white">Co-op Video Gaming:</strong> Cooperate to solve puzzle levels while on Discord voice calls.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="text-[#ea2261] mt-0.5">&rarr;</span>
+              <span><strong class="text-white">Silent Book Club:</strong> Keep call active silently as you read chapters, then discuss plot points together.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Static Arrow Timeline representation for Google crawling indexability -->
+      <section class="w-full max-w-xl mx-auto border border-white/10 rounded-xl p-8 bg-white/5 relative z-10 mb-16">
+        <h2 class="text-xl font-light text-white text-center mb-6 font-display">Sample Date Night Timeline</h2>
+        <div class="flex flex-col items-center space-y-4">
+          
+          <div class="text-center">
+            <div class="text-xs font-semibold text-[#b9b9f9] tabular-nums">{staticTimeBStart} ({countryB.name}) / {staticTimeAStart} ({countryA.name})</div>
+            <div class="text-sm font-medium text-white mt-1">Buy a digital gift</div>
+          </div>
+          
+          <div class="text-[#533afd] text-xl font-bold">↓</div>
+
+          <div class="text-center">
+            <div class="text-xs font-semibold text-neutral-400 tabular-nums">{staticTimeB30} ({countryB.name}) / {staticTimeA30} ({countryA.name})</div>
+            <div class="text-sm font-medium text-white mt-1">Video call</div>
+          </div>
+
+          <div class="text-[#533afd] text-xl font-bold">↓</div>
+
+          <div class="text-center">
+            <div class="text-xs font-semibold text-neutral-400 tabular-nums">{staticTimeB45} ({countryB.name}) / {staticTimeA45} ({countryA.name})</div>
+            <div class="text-sm font-medium text-white mt-1">Cook together</div>
+          </div>
+
+          <div class="text-[#533afd] text-xl font-bold">↓</div>
+
+          <div class="text-center">
+            <div class="text-xs font-semibold text-neutral-400 tabular-nums">{staticTimeB90} ({countryB.name}) / {staticTimeA90} ({countryA.name})</div>
+            <div class="text-sm font-medium text-white mt-1">Watch a movie</div>
+          </div>
+
+          <div class="text-[#533afd] text-xl font-bold">↓</div>
+
+          <div class="text-center">
+            <div class="text-xs font-semibold text-pink-300 tabular-nums">{staticTimeB210} ({countryB.name}) / {staticTimeA210} ({countryA.name})</div>
+            <div class="text-sm font-medium text-[#ea2261] mt-1 font-semibold">Open the gift together</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Embedded Gifting Engine (Pre-populates countries and dynamically calculates timeline/results on load) -->
+      <GiftingEngine />
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12 bg-[#090a12]/80 relative z-10">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-xs font-semibold tracking-wider text-white uppercase font-display">Will Meet Soon</span>
+          </div>
+          <p class="text-xs text-[#64748d] max-w-sm leading-relaxed font-light">
+            Connecting hearts across continents. Helping long distance relationships survive, thrive, and close the distance with premium tools.
+          </p>
+        </div>
+        
+        <div>
+          <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-4">Dynamic Routes</h4>
+          <ul class="space-y-2 text-xs text-[#61718a] font-light">
+            <li><a href="/gifts/us-to-in" class="hover:text-white transition-colors">USA to India</a></li>
+            <li><a href="/gifts/gb-to-us" class="hover:text-white transition-colors">UK to USA</a></li>
+            <li><a href="/gifts/in-to-ca" class="hover:text-white transition-colors">India to Canada</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-4">Site Portal</h4>
+          <ul class="space-y-2 text-xs text-[#61718a] font-light">
+            <li><a href="/" class="hover:text-white transition-colors">Home Planner</a></li>
+            <li><span class="cursor-default hover:text-white transition-colors">Privacy Policy</span></li>
+            <li><a href="https://willmeetsoon.com" class="hover:text-white transition-colors">willmeetsoon.com</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#61718a] font-light">
+        <p>&copy; 2026 Will Meet Soon. All rights reserved.</p>
+        <p class="tabular-nums">Dynamic SEO Routes for 100 couples channels.</p>
+      </div>
+    </footer>
+
+  </div>
+</Layout>
