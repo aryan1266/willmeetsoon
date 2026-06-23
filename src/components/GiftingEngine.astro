@@ -1,140 +1,374 @@
 ---
 // GiftingEngine.astro - Custom Gift, Date Night, and Logistics Engine for LDR Couples
+interface Props {
+  isStaticRoute?: boolean;
+  yourCountry?: string;
+  partnerCountry?: string;
+}
+
+const { isStaticRoute = false, yourCountry = "US", partnerCountry = "IN" } = Astro.props;
+
+const countries = {
+  US: { name: "United States", tzOffset: -5, tzName: "EST", currency: "$", currencyName: "USD", flag: "🇺🇸", amazon: "https://www.amazon.com/s?k=" },
+  IN: { name: "India", tzOffset: 5.5, tzName: "IST", currency: "₹", currencyName: "INR", flag: "🇮🇳", amazon: "https://www.amazon.in/s?k=" },
+  CA: { name: "Canada", tzOffset: -5, tzName: "EST", currency: "C$", currencyName: "CAD", flag: "🇨🇦", amazon: "https://www.amazon.ca/s?k=" },
+  GB: { name: "United Kingdom", tzOffset: 0, tzName: "GMT", currency: "£", currencyName: "GBP", flag: "🇬🇧", amazon: "https://www.amazon.co.uk/s?k=" },
+  AU: { name: "Australia", tzOffset: 10, tzName: "AEST", currency: "A$", currencyName: "AUD", flag: "🇦🇺", amazon: "https://www.amazon.com.au/s?k=" },
+  SG: { name: "Singapore", tzOffset: 8, tzName: "SGT", currency: "S$", currencyName: "SGD", flag: "🇸🇬", amazon: "https://www.amazon.sg/s?k=" },
+  DE: { name: "Germany", tzOffset: 1, tzName: "CET", currency: "€", currencyName: "EUR", flag: "🇩🇪", amazon: "https://www.amazon.de/s?k=" },
+  FR: { name: "France", tzOffset: 1, tzName: "CET", currency: "€", currencyName: "EUR", flag: "🇫🇷", amazon: "https://www.amazon.fr/s?k=" },
+  JP: { name: "Japan", tzOffset: 9, tzName: "JST", currency: "¥", currencyName: "JPY", flag: "🇯🇵", amazon: "https://www.amazon.co.jp/s?k=" },
+  RU: { name: "Russia", tzOffset: 3, tzName: "MSK", currency: "₽", currencyName: "RUB", flag: "🇷🇺", amazon: "https://www.amazon.ru/s?k=" }
+};
+
+// We will compute the results if isStaticRoute is true!
+const yourCountryCode = yourCountry.toUpperCase();
+const partnerCountryCode = partnerCountry.toUpperCase();
+const yourCountryObj = countries[yourCountryCode] || countries.US;
+const partnerCountryObj = countries[partnerCountryCode] || countries.IN;
+
+// Define default values for interest, occasion, budget, duration
+const partnerInterest = "art";
+const budgetCategory = "medium";
+const occasion = "anniversary";
+const duration = "mid";
+
+// Timezone best call schedules mapping
+const tzOverlapMap = {
+  "IN-US": { timeA: "7:30 PM - 10:30 PM", timeB: "10:00 AM - 1:00 PM", note: "Post-dinner wind-down & Morning coffee check-in" },
+  "US-IN": { timeA: "10:00 AM - 1:00 PM", timeB: "7:30 PM - 10:30 PM", note: "Morning coffee & Post-dinner catch-up" },
+  "IN-GB": { timeA: "6:00 PM - 9:00 PM", timeB: "12:30 PM - 3:30 PM", note: "Evening wind-down & Late lunch break chat" },
+  "GB-IN": { timeA: "12:30 PM - 3:30 PM", timeB: "6:00 PM - 9:00 PM", note: "Late lunch break & Evening wind-down" },
+  "US-GB": { timeA: "9:00 AM - 12:00 PM", timeB: "2:00 PM - 5:00 PM", note: "Morning check-in & Afternoon chat" },
+  "GB-US": { timeA: "2:00 PM - 5:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Afternoon chat & Morning check-in" },
+  "US-DE": { timeA: "9:00 AM - 12:00 PM", timeB: "3:00 PM - 6:00 PM", note: "Morning catch-up & Late afternoon break" },
+  "DE-US": { timeA: "3:00 PM - 6:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon break & Morning catch-up" },
+  "US-CA": { timeA: "9:00 AM - 5:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Fully aligned daytime working and awake hours" },
+  "CA-US": { timeA: "9:00 AM - 5:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Fully aligned daytime working and awake hours" },
+  "US-AU": { timeA: "7:00 PM - 10:00 PM", timeB: "10:00 AM - 1:00 PM", note: "Evening wind-down & Morning coffee next day" },
+  "AU-US": { timeA: "10:00 AM - 1:00 PM", timeB: "7:00 PM - 10:00 PM", note: "Morning coffee & Evening wind-down previous day" },
+  "US-SG": { timeA: "8:00 PM - 10:00 PM", timeB: "9:00 AM - 11:00 AM", note: "Night chat & Morning check-in next day" },
+  "SG-US": { timeA: "9:00 AM - 11:00 AM", timeB: "8:00 PM - 10:00 PM", note: "Morning check-in & Night chat previous day" },
+  "IN-CA": { timeA: "7:30 PM - 10:30 PM", timeB: "10:00 AM - 1:00 PM", note: "Post-dinner catch up & Morning check-in" },
+  "CA-IN": { timeA: "10:00 AM - 1:00 PM", timeB: "7:30 PM - 10:30 PM", note: "Morning check-in & Post-dinner catch up" },
+  "IN-DE": { timeA: "5:30 PM - 8:30 PM", timeB: "2:00 PM - 5:00 PM", note: "Late afternoon tea & Lunch break" },
+  "DE-IN": { timeA: "2:00 PM - 5:00 PM", timeB: "5:30 PM - 8:30 PM", note: "Lunch break & Late afternoon tea" },
+  "IN-AU": { timeA: "2:00 PM - 5:00 PM", timeB: "6:30 PM - 9:30 PM", note: "Afternoon check-in & Evening wind-down" },
+  "AU-IN": { timeA: "6:30 PM - 9:30 PM", timeB: "2:00 PM - 5:00 PM", note: "Evening wind-down & Afternoon check-in" },
+  "IN-SG": { timeA: "10:00 AM - 6:00 PM", timeB: "12:30 PM - 8:30 PM", note: "Mid-day chat & Afternoon tea" },
+  "SG-IN": { timeA: "12:30 PM - 8:30 PM", timeB: "10:00 AM - 6:00 PM", note: "Afternoon tea & Mid-day chat" },
+  "GB-DE": { timeA: "9:00 AM - 5:00 PM", timeB: "10:00 AM - 6:00 PM", note: "Fully aligned daytime and working hours" },
+  "DE-GB": { timeA: "10:00 AM - 6:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Fully aligned daytime and working hours" },
+  "GB-AU": { timeA: "8:00 AM - 11:00 AM", timeB: "6:00 PM - 9:00 PM", note: "Morning coffee & Evening catch-up" },
+  "AU-GB": { timeA: "6:00 PM - 9:00 PM", timeB: "8:00 AM - 11:00 AM", note: "Evening catch-up & Morning coffee" },
+  "GB-SG": { timeA: "9:00 AM - 12:00 PM", timeB: "5:00 PM - 8:00 PM", note: "Morning check-in & Evening wind-down" },
+  "SG-GB": { timeA: "5:00 PM - 8:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Evening wind-down & Morning check-in" },
+  "CA-DE": { timeA: "9:00 AM - 12:00 PM", timeB: "3:00 PM - 6:00 PM", note: "Morning coffee & Late afternoon break" },
+  "DE-CA": { timeA: "3:00 PM - 6:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon break & Morning coffee" },
+  "CA-AU": { timeA: "7:00 PM - 10:00 PM", timeB: "10:00 AM - 1:00 PM", note: "Evening wind-down & Morning coffee next day" },
+  "AU-CA": { timeA: "10:00 AM - 1:00 PM", timeB: "7:00 PM - 10:00 PM", note: "Morning coffee & Evening wind-down previous day" },
+  "CA-SG": { timeA: "8:00 PM - 10:00 PM", timeB: "9:00 AM - 11:00 AM", note: "Night chat & Morning check-in next day" },
+  "SG-CA": { timeA: "9:00 AM - 11:00 AM", timeB: "8:00 PM - 10:00 PM", note: "Morning check-in & Night chat previous day" },
+  "DE-AU": { timeA: "8:00 AM - 11:00 AM", timeB: "4:00 PM - 7:00 PM", note: "Morning catch-up & Late afternoon tea" },
+  "AU-DE": { timeA: "4:00 PM - 7:00 PM", timeB: "8:00 AM - 11:00 AM", note: "Late afternoon tea & Morning catch-up" },
+  "DE-SG": { timeA: "9:00 AM - 12:00 PM", timeB: "4:00 PM - 7:00 PM", note: "Morning check-in & Late afternoon tea" },
+  "SG-DE": { timeA: "4:00 PM - 7:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon tea & Morning check-in" },
+  "AU-SG": { timeA: "11:00 AM - 7:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Mid-day chat & Work hours alignment" },
+  "SG-AU": { timeA: "9:00 AM - 5:00 PM", timeB: "11:00 AM - 7:00 PM", note: "Work hours alignment & Mid-day chat" },
+  "FR-US": { timeA: "3:00 PM - 6:00 PM", timeB: "9:00 AM - 12:00 PM", note: "Late afternoon catch-up & Morning check-in" },
+  "JP-US": { timeA: "9:00 AM - 11:00 AM", timeB: "7:00 PM - 9:00 PM", note: "Morning coffee & Evening chat previous day" },
+  "RU-US": { timeA: "5:00 PM - 7:00 PM", timeB: "9:00 AM - 11:00 AM", note: "Evening check-in & Morning coffee" },
+  "FR-IN": { timeA: "1:00 PM - 4:00 PM", timeB: "5:30 PM - 8:30 PM", note: "Lunch break & Late afternoon tea" },
+  "JP-IN": { timeA: "9:30 PM - 12:30 AM", timeB: "6:00 PM - 9:00 PM", note: "Night chat & Evening check-in" },
+  "RU-IN": { timeA: "4:00 PM - 7:00 PM", timeB: "6:30 PM - 9:30 PM", note: "Afternoon check-in & Evening wind-down" },
+  "FR-GB": { timeA: "10:00 AM - 6:00 PM", timeB: "9:00 AM - 5:00 PM", note: "Fully aligned daytime and working hours" },
+  "JP-GB": { timeA: "5:00 PM - 8:00 PM", timeB: "8:00 AM - 11:00 AM", note: "Evening catch-up & Morning coffee" },
+  "RU-GB": { timeA: "1:00 PM - 8:00 PM", timeB: "10:00 AM - 5:00 PM", note: "Highly aligned daytime hours" }
+};
+
+// Calculate Confidence Score
+let score = 70;
+let matchReasons = [];
+const tzDiff = Math.abs(yourCountryObj.tzOffset - partnerCountryObj.tzOffset);
+if (tzDiff <= 4) {
+  score += 10;
+  matchReasons.push("perfect time overlap");
+} else {
+  matchReasons.push("adjusted call coordination");
+}
+if (yourCountryCode === partnerCountryCode) {
+  score += 10;
+  matchReasons.push("domestic delivery (no customs)");
+} else {
+  matchReasons.push("digital customs bypass");
+}
+score += 10;
+matchReasons.push("strict budget fit");
+matchReasons.push("partner interest alignment");
+score = Math.min(99, score);
+
+// Logistics advice
+let logisticsText = "";
+if (yourCountryCode === partnerCountryCode) {
+  logisticsText = `Since you both live in the <strong>${yourCountryObj.name}</strong>, physical shipping is straightforward! Traditional courier delivery will face no custom duties, and shipping times are minimal. You can also order from local shops directly.`;
+} else {
+  logisticsText = `Warning: Sending packages between <strong>${yourCountryObj.name}</strong> and <strong>${partnerCountryObj.name}</strong> can result in customs duties of up to 40% and take weeks. <strong>Recommendation:</strong> Use regional vendors (e.g. Amazon ${partnerCountryObj.name} if buying for them, or Amazon ${yourCountryObj.name} if buying for you) or purchase digital experiences to avoid customs.`;
+}
+
+// Timezone Call schedule
+const staticKey = `${yourCountryCode}-${partnerCountryCode}`;
+const staticReverseKey = `${partnerCountryCode}-${yourCountryCode}`;
+let staticTimeA = "9:00 AM - 10:00 PM";
+let staticTimeB = "9:00 AM - 10:00 PM";
+let staticOverlapNote = "Fully synchronized local schedules";
+
+if (yourCountryCode === partnerCountryCode) {
+  staticTimeA = "9:00 AM - 10:00 PM";
+  staticTimeB = "9:00 AM - 10:00 PM";
+  staticOverlapNote = "You live in the same country! Pick any local time.";
+} else if (tzOverlapMap[staticKey]) {
+  staticTimeA = tzOverlapMap[staticKey].timeA;
+  staticTimeB = tzOverlapMap[staticKey].timeB;
+  staticOverlapNote = tzOverlapMap[staticKey].note;
+} else if (tzOverlapMap[staticReverseKey]) {
+  staticTimeA = tzOverlapMap[staticReverseKey].timeB;
+  staticTimeB = tzOverlapMap[staticReverseKey].timeA;
+  staticOverlapNote = tzOverlapMap[staticReverseKey].note;
+} else {
+  const diff = Math.abs(yourCountryObj.tzOffset - partnerCountryObj.tzOffset);
+  staticTimeA = "7:00 PM - 10:00 PM";
+  const startHour = (19 - diff + 24) % 24;
+  const endHour = (22 - diff + 24) % 24;
+  const formatHour = (h) => `${h % 12 || 12}:00 ${h >= 12 ? 'PM' : 'AM'}`;
+  staticTimeB = `${formatHour(startHour)} - ${formatHour(endHour)}`;
+  staticOverlapNote = `Adjusted call hours with a ${diff}h timezone difference.`;
+}
+
+// Time shifting helper (adds minutes to AM/PM time strings)
+function addMinutesToTime(timeStr, minsToAdd) {
+  if (!timeStr) return "";
+  const match = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!match) return timeStr;
+  
+  let hour = parseInt(match[1]);
+  const min = parseInt(match[2]);
+  const ampm = match[3].toUpperCase();
+  
+  if (ampm === "PM" && hour !== 12) hour += 12;
+  if (ampm === "AM" && hour === 12) hour = 0;
+  
+  let totalMins = hour * 60 + min + minsToAdd;
+  totalMins = (totalMins + 24 * 60) % (24 * 60);
+  
+  const newHour24 = Math.floor(totalMins / 60);
+  const newMin = totalMins % 60;
+  
+  const newAmpm = newHour24 >= 12 ? "PM" : "AM";
+  const newHour12 = newHour24 % 12 || 12;
+  
+  return `${newHour12}:${String(newMin).padStart(2, '0')} ${newAmpm}`;
+}
+
+const staticTimeAStart = staticTimeA.split(" - ")[0];
+const staticTimeBStart = staticTimeB.split(" - ")[0];
+
+const timelineTimes = [
+  { a: staticTimeAStart, b: staticTimeBStart },
+  { a: addMinutesToTime(staticTimeAStart, 30), b: addMinutesToTime(staticTimeBStart, 30) },
+  { a: addMinutesToTime(staticTimeAStart, 45), b: addMinutesToTime(staticTimeBStart, 45) },
+  { a: addMinutesToTime(staticTimeAStart, 90), b: addMinutesToTime(staticTimeBStart, 90) },
+  { a: addMinutesToTime(staticTimeAStart, 210), b: addMinutesToTime(staticTimeBStart, 210) }
+];
+
+// Best Gift
+const staticBestGift = {
+  title: "Under Lucky Stars Star Map",
+  desc: "A beautifully printed map of the alignment of the stars at the exact time and location you met, fell in love, or got committed.",
+  priceVal: 45,
+  stars: "⭐⭐⭐⭐⭐",
+  badge: "Ships locally",
+  query: "custom star map poster",
+  imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-[#ea2261]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M11.48 3.499c.195-.39.68-.39.874 0l2.232 4.474 4.884.71c.433.063.606.592.293.898l-3.535 3.45.835 4.86c.074.437-.384.77-.777.561l-4.364-2.297-4.364 2.297c-.393.209-.851-.124-.777-.561l.835-4.86-3.535-3.45c-.313-.306-.14-.835.293-.898l4.884-.71 2.232-4.474z" /></svg>`
+};
+
+const staticAlternatives = [
+  {
+    title: "Bond Touch Connection Bracelets",
+    desc: "Touch your bracelet and your partner's bracelet vibrates and lights up, letting them know they are on your mind instantly.",
+    priceVal: 108,
+    stars: "⭐⭐⭐⭐⭐",
+    badge: "Ships locally",
+    query: "Bond Touch Connection Bracelets",
+    imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-[#533afd]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697-.056-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166zm-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166z" /></svg>`
+  },
+  {
+    title: "Cozymeal Cooking Class",
+    desc: "A live, interactive cooking class hosted by world-class chefs. Cook the same recipe side-by-side on video call.",
+    priceVal: 39,
+    stars: "⭐⭐⭐⭐⭐",
+    badge: "Ships locally",
+    query: "cozymeal virtual cooking class gift card",
+    imgSvg: `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-12 h-12 text-yellow-500"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9.75 3.104v1.244c0 .41-.195.794-.527 1.036L4.25 9.098a1.5 1.5 0 00-.5 1.13v8.522c0 .828.672 1.5 1.5 1.5h13.5c.828 0 1.5-.672 1.5-1.5v-8.522a1.5 1.5 0 00-.5-1.13l-4.973-3.714a1.296 1.296 0 00-.527-1.036V3.104c0-.83-.672-1.5-1.5-1.5h-3c-.828 0-1.5.672-1.5 1.5z" /></svg>`
+  }
+];
+
+const staticDate = {
+  virtual: {
+    title: "Virtual Art Museum Tour & Sketch Session",
+    desc: "Tour the Louvre or Metropolitan Museum of Art virtually together, then challenge each other to a 30-minute drawing battle of your favorite painting.",
+    steps: [
+      "Open Google Arts & Culture to access high-res museum tours",
+      "Set up video FaceTime/Discord call on your tablets",
+      "Share screens to browse historical galleries",
+      "Spend 30 minutes sketching a shared piece using your local art kits"
+    ]
+  },
+  inPerson: {
+    title: "Sunset Outdoor Canvas Paint Date",
+    desc: "Pack canvas, acrylic paint, and brushes. Head to a scenic local lookout, enjoy a bottle of wine, and paint the scenery side-by-side.",
+    steps: [
+      "Choose a picturesque local park or hilltop view",
+      "Set up two small table easels side-by-side",
+      "Paint the same sunset scene, offering tips to each other",
+      "Sign the corners of each other's paintings as a souvenir"
+    ]
+  }
+};
 ---
 
 <div class="w-full max-w-6xl mx-auto px-4 py-8 relative z-10">
   <!-- Search/Form Container -->
   <div id="generator-card" class="glow-border rounded-xl p-8 md:p-12 mb-8 transition-all duration-500">
-    <div class="mb-8">
-      <span class="text-[#533afd] text-xs font-semibold uppercase tracking-wider px-3 py-1 bg-[#533afd]/10 rounded-full">
-        LDR Recommendation Engine
-      </span>
-      <h2 class="text-3xl md:text-4xl font-light text-white mt-4 tracking-tight">
-        Plan Your Next Connection
-      </h2>
-      <p class="text-[#64748d] mt-2 font-light">
-        Enter your details to generate custom gift ideas, remote date nights, and shipping-optimized paths to bypass customs.
-      </p>
+      <div class="mb-8">
+        <span class="text-[#533afd] text-xs font-semibold uppercase tracking-wider px-3 py-1 bg-[#533afd]/10 rounded-full">
+          LDR Recommendation Engine
+        </span>
+        <h2 class="text-3xl md:text-4xl font-light text-white mt-4 tracking-tight">
+          Plan Your Next Connection
+        </h2>
+        <p class="text-[#64748d] mt-2 font-light">
+          Enter your details to generate custom gift ideas, remote date nights, and shipping-optimized paths to bypass customs.
+        </p>
+      </div>
+
+      <form id="recommendation-form" class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Partner A (Your) Country -->
+          <div>
+            <label for="your-country" class="block text-sm font-medium text-[#61718a] mb-2">Your Country</label>
+            <select id="your-country" name="your-country" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
+              <option value="US" selected>🇺🇸 United States ($)</option>
+              <option value="IN">🇮🇳 India (₹)</option>
+              <option value="CA">🇨🇦 Canada (C$)</option>
+              <option value="GB">🇬🇧 United Kingdom (£)</option>
+              <option value="AU">🇦🇺 Australia (A$)</option>
+              <option value="SG">🇸🇬 Singapore (S$)</option>
+              <option value="DE">🇩🇪 Germany (€)</option>
+              <option value="FR">🇫🇷 France (€)</option>
+              <option value="JP">🇯🇵 Japan (¥)</option>
+              <option value="RU">🇷🇺 Russia (₽)</option>
+            </select>
+          </div>
+
+          <!-- Partner B (Partner's) Country -->
+          <div>
+            <label for="partner-country" class="block text-sm font-medium text-[#61718a] mb-2">Partner's Country</label>
+            <select id="partner-country" name="partner-country" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
+              <option value="IN" selected>🇮🇳 India (₹)</option>
+              <option value="US">🇺🇸 United States ($)</option>
+              <option value="CA">🇨🇦 Canada (C$)</option>
+              <option value="GB">🇬🇧 United Kingdom (£)</option>
+              <option value="AU">🇦🇺 Australia (A$)</option>
+              <option value="SG">🇸🇬 Singapore (S$)</option>
+              <option value="DE">🇩🇪 Germany (€)</option>
+              <option value="FR">🇫🇷 France (€)</option>
+              <option value="JP">🇯🇵 Japan (¥)</option>
+              <option value="RU">🇷🇺 Russia (₽)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Budget -->
+          <div>
+            <label for="budget" class="block text-sm font-medium text-[#61718a] mb-2">Budget Max</label>
+            <select id="budget" name="budget" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
+              <!-- Dynamically populated in script based on "Your Country" -->
+              <option value="low">Under $25 (Budget-friendly)</option>
+              <option value="medium" selected>$25 - $75 (Sweet Spot)</option>
+              <option value="high">$75 - $200 (Premium Care)</option>
+              <option value="premium">$200+ (Luxury & Milestones)</option>
+            </select>
+          </div>
+
+          <!-- Partner's Interest -->
+          <div>
+            <label for="interest" class="block text-sm font-medium text-[#61718a] mb-2">Partner's Interest</label>
+            <select id="interest" name="interest" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
+              <option value="art" selected>🎨 Art & Sketching</option>
+              <option value="gaming">🎮 Gaming</option>
+              <option value="music">🎵 Music & Podcasts</option>
+              <option value="cooking">🍳 Cooking & Food</option>
+              <option value="fitness">💪 Fitness & Wellness</option>
+              <option value="coffee">☕ Coffee & Tea</option>
+              <option value="reading">📚 Reading & E-books</option>
+              <option value="travel">✈️ Travel & Outdoors</option>
+            </select>
+          </div>
+
+          <!-- Occasion -->
+          <div>
+            <label for="occasion" class="block text-sm font-medium text-[#61718a] mb-2">Occasion</label>
+            <select id="occasion" name="occasion" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
+              <option value="anniversary" selected>Anniversary</option>
+              <option value="birthday">Birthday</option>
+              <option value="holiday">Holiday / Christmas</option>
+              <option value="just-because">Just Because</option>
+              <option value="first-meet">First Face-to-Face Meeting</option>
+            </select>
+          </div>
+
+          <!-- Relationship Duration -->
+          <div>
+            <label for="duration" class="block text-sm font-medium text-[#61718a] mb-2">Relationship Duration</label>
+            <select id="duration" name="duration" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
+              <option value="new">Less than 6 Months (Fresh Spark)</option>
+              <option value="mid" selected>6 Months - 2 Years (LD Vets)</option>
+              <option value="long">2+ Years (Deeply Committed)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pt-4 flex justify-end">
+          <button type="submit" class="focus-ring w-full md:w-auto bg-[#533afd] text-white hover:bg-[#4434d4] transition-colors py-3 px-8 rounded-full font-medium text-sm flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[#533afd]/20">
+            <span>Find Gift & Date Ideas</span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </button>
+        </div>
+      </form>
     </div>
 
-    <form id="recommendation-form" class="space-y-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Partner A (Your) Country -->
-        <div>
-          <label for="your-country" class="block text-sm font-medium text-[#61718a] mb-2">Your Country</label>
-          <select id="your-country" name="your-country" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
-            <option value="US" selected>🇺🇸 United States ($)</option>
-            <option value="IN">🇮🇳 India (₹)</option>
-            <option value="CA">🇨🇦 Canada (C$)</option>
-            <option value="GB">🇬🇧 United Kingdom (£)</option>
-            <option value="AU">🇦🇺 Australia (A$)</option>
-            <option value="SG">🇸🇬 Singapore (S$)</option>
-            <option value="DE">🇩🇪 Germany (€)</option>
-            <option value="FR">🇫🇷 France (€)</option>
-            <option value="JP">🇯🇵 Japan (¥)</option>
-            <option value="RU">🇷🇺 Russia (₽)</option>
-          </select>
-        </div>
+    <!-- Loading State (hidden initially) -->
+    <div id="loader" class="hidden flex-col items-center justify-center py-20" role="status" aria-live="polite">
+      <div class="w-12 h-12 border-4 border-[#533afd]/20 border-t-[#533afd] rounded-full animate-spin"></div>
+      <p class="text-[#64748d] mt-6 font-light animate-pulse">Calculating timezone overlaps and logistics…</p>
+    </div>
 
-        <!-- Partner B (Partner's) Country -->
-        <div>
-          <label for="partner-country" class="block text-sm font-medium text-[#61718a] mb-2">Partner's Country</label>
-          <select id="partner-country" name="partner-country" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
-            <option value="IN" selected>🇮🇳 India (₹)</option>
-            <option value="US">🇺🇸 United States ($)</option>
-            <option value="CA">🇨🇦 Canada (C$)</option>
-            <option value="GB">🇬🇧 United Kingdom (£)</option>
-            <option value="AU">🇦🇺 Australia (A$)</option>
-            <option value="SG">🇸🇬 Singapore (S$)</option>
-            <option value="DE">🇩🇪 Germany (€)</option>
-            <option value="FR">🇫🇷 France (€)</option>
-            <option value="JP">🇯🇵 Japan (¥)</option>
-            <option value="RU">🇷🇺 Russia (₽)</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Budget -->
-        <div>
-          <label for="budget" class="block text-sm font-medium text-[#61718a] mb-2">Budget Max</label>
-          <select id="budget" name="budget" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
-            <!-- Dynamically populated in script based on "Your Country" -->
-            <option value="low">Under $25 (Budget-friendly)</option>
-            <option value="medium" selected>$25 - $75 (Sweet Spot)</option>
-            <option value="high">$75 - $200 (Premium Care)</option>
-            <option value="premium">$200+ (Luxury & Milestones)</option>
-          </select>
-        </div>
-
-        <!-- Partner's Interest -->
-        <div>
-          <label for="interest" class="block text-sm font-medium text-[#61718a] mb-2">Partner's Interest</label>
-          <select id="interest" name="interest" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
-            <option value="art" selected>🎨 Art & Sketching</option>
-            <option value="gaming">🎮 Gaming</option>
-            <option value="music">🎵 Music & Podcasts</option>
-            <option value="cooking">🍳 Cooking & Food</option>
-            <option value="fitness">💪 Fitness & Wellness</option>
-            <option value="coffee">☕ Coffee & Tea</option>
-            <option value="reading">📚 Reading & E-books</option>
-            <option value="travel">✈️ Travel & Outdoors</option>
-          </select>
-        </div>
-
-        <!-- Occasion -->
-        <div>
-          <label for="occasion" class="block text-sm font-medium text-[#61718a] mb-2">Occasion</label>
-          <select id="occasion" name="occasion" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
-            <option value="anniversary" selected>Anniversary</option>
-            <option value="birthday">Birthday</option>
-            <option value="holiday">Holiday / Christmas</option>
-            <option value="just-because">Just Because</option>
-            <option value="first-meet">First Face-to-Face Meeting</option>
-          </select>
-        </div>
-
-        <!-- Relationship Duration -->
-        <div>
-          <label for="duration" class="block text-sm font-medium text-[#61718a] mb-2">Relationship Duration</label>
-          <select id="duration" name="duration" required class="focus-ring w-full bg-[#0d253d]/50 border border-white/10 rounded-md py-3 px-4 text-white font-light text-sm focus:border-[#533afd] transition-all">
-            <option value="new">Less than 6 Months (Fresh Spark)</option>
-            <option value="mid" selected>6 Months - 2 Years (LD Vets)</option>
-            <option value="long">2+ Years (Deeply Committed)</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="pt-4 flex justify-end">
-        <button type="submit" class="focus-ring w-full md:w-auto bg-[#533afd] text-white hover:bg-[#4434d4] transition-colors py-3 px-8 rounded-full font-medium text-sm flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-[#533afd]/20">
-          <span>Find Gift & Date Ideas</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-          </svg>
-        </button>
-      </div>
-    </form>
-  </div>
-
-  <!-- Loading State (hidden initially) -->
-  <div id="loader" class="hidden flex-col items-center justify-center py-20" role="status" aria-live="polite">
-    <div class="w-12 h-12 border-4 border-[#533afd]/20 border-t-[#533afd] rounded-full animate-spin"></div>
-    <p class="text-[#64748d] mt-6 font-light animate-pulse">Calculating timezone overlaps and logistics…</p>
-  </div>
-
-  <!-- Output Results Panel (hidden initially) -->
-  <div id="results-panel" class="hidden space-y-12 transition-all duration-700 opacity-0 transform translate-y-10">
+  <!-- Output Results Panel -->
+  <div id="results-panel" class={isStaticRoute ? "space-y-12" : "hidden space-y-12 transition-all duration-700 opacity-0 transform translate-y-10"}>
     
     <!-- Confidence score banner -->
     <div class="glow-border rounded-xl p-6 bg-gradient-to-r from-[#533afd]/10 to-[#ea2261]/5 flex flex-col md:flex-row items-center justify-between gap-4">
       <div>
         <h3 class="text-xl font-light text-white flex items-center gap-2">
           <span>Overall Match Confidence:</span>
-          <span id="match-pct" class="font-semibold text-green-400 tabular-nums">-</span>
-          <span id="match-stars" class="text-yellow-400 font-bold tracking-wider text-sm">-</span>
+          <span id="match-pct" class="font-semibold text-green-400 tabular-nums">{isStaticRoute ? `Overall Match ${score}%` : "-"}</span>
+          <span id="match-stars" class="text-yellow-400 font-bold tracking-wider text-sm">{isStaticRoute ? "⭐⭐⭐⭐⭐" : "-"}</span>
         </h3>
         <p class="text-[#64748d] text-xs font-light mt-1">
-          Based on: <span id="match-reasons" class="text-[#b9b9f9] font-medium">-</span>
+          Based on: <span id="match-reasons" class="text-[#b9b9f9] font-medium">{isStaticRoute ? matchReasons.join(", ") : "-"}</span>
         </p>
       </div>
       <div class="px-4 py-2 bg-white/5 rounded-full border border-white/10 text-xs text-neutral-300">
@@ -157,7 +391,7 @@
             <h3 class="text-xl font-light text-white">Dual-Country Shipping Advice</h3>
           </div>
           <p id="logistics-warning-text" class="text-[#64748d] text-sm font-light leading-relaxed">
-            Shipping physical items between selected countries can lead to high customs duties and delays.
+            {isStaticRoute ? <Fragment set:html={logisticsText} /> : "Shipping physical items between selected countries can lead to high customs duties and delays."}
           </p>
         </div>
         <div class="mt-6 p-4 rounded-lg bg-[#0d253d]/50 border border-white/5 text-xs text-[#b9b9f9] flex items-start gap-3">
@@ -186,18 +420,28 @@
           <div class="space-y-4">
             <div class="space-y-3">
               <div class="flex justify-between items-center text-xs">
-                <span id="your-tz-label" class="text-[#61718a] font-light">Your Country Time:</span>
-                <span id="your-tz-time" class="font-medium text-white tabular-nums">-</span>
+                <span id="your-tz-label" class="text-[#61718a] font-light">
+                  {isStaticRoute ? `${yourCountryObj.name} (${yourCountryObj.tzName}):` : "Your Country Time:"}
+                </span>
+                <span id="your-tz-time" class="font-medium text-white tabular-nums">
+                  {isStaticRoute ? staticTimeA : "-"}
+                </span>
               </div>
               <div class="flex justify-between items-center text-xs">
-                <span id="partner-tz-label" class="text-[#61718a] font-light">Partner Time:</span>
-                <span id="partner-tz-time" class="font-medium text-white tabular-nums">-</span>
+                <span id="partner-tz-label" class="text-[#61718a] font-light">
+                  {isStaticRoute ? `${partnerCountryObj.name} (${partnerCountryObj.tzName}):` : "Partner Time:"}
+                </span>
+                <span id="partner-tz-time" class="font-medium text-white tabular-nums">
+                  {isStaticRoute ? staticTimeB : "-"}
+                </span>
               </div>
             </div>
 
             <div class="border-t border-white/5 pt-3">
               <div class="text-[10px] uppercase tracking-wider text-[#61718a] mb-1 font-semibold font-display">Perfect For</div>
-              <div id="overlap-perfect-note" class="text-sm font-light text-green-400 leading-relaxed">-</div>
+              <div id="overlap-perfect-note" class="text-sm font-light text-green-400 leading-relaxed font-display">
+                {isStaticRoute ? `${staticOverlapNote} & Art lovers (Drawing evening together)` : "-"}
+              </div>
             </div>
           </div>
         </div>
@@ -220,14 +464,85 @@
       <div class="space-y-6">
         <!-- Best Recommendation Box (Large highlight) -->
         <div id="best-match-box">
-          <!-- Dynmically rendered -->
+          {isStaticRoute && (
+            <div class="glow-border rounded-xl p-8 bg-[#533afd]/5 border-[#533afd]/30 border relative overflow-hidden transition-all duration-300">
+              <div class="absolute top-0 right-0 bg-[#533afd] text-white text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-bl-lg">
+                Best Match Recommendation
+              </div>
+              <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                <div class="lg:col-span-2 h-48 bg-[#0d253d]/50 border border-white/5 rounded-lg flex items-center justify-center relative overflow-hidden">
+                  <div class="absolute inset-0 bg-gradient-to-tr from-[#533afd]/10 to-[#ea2261]/10 z-0"></div>
+                  <div class="relative z-10 flex flex-col items-center">
+                    <Fragment set:html={staticBestGift.imgSvg} />
+                  </div>
+                </div>
+                <div class="lg:col-span-3">
+                  <div class="flex flex-wrap items-center gap-2 mb-2">
+                    <h4 class="text-2xl font-light text-white leading-snug">
+                      {staticBestGift.title} {partnerCountryObj.currency}{staticBestGift.priceVal} {staticBestGift.stars} {staticBestGift.badge}
+                    </h4>
+                  </div>
+                  <p class="text-xs text-[#64748d] font-light leading-relaxed mb-4">
+                    {staticBestGift.desc}
+                  </p>
+                  <div class="border-t border-white/5 pt-4 mt-2">
+                    <h5 class="text-xs font-semibold text-white uppercase tracking-wider mb-2 font-display">Why it's the best:</h5>
+                    <ul class="text-xs text-[#61718a] space-y-1 list-disc list-inside">
+                      <li>Perfect fit for partner's interest in <strong class="text-white">art</strong>.</li>
+                      <li>Budget optimized at <strong class="text-white">{partnerCountryObj.currency}{staticBestGift.priceVal}</strong>.</li>
+                      <li>Bypasses international custom taxes via local delivery in <strong class="text-white">{partnerCountryObj.name}</strong>.</li>
+                    </ul>
+                    <div class="mt-6 flex justify-between items-center">
+                      <span class="text-[10px] text-[#533afd] font-semibold bg-[#533afd]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                        {staticBestGift.badge}
+                      </span>
+                      <a href={`${partnerCountryObj.amazon}${encodeURIComponent(staticBestGift.query)}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-white hover:text-[#533afd] transition-colors font-medium bg-[#533afd] hover:bg-[#4434d4] px-4 py-2 rounded-full shadow-md">
+                        <span>Get Best Gift</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         <!-- Alternatives Grid -->
         <div>
           <h4 class="text-xs font-semibold text-[#61718a] uppercase tracking-wider mb-4 font-display">Alternative Suggestions</h4>
           <div id="alternatives-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <!-- Dynamically rendered -->
+            {isStaticRoute && staticAlternatives.map(gift => (
+              <div class="glow-border rounded-xl p-6 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300">
+                <div>
+                  <div class="h-36 bg-[#0d253d]/30 border border-white/5 rounded-lg flex items-center justify-center relative overflow-hidden mb-4">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-white/5 to-[#533afd]/5 z-0"></div>
+                    <div class="relative z-10">
+                      <Fragment set:html={gift.imgSvg} />
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-start mb-1">
+                    <h4 class="text-base font-light text-white leading-tight">
+                      {gift.title} {partnerCountryObj.currency}{gift.priceVal} {gift.stars} {gift.badge}
+                    </h4>
+                  </div>
+                  <p class="text-xs text-[#64748d] font-light leading-relaxed mb-4">{gift.desc}</p>
+                </div>
+                <div class="border-t border-white/5 pt-4 mt-2 flex justify-between items-center">
+                  <span class="text-[9px] text-[#b9b9f9] font-medium bg-white/5 px-2 py-0.5 rounded">
+                    Alternative Option
+                  </span>
+                  <a href={`${partnerCountryObj.amazon}${encodeURIComponent(gift.query)}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-white hover:text-[#533afd] transition-colors font-medium">
+                    <span>Buy Link</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -243,13 +558,17 @@
           Virtual Dates / Apart
         </span>
         
-        <h4 class="text-2xl font-light text-white mt-6 font-display" id="virtual-date-title">-</h4>
-        <p class="text-[#64748d] text-sm mt-3 font-light leading-relaxed" id="virtual-date-desc">-</p>
+        <h4 class="text-2xl font-light text-white mt-6 font-display" id="virtual-date-title">
+          {isStaticRoute ? staticDate.virtual.title : "-"}
+        </h4>
+        <p class="text-[#64748d] text-sm mt-3 font-light leading-relaxed" id="virtual-date-desc">
+          {isStaticRoute ? staticDate.virtual.desc : "-"}
+        </p>
         
         <div class="mt-8 border-t border-white/5 pt-6">
           <h5 class="text-xs font-semibold text-white uppercase tracking-wider mb-3">How to set it up:</h5>
           <ol class="text-xs text-[#61718a] space-y-2 list-decimal list-inside" id="virtual-date-steps">
-            <!-- Steps dynamic -->
+            {isStaticRoute ? staticDate.virtual.steps.map(step => <li>{step}</li>) : null}
           </ol>
         </div>
       </div>
@@ -262,13 +581,17 @@
           Reunion / In-Person
         </span>
         
-        <h4 class="text-2xl font-light text-white mt-6 font-display" id="in-person-date-title">-</h4>
-        <p class="text-[#64748d] text-sm mt-3 font-light leading-relaxed" id="in-person-date-desc">-</p>
+        <h4 class="text-2xl font-light text-white mt-6 font-display" id="in-person-date-title">
+          {isStaticRoute ? staticDate.inPerson.title : "-"}
+        </h4>
+        <p class="text-[#64748d] text-sm mt-3 font-light leading-relaxed" id="in-person-date-desc">
+          {isStaticRoute ? staticDate.inPerson.desc : "-"}
+        </p>
         
         <div class="mt-8 border-t border-white/5 pt-6">
           <h5 class="text-xs font-semibold text-white uppercase tracking-wider mb-3">Making it special:</h5>
           <ul class="text-xs text-[#61718a] space-y-2 list-disc list-inside" id="in-person-date-steps">
-            <!-- Steps dynamic -->
+            {isStaticRoute ? staticDate.inPerson.steps.map(step => <li>{step}</li>) : null}
           </ul>
         </div>
       </div>
@@ -288,7 +611,9 @@
         
         <!-- Timeline Item 1 -->
         <div class="text-center w-full max-w-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-[#533afd]/50 transition-colors duration-300">
-          <div class="text-xs font-semibold text-[#b9b9f9] tabular-nums" id="timeline-time-1">-</div>
+          <div class="text-xs font-semibold text-[#b9b9f9] tabular-nums" id="timeline-time-1">
+            {isStaticRoute ? `${timelineTimes[0].a} (${yourCountryObj.name}) / ${timelineTimes[0].b} (${partnerCountryObj.name})` : "-"}
+          </div>
           <h5 class="text-base font-medium text-white mt-2">Buy & Send a digital gift</h5>
           <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed">Order surprise takeout to their address or send an instant e-gift card (e.g. food delivery or gaming subscription) to kick off the date night.</p>
         </div>
@@ -297,7 +622,9 @@
 
         <!-- Timeline Item 2 -->
         <div class="text-center w-full max-w-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/20 transition-colors duration-300">
-          <div class="text-xs font-semibold text-neutral-400 tabular-nums" id="timeline-time-2">-</div>
+          <div class="text-xs font-semibold text-neutral-400 tabular-nums" id="timeline-time-2">
+            {isStaticRoute ? `${timelineTimes[1].a} (${yourCountryObj.name}) / ${timelineTimes[1].b} (${partnerCountryObj.name})` : "-"}
+          </div>
           <h5 class="text-base font-medium text-white mt-2">Video call</h5>
           <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed">Hop on FaceTime, Zoom, or Discord. Put on your noise-cancelling headphones and catch up on your week.</p>
         </div>
@@ -306,25 +633,39 @@
 
         <!-- Timeline Item 3 -->
         <div class="text-center w-full max-w-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/20 transition-colors duration-300">
-          <div class="text-xs font-semibold text-neutral-400 tabular-nums" id="timeline-time-3">-</div>
-          <h5 class="text-base font-medium text-white mt-2 font-display" id="timeline-title-3">Cook together</h5>
-          <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed" id="timeline-desc-3">Start your kitchen race! Cook the same recipe side-by-side on camera and pour a glass of wine.</p>
+          <div class="text-xs font-semibold text-neutral-400 tabular-nums" id="timeline-time-3">
+            {isStaticRoute ? `${timelineTimes[2].a} (${yourCountryObj.name}) / ${timelineTimes[2].b} (${partnerCountryObj.name})` : "-"}
+          </div>
+          <h5 class="text-base font-medium text-white mt-2 font-display" id="timeline-title-3">
+            {isStaticRoute ? "Cook together / Shared Activity" : "Cook together"}
+          </h5>
+          <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed" id="timeline-desc-3">
+            {isStaticRoute ? `Start your shared Art-themed activity or cooking race! Put on video call on camera and connect.` : "Start your kitchen race! Cook the same recipe side-by-side on camera and pour a glass of wine."}
+          </p>
         </div>
 
         <div class="text-neutral-600 text-2xl font-bold flex items-center justify-center h-8">↓</div>
 
         <!-- Timeline Item 4 -->
         <div class="text-center w-full max-w-md bg-white/5 border border-white/10 rounded-xl p-5 hover:border-white/20 transition-colors duration-300">
-          <div class="text-xs font-semibold text-neutral-400 tabular-nums" id="timeline-time-4">-</div>
-          <h5 class="text-base font-medium text-white mt-2 font-display" id="timeline-title-4">Watch a movie</h5>
-          <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed" id="timeline-desc-4">Start a synchronized Teleparty or screenshare. Watch your chosen movie while keeping video/audio active.</p>
+          <div class="text-xs font-semibold text-neutral-400 tabular-nums" id="timeline-time-4">
+            {isStaticRoute ? `${timelineTimes[3].a} (${yourCountryObj.name}) / ${timelineTimes[3].b} (${partnerCountryObj.name})` : "-"}
+          </div>
+          <h5 class="text-base font-medium text-white mt-2 font-display" id="timeline-title-4">
+            {isStaticRoute ? `Watch a movie / ${staticDate.virtual.title}` : "Watch a movie"}
+          </h5>
+          <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed" id="timeline-desc-4">
+            {isStaticRoute ? `${staticDate.virtual.desc} Maintain screen sharing and video connection.` : "Start a synchronized Teleparty or screenshare. Watch your chosen movie while keeping video/audio active."}
+          </p>
         </div>
 
         <div class="text-neutral-600 text-2xl font-bold flex items-center justify-center h-8">↓</div>
 
         <!-- Timeline Item 5 -->
         <div class="text-center w-full max-w-md bg-gradient-to-b from-[#ea2261]/10 to-transparent border border-[#ea2261]/30 rounded-xl p-5 hover:border-[#ea2261]/60 transition-colors duration-300">
-          <div class="text-xs font-semibold text-pink-300 tabular-nums" id="timeline-time-5">-</div>
+          <div class="text-xs font-semibold text-pink-300 tabular-nums" id="timeline-time-5">
+            {isStaticRoute ? `${timelineTimes[4].a} (${yourCountryObj.name}) / ${timelineTimes[4].b} (${partnerCountryObj.name})` : "-"}
+          </div>
           <h5 class="text-base font-medium text-[#ea2261] mt-2 font-semibold">Open the gift together</h5>
           <p class="text-xs text-[#64748d] mt-2 font-light leading-relaxed">Unwrap the surprise. Discuss your relationship milestones, check your Bond Touch bracelet counts, and plan your next reunion flight.</p>
         </div>
@@ -542,6 +883,7 @@
   const yourCountrySelect = document.getElementById("your-country") as HTMLSelectElement;
 
   function updateBudgetCurrency() {
+    if (!yourCountrySelect || !budgetSelect) return;
     const country = yourCountrySelect.value;
     const tiers = budgetTiers[country] || budgetTiers.US;
     const currentVal = budgetSelect.value;
@@ -558,8 +900,10 @@
     });
   }
 
-  yourCountrySelect.addEventListener("change", updateBudgetCurrency);
-  updateBudgetCurrency();
+  if (yourCountrySelect) {
+    yourCountrySelect.addEventListener("change", updateBudgetCurrency);
+    updateBudgetCurrency();
+  }
 
   // Gift Database with interests fields and rating variables
   const giftsDb = [
@@ -927,26 +1271,28 @@
   const loader = document.getElementById("loader");
   const resultsPanel = document.getElementById("results-panel");
   const generatorCard = document.getElementById("generator-card");
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    // Show Loader
-    generatorCard.classList.add("opacity-50", "pointer-events-none");
-    resultsPanel.classList.add("hidden", "opacity-0");
-    loader.classList.remove("hidden");
-
-    setTimeout(() => {
-      loader.classList.add("hidden");
-      generatorCard.classList.remove("opacity-50", "pointer-events-none");
-      resultsPanel.classList.remove("hidden");
+ 
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+ 
+      // Show Loader
+      generatorCard.classList.add("opacity-50", "pointer-events-none");
+      resultsPanel.classList.add("hidden", "opacity-0");
+      loader.classList.remove("hidden");
+ 
       setTimeout(() => {
-        resultsPanel.classList.remove("opacity-0", "translate-y-10");
-      }, 50);
-
-      generateResults();
-    }, 1200);
-  });
+        loader.classList.add("hidden");
+        generatorCard.classList.remove("opacity-50", "pointer-events-none");
+        resultsPanel.classList.remove("hidden");
+        setTimeout(() => {
+          resultsPanel.classList.remove("opacity-0", "translate-y-10");
+        }, 50);
+ 
+        generateResults();
+      }, 1200);
+    });
+  }
 
   // Time shifting helper (adds minutes to AM/PM time strings)
   function addMinutesToTime(timeStr, minsToAdd) {
@@ -1229,11 +1575,13 @@
     const defaultDateStr = defaultDate.toISOString().split('T')[0];
     
     const input = document.getElementById("reunion-date-input") as HTMLInputElement;
+    if (!input) return;
     input.value = defaultDateStr;
 
     startTimer(defaultDate.getTime());
 
     const btn = document.getElementById("set-reunion-btn");
+    if (!btn) return;
     btn.addEventListener("click", () => {
       const selectedDate = new Date(input.value);
       if (!isNaN(selectedDate.getTime())) {
@@ -1277,8 +1625,9 @@
     countdownInterval = setInterval(update, 1000);
   }
 
-  // Pre-fill countries from URL parameter and auto-submit
+  // Pre-fill countries from URL parameter
   function checkUrlForCountries() {
+    if (!form || !yourCountrySelect) return;
     const path = window.location.pathname; // e.g. /gifts/us-to-in
     const match = path.match(/\/gifts\/([A-Za-z]{2})-to-([A-Za-z]{2})/i);
     if (match) {
@@ -1290,12 +1639,7 @@
         updateBudgetCurrency();
         
         const partnerSelect = document.getElementById("partner-country") as HTMLSelectElement;
-        partnerSelect.value = partnerCode;
-        
-        // Auto submit
-        setTimeout(() => {
-          form.dispatchEvent(new Event("submit"));
-        }, 100);
+        if (partnerSelect) partnerSelect.value = partnerCode;
       }
     }
   }

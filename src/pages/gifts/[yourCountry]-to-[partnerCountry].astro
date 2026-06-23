@@ -43,6 +43,21 @@ const partnerCountryCode = partnerCountry.toUpperCase();
 const countryA = countriesMap[yourCountry];
 const countryB = countriesMap[partnerCountry];
 
+// Generate all 90 long-distance couples routes for SEO directory
+const countriesList = Object.keys(countriesMap);
+const allCoupleRoutes = [];
+for (const fromC of countriesList) {
+  for (const toC of countriesList) {
+    if (fromC !== toC) {
+      allCoupleRoutes.push({
+        fromCode: fromC.toUpperCase(),
+        toCode: toC.toUpperCase(),
+        path: `/gifts/${fromC}-to-${toC}`
+      });
+    }
+  }
+}
+
 const titleText = `Gift Ideas for ${countryA.name} → ${countryB.name} Couples`;
 const seoDescription = `Explore shipping-optimized gifts, virtual date nights, and timezone call times for couples in ${countryA.name} and ${countryB.name}. Banish distance with Will Meet Soon.`;
 
@@ -232,139 +247,14 @@ const tzDifferenceHours = Math.abs(countryA.tzOffset - countryB.tzOffset);
         <p class="text-base md:text-lg font-light text-[#64748d] max-w-2xl mx-auto mt-4 leading-relaxed text-pretty">
           A dedicated portal for long-distance relationships between <strong>{countryA.name}</strong> and <strong>{countryB.name}</strong>. Get customs-optimized gift recommendations, timezone overlap hours, and interactive virtual date ideas.
         </p>
-      </div>
-
-      <!-- Static content that Google will index on this specific page -->
-      <section class="w-full max-w-4xl mx-auto px-6 mb-12 grid grid-cols-1 md:grid-cols-2 gap-8 border-b border-white/5 pb-12">
-        
-        <!-- Best Anniversary Gifts -->
-        <div class="space-y-4">
-          <h2 class="text-xl font-light text-white">Best Anniversary Gifts</h2>
-          <p class="text-xs text-[#64748d] font-light leading-relaxed">
-            Anniversaries are major milestones for long-distance couples. To celebrate your special connection between <strong>{countryA.name}</strong> and <strong>{countryB.name}</strong>, we recommend ordering digital gifts or locally-fulfilled products. Sourcing within <strong>{countryB.name}</strong> avoids customs delays (which can last weeks) and steep import duty taxes (which can range up to 40%).
-          </p>
-          <ul class="text-xs text-[#61718a] space-y-2 list-none">
-            <li class="flex items-center gap-2">
-              <span class="text-[#533afd]">&bull;</span>
-              <span><strong class="text-white">Custom Star Map Poster</strong> ({countryB.currency}45) &ndash; ⭐⭐⭐⭐⭐ Printed and shipped locally within {countryB.name}.</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="text-[#533afd]">&bull;</span>
-              <span><strong class="text-white">Bond Touch bracelets</strong> ({countryB.currency}108) &ndash; ⭐⭐⭐⭐⭐ Stay in touch with real-time vibrations.</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <span class="text-[#533afd]">&bull;</span>
-              <span><strong class="text-white">Virtual Cooking Class</strong> ({countryB.currency}39) &ndash; ⭐⭐⭐⭐⭐ High-fidelity online interactive dinner.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Timezone -->
-        <div class="space-y-4">
-          <h2 class="text-xl font-light text-white">Timezone</h2>
-          <p class="text-xs text-[#64748d] font-light leading-relaxed">
-            Coordinating schedules between <strong>{countryA.name}</strong> ({countryA.tzName}) and <strong>{countryB.name}</strong> ({countryB.tzName}) calls for synchronized check-ins. The time difference is <strong class="text-white">{tzDifferenceHours} hours</strong>.
-          </p>
-          <div class="p-4 rounded-lg bg-[#0d253d]/30 border border-white/5 space-y-2 text-xs">
-            <div class="flex justify-between items-center">
-              <span class="text-[#61718a] font-light">{countryA.name} ({countryA.tzName}):</span>
-              <span class="font-medium text-white">{staticTimeA}</span>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="text-[#61718a] font-light">{countryB.name} ({countryB.tzName}):</span>
-              <span class="font-medium text-white">{staticTimeB}</span>
-            </div>
-            <div class="border-t border-white/5 pt-2 mt-2">
-              <span class="text-[10px] uppercase font-semibold text-[#533afd] block font-display">Best Call Window</span>
-              <span class="text-green-400 font-light mt-0.5 block">{staticOverlapNote}</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Shipping Advice -->
-        <div class="space-y-4">
-          <h2 class="text-xl font-light text-white">Shipping Advice</h2>
-          <p class="text-xs text-[#64748d] font-light leading-relaxed">
-            Sending a package directly from <strong>{countryA.name}</strong> to <strong>{countryB.name}</strong> is rarely the best option due to complex customs clearance checks and heavy duties.
-          </p>
-          <p class="text-xs text-[#64748d] font-light leading-relaxed">
-            <strong class="text-white">Shipping Tip:</strong> Avoid cross-border courier routes completely. Log in to localized versions of e-commerce sites (e.g. Amazon {countryB.name}) and order directly to your partner's address using their local currency ({countryB.currencyName} / {countryB.currency}).
-          </p>
-        </div>
-
-        <!-- Virtual Dates -->
-        <div class="space-y-4">
-          <h2 class="text-xl font-light text-white">Virtual Dates</h2>
-          <p class="text-xs text-[#64748d] font-light leading-relaxed">
-            Maintain relationship intimacy across borders with synchronized remote date nights. Great virtual dates for couples in <strong>{countryA.name}</strong> and <strong>{countryB.name}</strong> include:
-          </p>
-          <ul class="text-xs text-[#61718a] space-y-2 list-none">
-            <li class="flex items-start gap-2">
-              <span class="text-[#ea2261] mt-0.5">&rarr;</span>
-              <span><strong class="text-white">Live Cooking Challenge:</strong> Brew coffee or cook a gourmet recipe side-by-side on camera.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-[#ea2261] mt-0.5">&rarr;</span>
-              <span><strong class="text-white">Co-op Video Gaming:</strong> Cooperate to solve puzzle levels while on Discord voice calls.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-[#ea2261] mt-0.5">&rarr;</span>
-              <span><strong class="text-white">Silent Book Club:</strong> Keep call active silently as you read chapters, then discuss plot points together.</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Static Arrow Timeline representation for Google crawling indexability -->
-      <section class="w-full max-w-xl mx-auto border border-white/10 rounded-xl p-8 bg-white/5 relative z-10 mb-16">
-        <h2 class="text-xl font-light text-white text-center mb-6 font-display">Sample Date Night Timeline</h2>
-        <div class="flex flex-col items-center space-y-4">
-          
-          <div class="text-center">
-            <div class="text-xs font-semibold text-[#b9b9f9] tabular-nums">{staticTimeBStart} ({countryB.name}) / {staticTimeAStart} ({countryA.name})</div>
-            <div class="text-sm font-medium text-white mt-1">Buy a digital gift</div>
-          </div>
-          
-          <div class="text-[#533afd] text-xl font-bold">↓</div>
-
-          <div class="text-center">
-            <div class="text-xs font-semibold text-neutral-400 tabular-nums">{staticTimeB30} ({countryB.name}) / {staticTimeA30} ({countryA.name})</div>
-            <div class="text-sm font-medium text-white mt-1">Video call</div>
-          </div>
-
-          <div class="text-[#533afd] text-xl font-bold">↓</div>
-
-          <div class="text-center">
-            <div class="text-xs font-semibold text-neutral-400 tabular-nums">{staticTimeB45} ({countryB.name}) / {staticTimeA45} ({countryA.name})</div>
-            <div class="text-sm font-medium text-white mt-1">Cook together</div>
-          </div>
-
-          <div class="text-[#533afd] text-xl font-bold">↓</div>
-
-          <div class="text-center">
-            <div class="text-xs font-semibold text-neutral-400 tabular-nums">{staticTimeB90} ({countryB.name}) / {staticTimeA90} ({countryA.name})</div>
-            <div class="text-sm font-medium text-white mt-1">Watch a movie</div>
-          </div>
-
-          <div class="text-[#533afd] text-xl font-bold">↓</div>
-
-          <div class="text-center">
-            <div class="text-xs font-semibold text-pink-300 tabular-nums">{staticTimeB210} ({countryB.name}) / {staticTimeA210} ({countryA.name})</div>
-            <div class="text-sm font-medium text-[#ea2261] mt-1 font-semibold">Open the gift together</div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- Embedded Gifting Engine (Pre-populates countries and dynamically calculates timeline/results on load) -->
-      <GiftingEngine />
-
+      </div>      <!-- Render the static dashboard directly -->
+      <GiftingEngine isStaticRoute={true} yourCountry={yourCountry} partnerCountry={partnerCountry} />
     </main>
 
     <!-- Footer -->
     <footer class="border-t border-white/5 py-12 bg-[#090a12]/80 relative z-10">
-      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div class="md:col-span-2">
+      <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
           <div class="flex items-center gap-2 mb-4">
             <span class="text-xs font-semibold tracking-wider text-white uppercase font-display">Will Meet Soon</span>
           </div>
@@ -374,21 +264,33 @@ const tzDifferenceHours = Math.abs(countryA.tzOffset - countryB.tzOffset);
         </div>
         
         <div>
-          <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-4">Dynamic Routes</h4>
+          <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-4 font-display">Resources</h4>
           <ul class="space-y-2 text-xs text-[#61718a] font-light">
-            <li><a href="/gifts/us-to-in" class="hover:text-white transition-colors">USA to India</a></li>
-            <li><a href="/gifts/gb-to-us" class="hover:text-white transition-colors">UK to USA</a></li>
-            <li><a href="/gifts/in-to-ca" class="hover:text-white transition-colors">India to Canada</a></li>
+            <li><a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Amazon Logistics</a></li>
+            <li><a href="https://www.paired.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Paired Couples App</a></li>
+            <li><a href="https://www.cozymeal.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Cozymeal Cooking</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-4">Site Portal</h4>
+          <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-4 font-display">Site Links</h4>
           <ul class="space-y-2 text-xs text-[#61718a] font-light">
             <li><a href="/" class="hover:text-white transition-colors">Home Planner</a></li>
             <li><span class="cursor-default hover:text-white transition-colors">Privacy Policy</span></li>
             <li><a href="https://willmeetsoon.com" class="hover:text-white transition-colors">willmeetsoon.com</a></li>
           </ul>
+        </div>
+      </div>
+
+      <!-- SEO directory of all 90 routes -->
+      <div class="max-w-6xl mx-auto px-6 mt-12 pt-12 border-t border-white/5">
+        <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-6 font-display">Explore Long Distance Portals</h4>
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-x-4 gap-y-3 text-[10px] text-[#61718a] font-light">
+          {allCoupleRoutes.map(route => (
+            <a href={route.path} class="hover:text-white transition-colors whitespace-nowrap">
+              {route.fromCode} → {route.toCode} Couples
+            </a>
+          ))}
         </div>
       </div>
 
