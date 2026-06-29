@@ -13,6 +13,7 @@ export interface Gift {
   imgSvg: string;
   countries: string[];
   durations: string[];
+  stores: string[];
 }
 
 const giftModules = import.meta.glob('./gifts/*.json', { eager: true });

@@ -13,7 +13,7 @@ export interface GiftRecommendation {
   badge: string;
   query: string;
   imgSvg: string;
-  buyLink: string;
+  stores: string[];
   isBest: boolean;
   whyBestReasons?: string[];
 }
@@ -193,7 +193,6 @@ export function getRecommendations(
 
   const bestPriceVal = bestGift.price[budget] || Object.values(bestGift.price)[0];
   const bestLocalPrice = `${partnerCountry.currency}${bestPriceVal}`;
-  const bestBuyLink = `${partnerCountry.amazon}${encodeURIComponent(bestGift.query)}`;
 
   const gifts: GiftRecommendation[] = [
     {
@@ -206,7 +205,7 @@ export function getRecommendations(
       badge: bestGift.badge,
       query: bestGift.query,
       imgSvg: bestGift.imgSvg,
-      buyLink: bestBuyLink,
+      stores: bestGift.stores || ["Amazon"],
       isBest: true,
       whyBestReasons: [
         bestGift.interests.includes(interest) ? `Perfect fit for partner's interest in <strong class="text-white">${interest}</strong>.` : `Matches partner's profile interests.`,
@@ -219,7 +218,6 @@ export function getRecommendations(
   alternativesToRender.forEach(gift => {
     const altPriceVal = gift.price[budget] || Object.values(gift.price)[0];
     const altLocalPrice = `${partnerCountry.currency}${altPriceVal}`;
-    const altBuyLink = `${partnerCountry.amazon}${encodeURIComponent(gift.query)}`;
     gifts.push({
       id: gift.id,
       title: gift.title,
@@ -230,7 +228,7 @@ export function getRecommendations(
       badge: gift.badge,
       query: gift.query,
       imgSvg: gift.imgSvg,
-      buyLink: altBuyLink,
+      stores: gift.stores || ["Amazon"],
       isBest: false
     });
   });

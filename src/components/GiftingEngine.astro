@@ -294,12 +294,14 @@ const staticDate = {
                       <span class="text-[10px] text-[#533afd] font-semibold bg-[#533afd]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                         {staticBestGift.badge}
                       </span>
-                      <a href={`${partnerCountryObj.amazon}${encodeURIComponent(staticBestGift.query)}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-white hover:text-[#533afd] transition-colors font-medium bg-[#533afd] hover:bg-[#4434d4] px-4 py-2 rounded-full shadow-md">
-                        <span>Get Best Gift</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                        </svg>
-                      </a>
+                      <div class="flex items-center gap-2">
+                        <span class="text-xs text-[#61718a]">Available at:</span>
+                        {staticBestGift.stores.map(store => (
+                          <span class="text-xs text-white bg-white/5 border border-white/10 px-2.5 py-1 rounded">
+                            {store}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -332,12 +334,14 @@ const staticDate = {
                   <span class="text-[9px] text-[#b9b9f9] font-medium bg-white/5 px-2 py-0.5 rounded">
                     Alternative Option
                   </span>
-                  <a href={`${partnerCountryObj.amazon}${encodeURIComponent(gift.query)}`} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-white hover:text-[#533afd] transition-colors font-medium">
-                    <span>Buy Link</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                    </svg>
-                  </a>
+                  <div class="flex items-center gap-1.5 flex-wrap">
+                    <span class="text-[10px] text-[#61718a]">Stores:</span>
+                    {gift.stores.map(store => (
+                      <span class="text-[10px] text-white bg-white/5 border border-white/10 px-2 py-0.5 rounded">
+                        {store}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             ))}
@@ -666,12 +670,14 @@ const staticDate = {
                 <span class="text-[10px] text-[#533afd] font-semibold bg-[#533afd]/10 px-2.5 py-1 rounded-full uppercase tracking-wider">
                   ${bestGift.badge}
                 </span>
-                <a href="${bestGift.buyLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-white hover:text-[#533afd] transition-colors font-medium bg-[#533afd] hover:bg-[#4434d4] px-4 py-2 rounded-full shadow-md">
-                  <span>Get Best Gift</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-                  </svg>
-                </a>
+                <div class="flex items-center gap-2">
+                  <span class="text-xs text-[#61718a]">Available at:</span>
+                  ${(bestGift.stores || []).map(store => `
+                    <span class="text-xs text-white bg-white/5 border border-white/10 px-2.5 py-1 rounded">
+                      ${store}
+                    </span>
+                  `).join("")}
+                </div>
               </div>
             </div>
           </div>
@@ -700,12 +706,14 @@ const staticDate = {
           <span class="text-[9px] text-[#b9b9f9] font-medium bg-white/5 px-2 py-0.5 rounded">
             Alternative Option
           </span>
-          <a href="${gift.buyLink}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs text-white hover:text-[#533afd] transition-colors font-medium">
-            <span>Buy Link</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-3.5 h-3.5" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
-            </svg>
-          </a>
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="text-[10px] text-[#61718a]">Stores:</span>
+            ${(gift.stores || []).map(store => `
+              <span class="text-[10px] text-white bg-white/5 border border-white/10 px-2 py-0.5 rounded">
+                ${store}
+              </span>
+            `).join("")}
+          </div>
         </div>
       `;
       alternativesGrid.appendChild(card);

@@ -5,20 +5,19 @@ export interface Country {
   currency: string;
   currencyName?: string;
   flag?: string;
-  amazon: string;
 }
 
 export const countries: Record<string, Country> = {
-  US: { name: "United States", tzOffset: -5, tzName: "EST", currency: "$", currencyName: "USD", flag: "🇺🇸", amazon: "https://www.amazon.com/s?k=" },
-  IN: { name: "India", tzOffset: 5.5, tzName: "IST", currency: "₹", currencyName: "INR", flag: "🇮🇳", amazon: "https://www.amazon.in/s?k=" },
-  CA: { name: "Canada", tzOffset: -5, tzName: "EST", currency: "C$", currencyName: "CAD", flag: "🇨🇦", amazon: "https://www.amazon.ca/s?k=" },
-  GB: { name: "United Kingdom", tzOffset: 0, tzName: "GMT", currency: "£", currencyName: "GBP", flag: "🇬🇧", amazon: "https://www.amazon.co.uk/s?k=" },
-  AU: { name: "Australia", tzOffset: 10, tzName: "AEST", currency: "A$", currencyName: "AUD", flag: "🇦🇺", amazon: "https://www.amazon.com.au/s?k=" },
-  SG: { name: "Singapore", tzOffset: 8, tzName: "SGT", currency: "S$", currencyName: "SGD", flag: "🇸🇬", amazon: "https://www.amazon.sg/s?k=" },
-  DE: { name: "Germany", tzOffset: 1, tzName: "CET", currency: "€", currencyName: "EUR", flag: "🇩🇪", amazon: "https://www.amazon.de/s?k=" },
-  FR: { name: "France", tzOffset: 1, tzName: "CET", currency: "€", currencyName: "EUR", flag: "🇫🇷", amazon: "https://www.amazon.fr/s?k=" },
-  JP: { name: "Japan", tzOffset: 9, tzName: "JST", currency: "¥", currencyName: "JPY", flag: "🇯🇵", amazon: "https://www.amazon.co.jp/s?k=" },
-  RU: { name: "Russia", tzOffset: 3, tzName: "MSK", currency: "₽", currencyName: "RUB", flag: "🇷🇺", amazon: "https://www.amazon.ru/s?k=" }
+  US: { name: "United States", tzOffset: -5, tzName: "EST", currency: "$", currencyName: "USD", flag: "🇺🇸" },
+  IN: { name: "India", tzOffset: 5.5, tzName: "IST", currency: "₹", currencyName: "INR", flag: "🇮🇳" },
+  CA: { name: "Canada", tzOffset: -5, tzName: "EST", currency: "C$", currencyName: "CAD", flag: "🇨🇦" },
+  GB: { name: "United Kingdom", tzOffset: 0, tzName: "GMT", currency: "£", currencyName: "GBP", flag: "🇬🇧" },
+  AU: { name: "Australia", tzOffset: 10, tzName: "AEST", currency: "A$", currencyName: "AUD", flag: "🇦🇺" },
+  SG: { name: "Singapore", tzOffset: 8, tzName: "SGT", currency: "S$", currencyName: "SGD", flag: "🇸🇬" },
+  DE: { name: "Germany", tzOffset: 1, tzName: "CET", currency: "€", currencyName: "EUR", flag: "🇩🇪" },
+  FR: { name: "France", tzOffset: 1, tzName: "CET", currency: "€", currencyName: "EUR", flag: "🇫🇷" },
+  JP: { name: "Japan", tzOffset: 9, tzName: "JST", currency: "¥", currencyName: "JPY", flag: "🇯🇵" },
+  RU: { name: "Russia", tzOffset: 3, tzName: "MSK", currency: "₽", currencyName: "RUB", flag: "🇷🇺" }
 };
 
 export interface TzOverlap {

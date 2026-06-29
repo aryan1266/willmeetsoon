@@ -4,499 +4,1424 @@
     "title": "Amazon Kindle Paperwhite",
     "description": "Thin, lightweight, and waterproof. Perfect for reading their favorite books or sharing e-book selections together on calls.",
     "desc": "Thin, lightweight, and waterproof. Perfect for reading their favorite books or sharing e-book selections together on calls.",
-    "price": { "low": 139, "medium": 139, "high": 139, "premium": 189 },
+    "price": {
+      "low": 139,
+      "medium": 139,
+      "high": 139,
+      "premium": 189
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "anniversary", "holiday"],
-    "interests": ["reading"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "holiday"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Kindle Paperwhite waterproof",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-purple-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["high", "premium"],
-    "durations": ["high", "premium"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "high",
+      "premium"
+    ],
+    "durations": [
+      "high",
+      "premium"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "audible-membership",
     "title": "Audible Premium Plus Gift (3 Months)",
     "description": "3 months of audiobooks credit. Listen to the same audiobook and discuss your thoughts on your next virtual date.",
     "desc": "3 months of audiobooks credit. Listen to the same audiobook and discuss your thoughts on your next virtual date.",
-    "price": { "low": 45, "medium": 45, "high": 45, "premium": 45 },
+    "price": {
+      "low": 45,
+      "medium": 45,
+      "high": 45,
+      "premium": 45
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday", "just-because"],
-    "interests": ["reading"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday",
+      "just-because"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "digital",
     "type": "digital",
     "query": "Audible gift membership 3 months",
     "badge": "Digital delivery",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-orange-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 19V6l12-3v13M9 10l12-3\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "neck-reading-light",
     "title": "Glocusent LED Neck Reading Light",
     "description": "A hands-free, comfortable neck light with 3 colors and 6 brightness levels. Read in bed without disturbing anyone.",
     "desc": "A hands-free, comfortable neck light with 3 colors and 6 brightness levels. Read in bed without disturbing anyone.",
-    "price": { "low": 20, "medium": 20, "high": 20, "premium": 20 },
+    "price": {
+      "low": 20,
+      "medium": 20,
+      "high": 20,
+      "premium": 20
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Glocusent LED neck reading light hands free",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 18v3m0 0h.01m-9.01-3h18\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "embossed-book-stamp",
     "title": "Custom Library Book Embosser Stamp",
     "description": "A personalized hand embosser to print 'From the Library of' with their name on their favorite book collection.",
     "desc": "A personalized hand embosser to print 'From the Library of' with their name on their favorite book collection.",
-    "price": { "low": 26, "medium": 26, "high": 26, "premium": 26 },
+    "price": {
+      "low": 26,
+      "medium": 26,
+      "high": 26,
+      "premium": 26
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "holiday"],
-    "interests": ["reading", "art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "holiday"
+    ],
+    "interests": [
+      "reading",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "custom book embosser personalized library stamp",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.53 16.122l.188.188a1.5 1.5 0 11-2.122 2.122l-.188-.188\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "wooden-page-holder",
     "title": "Handmade Wooden Book Page Holder",
     "description": "A polished wooden thumb ring page spreader. Holds pages open with one hand while drinking coffee or calling.",
     "desc": "Handmade wooden thumb ring page spreader. Holds pages open with one hand while drinking coffee or calling.",
-    "price": { "low": 12, "medium": 12, "high": 12, "premium": 12 },
+    "price": {
+      "low": 12,
+      "medium": 12,
+      "high": 12,
+      "premium": 12
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading", "coffee"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading",
+      "coffee"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "wooden book page holder thumb ring",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-amber-700\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "scratch-book-poster",
     "title": "100 Books Scratch-Off Poster",
     "description": "A beautiful wall poster containing 100 literary classics to scratch off as you read. Perfect for reading milestones.",
     "desc": "A beautiful wall poster containing 100 literary classics to scratch off as you read. Perfect for reading milestones.",
-    "price": { "low": 18, "medium": 18, "high": 18, "premium": 18 },
+    "price": {
+      "low": 18,
+      "medium": 18,
+      "high": 18,
+      "premium": 18
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["reading", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "reading",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "100 books scratch off bucket list poster",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-pink-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M2.25 15.75l5.159-5.159m-1.5-1.5l1.409-1.409\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "invisible-bookshelves",
     "title": "Floating Invisible Metal Bookshelves",
     "description": "A set of 3 heavy-duty metal bookshelves that become invisible behind a stack of books, creating a floating library look.",
     "desc": "A set of 3 heavy-duty metal bookshelves that become invisible behind a stack of books, creating a floating library look.",
-    "price": { "low": 25, "medium": 25, "high": 25, "premium": 25 },
+    "price": {
+      "low": 25,
+      "medium": 25,
+      "high": 25,
+      "premium": 25
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["reading", "art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "reading",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "floating invisible metal bookshelves set of 3",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-slate-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M5.25 7.5A2.25 2.25 0 017.5 5.25h9\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "acrylic-book-weight",
     "title": "Transparent Acrylic Book Weight",
     "description": "A clear acrylic page holder that lies flat on a book. Keeps pages open hands-free while reading and taking notes.",
     "desc": "A clear acrylic page holder that lies flat on a book. Keeps pages open hands-free while reading and taking notes.",
-    "price": { "low": 15, "medium": 15, "high": 15, "premium": 15 },
+    "price": {
+      "low": 15,
+      "medium": 15,
+      "high": 15,
+      "premium": 15
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "clear acrylic book weight page holder flat",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-cyan-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "book-scented-candle",
     "title": "Homesick Old Books Scented Candle",
     "description": "Specially formulated soy wax candle with notes of sweet paper, leather, and wood shavings. Smells like a cozy vintage library.",
     "desc": "Specially formulated soy wax candle with notes of sweet paper, leather, and wood shavings. Smells like a cozy vintage library.",
-    "price": { "low": 34, "medium": 34, "high": 34, "premium": 34 },
+    "price": {
+      "low": 34,
+      "medium": 34,
+      "high": 34,
+      "premium": 34
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading", "coffee"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading",
+      "coffee"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Homesick library scented candle old books",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-amber-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.362 5.214A8.252 8.252 0 0112 21\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "leather-bookmark",
     "title": "Personalized Leather Bookmark",
     "description": "A hand-carved full grain leather bookmark, customized with initials and a heart. A durable companion to their reading.",
     "desc": "A hand-carved full grain leather bookmark, customized with initials and a heart. A durable companion to their reading.",
-    "price": { "low": 14, "medium": 14, "high": 14, "premium": 14 },
+    "price": {
+      "low": 14,
+      "medium": 14,
+      "high": 14,
+      "premium": 14
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["anniversary", "birthday", "just-because"],
-    "interests": ["reading", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "personalized leather bookmark custom engraved heart",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-700\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "reading-pillow",
     "title": "Husband Reading Pillow with Arm Support",
     "description": "A shredded memory foam support pillow. Provides ergonomic posture support while reading or calling on your bed or floor.",
     "desc": "A shredded memory foam support pillow. Provides ergonomic posture support while reading or calling on your bed or floor.",
-    "price": { "low": 39, "medium": 39, "high": 39, "premium": 39 },
+    "price": {
+      "low": 39,
+      "medium": 39,
+      "high": 39,
+      "premium": 39
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["reading"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "husband reading pillow memory foam arm support",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-purple-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "kindle-remote-tuner",
     "title": "Kindle Remote Page Turner Bundle",
     "description": "Includes a Bluetooth finger ring remote control and a screen clip-on page-turner. Turn pages on your Kindle without lifting a hand.",
     "desc": "Includes a Bluetooth finger ring remote control and a screen clip-on page-turner. Turn pages on your Kindle without lifting a hand.",
-    "price": { "low": 29, "medium": 29, "high": 29, "premium": 29 },
+    "price": {
+      "low": 29,
+      "medium": 29,
+      "high": 29,
+      "premium": 29
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading", "gaming"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "bluetooth remote page turner for Kindle paperwhite",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "clip-on-reading-light",
     "title": "Rechargeable Clip-on Book Light",
     "description": "An ultra-lightweight book light with amber mode to block 99.99% of blue light, protecting eyes during nighttime reading.",
     "desc": "An ultra-lightweight book light with amber mode to block 99.99% of blue light, protecting eyes during nighttime reading.",
-    "price": { "low": 14, "medium": 14, "high": 14, "premium": 14 },
+    "price": {
+      "low": 14,
+      "medium": 14,
+      "high": 14,
+      "premium": 14
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "rechargeable clip on book light amber eye protection",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 18v3m0 0h.01\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "book-couch-stand",
     "title": "The Book Couch Tablet Stand",
     "description": "A soft plush cushion stand designed to hold books, tablets, or e-readers securely at a perfect viewing angle on the sofa or bed.",
     "desc": "A soft plush cushion stand designed to hold books, tablets, or e-readers securely at a perfect viewing angle on the sofa or bed.",
-    "price": { "low": 28, "medium": 28, "high": 28, "premium": 28 },
+    "price": {
+      "low": 28,
+      "medium": 28,
+      "high": 28,
+      "premium": 28
+    },
     "budget": "medium",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Book Couch tablet stand e-reader cushion holder",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-indigo-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "ex-libris-stickers",
     "title": "Ex Libris Custom Bookplate Stickers",
     "description": "A pack of 50 adhesive bookplates with beautiful vintage floral designs. Personalized with their library name.",
     "desc": "A pack of 50 adhesive bookplates with beautiful vintage floral designs. Personalized with their library name.",
-    "price": { "low": 15, "medium": 15, "high": 15, "premium": 15 },
+    "price": {
+      "low": 15,
+      "medium": 15,
+      "high": 15,
+      "premium": 15
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary"],
-    "interests": ["reading", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary"
+    ],
+    "interests": [
+      "reading",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "personalized ex libris bookplates stickers pack of 50",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-rose-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 8.25c0-2.485-2.099-4.5-4.688-4.5\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "luminous-feather-bookmark",
     "title": "Luminous Metal Feather Bookmark",
     "description": "A vintage metal bookmark shaped like a feather with a glow-in-the-dark 3D dragonfly pendant bead.",
     "desc": "A vintage metal bookmark shaped like a feather with a glow-in-the-dark 3D dragonfly pendant bead.",
-    "price": { "low": 10, "medium": 10, "high": 10, "premium": 10 },
+    "price": {
+      "low": 10,
+      "medium": 10,
+      "high": 10,
+      "premium": 10
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "glow in the dark metal feather bookmark dragonfly",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.232 5.232l3.536 3.536M9 11l3 3\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "literary-quote-mug",
     "title": "First Lines Literature Coffee Mug",
     "description": "A premium ceramic coffee mug printed with famous opening lines from the world's greatest literature classics.",
     "desc": "A premium ceramic coffee mug printed with famous opening lines from the world's greatest literature classics.",
-    "price": { "low": 16, "medium": 16, "high": 16, "premium": 16 },
+    "price": {
+      "low": 16,
+      "medium": 16,
+      "high": 16,
+      "premium": 16
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading", "coffee"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading",
+      "coffee"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "famous first lines of literature coffee mug",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-orange-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.75 3.104v1.244c0 .41-.195.794-.527 1.036L4.25 9.098a1.5 1.5 0 00-.5 1.13v8.522c0 .828.672 1.5 1.5 1.5h13.5\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "canvas-book-tote",
     "title": "Canvas Library Books Tote Bag",
     "description": "Heavy-duty organic cotton tote bag featuring interior pockets. Holds several hardcover books for trips to libraries.",
     "desc": "Heavy-duty organic cotton tote bag featuring interior pockets. Holds several hardcover books for trips to libraries.",
-    "price": { "low": 20, "medium": 20, "high": 20, "premium": 20 },
+    "price": {
+      "low": 20,
+      "medium": 20,
+      "high": 20,
+      "premium": 20
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "organic cotton library book tote bag pockets",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-violet-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "diy-book-nook",
     "title": "DIY Wooden Book Nook Shelf Insert",
     "description": "Assemble a gorgeous, miniature 3D scene that slots between books on a shelf, complete with tiny furniture and LED lights.",
     "desc": "Assemble a gorgeous, miniature 3D scene that slots between books on a shelf, complete with tiny furniture and LED lights.",
-    "price": { "low": 45, "medium": 45, "high": 45, "premium": 45 },
+    "price": {
+      "low": 45,
+      "medium": 45,
+      "high": 45,
+      "premium": 45
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["reading", "art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "reading",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "DIY book nook miniature kit bookshelf insert led",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-600\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "book-led-folding-lamp",
     "title": "Wooden Folding LED Book Light",
     "description": "A decorative lamp designed like a hardcover book. Opens 360 degrees to emit soft multi-color light.",
     "desc": "A decorative lamp designed like a hardcover book. Opens 360 degrees to emit soft multi-color light.",
-    "price": { "low": 29, "medium": 29, "high": 29, "premium": 29 },
+    "price": {
+      "low": 29,
+      "medium": 29,
+      "high": 29,
+      "premium": 29
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "holiday"],
-    "interests": ["reading", "art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "holiday"
+    ],
+    "interests": [
+      "reading",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "folding led book lamp wooden cover magnetic",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 18v3m0 0h.01\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "cozy-readers-giftbox",
     "title": "The Cozy Book Lover's Gift Box Set",
     "description": "Includes warm thermal reading socks, a novelty mug, library-scented tea lights, and a customized bookmark.",
     "desc": "Includes warm thermal reading socks, a novelty mug, library-scented tea lights, and a customized bookmark.",
-    "price": { "low": 35, "medium": 35, "high": 35, "premium": 35 },
+    "price": {
+      "low": 35,
+      "medium": 35,
+      "high": 35,
+      "premium": 35
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["reading", "coffee"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "reading",
+      "coffee"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "cozy reading socks book lover gift basket",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-rose-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 8.25c0-2.485-2.099-4.5-4.688-4.5\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "thumb-book-opener",
     "title": "Metal Book Spreader Page Opener",
     "description": "A premium stainless steel page holder anchor. Securely anchors pages flat while studying or calling.",
     "desc": "A premium stainless steel page holder anchor. Securely anchors pages flat while studying or calling.",
-    "price": { "low": 12, "medium": 12, "high": 12, "premium": 12 },
+    "price": {
+      "low": 12,
+      "medium": 12,
+      "high": 12,
+      "premium": 12
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "metal book page holder anchor paperweight",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-sky-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "books-before-you-die",
     "title": "1000 Books to Read Before You Die",
     "description": "An exhaustive guide of must-read books, describing why each is worth reading. Ideal for picking reading list books.",
     "desc": "An exhaustive guide of must-read books, describing why each is worth reading. Ideal for picking reading list books.",
-    "price": { "low": 24, "medium": 24, "high": 24, "premium": 24 },
+    "price": {
+      "low": 24,
+      "medium": 24,
+      "high": 24,
+      "premium": 24
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "1000 books to read before you die hardcover",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-purple-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "kindle-clear-case",
     "title": "Kindle Clear Case with Remote Turner",
     "description": "A shockproof transparent Kindle cover paired with a bluetooth ring remote. Page turner control at your fingertips.",
     "desc": "A shockproof transparent Kindle cover paired with a bluetooth ring remote. Page turner control at your fingertips.",
-    "price": { "low": 24, "medium": 24, "high": 24, "premium": 24 },
+    "price": {
+      "low": 24,
+      "medium": 24,
+      "high": 24,
+      "premium": 24
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading", "gaming"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "kindle paperwhite clear case bluetooth remote turner",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-300\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 17.25v1.007\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "book-seat-pillow",
     "title": "The Book Seat Support Cushion Pillow",
     "description": "A beanbag holder that molds to any surface, holding books or tablets upright. Relaxing hands-free reading helper.",
     "desc": "A beanbag holder that molds to any surface, holding books or tablets upright. Relaxing hands-free reading helper.",
-    "price": { "low": 35, "medium": 35, "high": 35, "premium": 35 },
+    "price": {
+      "low": 35,
+      "medium": 35,
+      "high": 35,
+      "premium": 35
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["reading"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "The Book Seat book holder bean bag cushion",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-blue-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   }
 ]

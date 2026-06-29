@@ -4,499 +4,1411 @@
     "title": "Dual Sketchbooks for Couples",
     "description": "A pair of matching sketchbooks. Draw half of a drawing and mail it to your partner to finish, creating a shared piece of art.",
     "desc": "A pair of matching sketchbooks. Draw half of a drawing and mail it to your partner to finish, creating a shared piece of art.",
-    "price": { "low": 15, "medium": 15, "high": 15, "premium": 15 },
+    "price": {
+      "low": 15,
+      "medium": 15,
+      "high": 15,
+      "premium": 15
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["anniversary", "birthday", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "dual sketchbooks for couples",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-rose-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "watercolor-travel-set",
     "title": "Portable Watercolor Travel Palette",
     "description": "A pocket-sized watercolor set with a water brush pen, perfect for painting outdoors or while traveling to see each other.",
     "desc": "A pocket-sized watercolor set with a water brush pen, perfect for painting outdoors or while traveling to see each other.",
-    "price": { "low": 24, "medium": 24, "high": 24, "premium": 24 },
+    "price": {
+      "low": 24,
+      "medium": 24,
+      "high": 24,
+      "premium": 24
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["art", "travel"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "art",
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "portable travel watercolor paint set",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-blue-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.53 16.122l.188.188a1.5 1.5 0 11-2.122 2.122l-.188-.188m2.122-2.122A1.5 1.5 0 106.608 14m2.922 2.122a1.5 1.5 0 11-2.922-2.122m3.844-3.844L12 9l3.844 3.844m-7.688 0A1.5 1.5 0 116.608 14m6.447-4.47l.884-.884a1.5 1.5 0 112.122 2.122l-.884.884m-2.122-2.122A1.5 1.5 0 1012 9m1.055.53a1.5 1.5 0 11-1.055-.53\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "acrylic-paint-pens",
     "title": "Acrylic Paint Pens Set",
     "description": "Multi-surface paint markers for customized mugs, glass, wood, and canvases. Easy to use together on a video call.",
     "desc": "Multi-surface paint markers for customized mugs, glass, wood, and canvases. Easy to use together on a video call.",
-    "price": { "low": 19, "medium": 19, "high": 19, "premium": 19 },
+    "price": {
+      "low": 19,
+      "medium": 19,
+      "high": 19,
+      "premium": 19
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "holiday", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "acrylic paint pens markers set",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-emerald-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "digital-drawing-tablet",
     "title": "Veikk Digital Drawing Tablet",
     "description": "An entry-level drawing tablet with a battery-free stylus, perfect for digital sketching, photo editing, and playing online drawing games.",
     "desc": "An entry-level drawing tablet with a battery-free stylus, perfect for digital sketching, photo editing, and playing online drawing games.",
-    "price": { "low": 39, "medium": 39, "high": 39, "premium": 39 },
+    "price": {
+      "low": 39,
+      "medium": 39,
+      "high": 39,
+      "premium": 39
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["art", "gaming"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "art",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Veikk drawing tablet battery-free stylus",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "custom-paint-by-numbers",
     "title": "Custom Paint-by-Numbers Photo Kit",
     "description": "Convert a favorite photo of you two into a custom paint-by-numbers canvas. A beautiful keepsake to paint together.",
     "desc": "Convert a favorite photo of you two into a custom paint-by-numbers canvas. A beautiful keepsake to paint together.",
-    "price": { "low": 29, "medium": 29, "high": 29, "premium": 29 },
+    "price": {
+      "low": 29,
+      "medium": 29,
+      "high": 29,
+      "premium": 29
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["anniversary", "birthday", "holiday"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "custom paint by numbers kit from photo",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-purple-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "led-copy-board",
     "title": "A4 Ultra-Thin LED Light Box",
     "description": "An adjustable tracing light pad, ideal for sketching, calligraphy, stenciling, and sharing hand-drawn cards.",
     "desc": "An adjustable tracing light pad, ideal for sketching, calligraphy, stenciling, and sharing hand-drawn cards.",
-    "price": { "low": 18, "medium": 18, "high": 18, "premium": 18 },
+    "price": {
+      "low": 18,
+      "medium": 18,
+      "high": 18,
+      "premium": 18
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "A4 LED light box tracing board",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 18v3m0 0h.01m-9.01-3h18M12 3a9 9 0 00-9 9c0 2.21.8 4.21 2.1 5.73l.9.91a2.25 2.25 0 01.65 1.59v1.27h10.7v-1.27a2.25 2.25 0 01.65-1.59l.9-.91A9 9 0 0012 3z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "3d-printing-pen",
     "title": "3Doodler Create+ 3D Printing Pen",
     "description": "Create amazing 3D models and sculptures in real-time. Fun, interactive, and adds a futuristic dimension to art date nights.",
     "desc": "Create amazing 3D models and sculptures in real-time. Fun, interactive, and adds a futuristic dimension to art date nights.",
-    "price": { "low": 79, "medium": 79, "high": 79, "premium": 79 },
+    "price": {
+      "low": 79,
+      "medium": 79,
+      "high": 79,
+      "premium": 79
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["art", "gaming"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "art",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "3Doodler Create plus 3D printing pen",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-indigo-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.813 15.904L9 21l5.096-.813a2 2 0 001.077-.543l5.284-5.284a2 2 0 00.543-1.077L21 9l-5.096.813a2 2 0 00-1.077.543l-5.284 5.284a2 2 0 00-.543 1.077z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "calligraphy-starter-kit",
     "title": "Modern Calligraphy Starter Kit",
     "description": "Includes a wooden dip pen, high-quality nibs, black ink, and a step-by-step workbook for hand-lettering romantic letters.",
     "desc": "Includes a wooden dip pen, high-quality nibs, black ink, and a step-by-step workbook for hand-lettering romantic letters.",
-    "price": { "low": 28, "medium": 28, "high": 28, "premium": 28 },
+    "price": {
+      "low": 28,
+      "medium": 28,
+      "high": 28,
+      "premium": 28
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "modern calligraphy starter kit dip pen",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-amber-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "acrylic-painting-kit",
     "title": "Complete Acrylic Paint Set with Easel",
     "description": "An all-in-one painting set with 24 colors, brushes, mixing palette, canvases, and a sturdy tabletop wooden easel.",
     "desc": "An all-in-one painting set with 24 colors, brushes, mixing palette, canvases, and a sturdy tabletop wooden easel.",
-    "price": { "low": 45, "medium": 45, "high": 45, "premium": 45 },
+    "price": {
+      "low": 45,
+      "medium": 45,
+      "high": 45,
+      "premium": 45
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "holiday"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "holiday"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "complete acrylic painting kit tabletop easel",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-rose-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.53 16.122l.188.188a1.5 1.5 0 11-2.122 2.122l-.188-.188m2.122-2.122A1.5 1.5 0 106.608 14m2.922 2.122a1.5 1.5 0 11-2.922-2.122m3.844-3.844L12 9l3.844 3.844m-7.688 0A1.5 1.5 0 116.608 14m6.447-4.47l.884-.884a1.5 1.5 0 112.122 2.122l-.884.884m-2.122-2.122A1.5 1.5 0 1012 9m1.055.53a1.5 1.5 0 11-1.055-.53\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "clay-sculpting-kit",
     "title": "Air-Dry Clay Sculpting DIY Kit",
     "description": "Pottery kit complete with clay, carving tools, acrylic paints, and gloss varnish. Build mini sculptures side-by-side.",
     "desc": "Pottery kit complete with clay, carving tools, acrylic paints, and gloss varnish. Build mini sculptures side-by-side.",
-    "price": { "low": 35, "medium": 35, "high": 35, "premium": 35 },
+    "price": {
+      "low": 35,
+      "medium": 35,
+      "high": 35,
+      "premium": 35
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "air dry clay pottery kit diy carving tools",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-amber-700\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "professional-colored-pencils",
     "title": "Prismacolor Premier Colored Pencils (72)",
     "description": "Professional-grade soft-core pencils, renowned for smooth application, vibrant pigments, and expert blending capabilities.",
     "desc": "Professional-grade soft-core pencils, renowned for smooth application, vibrant pigments, and expert blending capabilities.",
-    "price": { "low": 59, "medium": 59, "high": 59, "premium": 59 },
+    "price": {
+      "low": 59,
+      "medium": 59,
+      "high": 59,
+      "premium": 59
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Prismacolor Premier colored pencils 72 count",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-pink-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.242 21.832l-3.536-3.536m2.036 5.036a2.5 2.5 0 11-3.536-3.536L6.5 13.964H3v3.572L16.732 20.832z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "leather-sketchbook-cover",
     "title": "Refillable Leather Sketchbook Organizer",
     "description": "A handmade, genuine leather wrap cover containing pockets for brushes, pencils, and cards. Designed to last a lifetime.",
     "desc": "A handmade, genuine leather wrap cover containing pockets for brushes, pencils, and cards. Designed to last a lifetime.",
-    "price": { "low": 48, "medium": 48, "high": 48, "premium": 48 },
+    "price": {
+      "low": 48,
+      "medium": 48,
+      "high": 48,
+      "premium": 48
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["anniversary", "birthday"],
-    "interests": ["art", "travel"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday"
+    ],
+    "interests": [
+      "art",
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "handmade leather sketchbook cover refillable",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-800\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "origami-folding-kit",
     "title": "Deluxe Origami Paper Kit & Instructions",
     "description": "Features 500 sheets of beautiful double-sided Japanese folding paper and an instructions guide to fold animals and flowers together.",
     "desc": "Features 500 sheets of beautiful double-sided Japanese folding paper and an instructions guide to fold animals and flowers together.",
-    "price": { "low": 14, "medium": 14, "high": 14, "premium": 14 },
+    "price": {
+      "low": 14,
+      "medium": 14,
+      "high": 14,
+      "premium": 14
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "japanese origami paper kit instruction book 500 sheets",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "scratch-art-set",
     "title": "Rainbow Scratch Paper Notes Set",
     "description": "Fun, scratch-off pads where hidden rainbow colors reveal themselves. Write playful secrets and draw doodles together.",
     "desc": "Fun, scratch-off pads where hidden rainbow colors reveal themselves. Write playful secrets and draw doodles together.",
-    "price": { "low": 12, "medium": 12, "high": 12, "premium": 12 },
+    "price": {
+      "low": 12,
+      "medium": 12,
+      "high": 12,
+      "premium": 12
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "rainbow scratch art notes box set",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-fuchsia-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.12 2.9 2.78 2.9H7.5v2.25L9.75 18H18.2c1.66 0 2.8-1.3 2.8-2.9v-9.6C21 3.9 19.86 2.6 18.2 2.6H4.8C3.12 2.6 2 3.9 2 5.5v7.26z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "tote-bag-painting-kit",
     "title": "DIY Canvas Tote Bag Painting Set",
     "description": "Includes 2 organic cotton canvas tote bags, textile acrylic paint markers, and stencils to design custom matching bags.",
     "desc": "Includes 2 organic cotton canvas tote bags, textile acrylic paint markers, and stencils to design custom matching bags.",
-    "price": { "low": 22, "medium": 22, "high": 22, "premium": 22 },
+    "price": {
+      "low": 22,
+      "medium": 22,
+      "high": 22,
+      "premium": 22
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "DIY canvas tote bag painting kit textile markers",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-violet-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "gouache-paint-palette",
     "title": "Himi Jelly Gouache Paint Set",
     "description": "Features 18 vivid gouache paint cups in a portable carry box. A smooth, thick paint format that is exciting to play with.",
     "desc": "Features 18 vivid gouache paint cups in a portable carry box. A smooth, thick paint format that is exciting to play with.",
-    "price": { "low": 26, "medium": 26, "high": 26, "premium": 26 },
+    "price": {
+      "low": 26,
+      "medium": 26,
+      "high": 26,
+      "premium": 26
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "HIMI jelly gouache paint set 18 colors",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-orange-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "linocut-printing-kit",
     "title": "Linocut Block Printing Starter Kit",
     "description": "Includes linoleum blocks, carving cutters, water-soluble ink, and a hand brayer roller. Craft custom prints for stamp art.",
     "desc": "Includes linoleum blocks, carving cutters, water-soluble ink, and a hand brayer roller. Craft custom prints for stamp art.",
-    "price": { "low": 38, "medium": 38, "high": 38, "premium": 38 },
+    "price": {
+      "low": 38,
+      "medium": 38,
+      "high": 38,
+      "premium": 38
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "linocut block printing starter kit carving tool",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-neutral-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "resin-coaster-diy",
     "title": "Resin Coaster Making Art Kit",
     "description": "Clear epoxy resin, silicone molds, dried flowers, and glitter pigments. Make shiny, custom cups coasters for each other.",
     "desc": "Clear epoxy resin, silicone molds, dried flowers, and glitter pigments. Make shiny, custom cups coasters for each other.",
-    "price": { "low": 27, "medium": 27, "high": 27, "premium": 27 },
+    "price": {
+      "low": 27,
+      "medium": 27,
+      "high": 27,
+      "premium": 27
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "epoxy resin coaster diy starter kit silicone molds",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-cyan-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "glass-etching-kit",
     "title": "DIY Glass Etching Starter Kit",
     "description": "Includes glass etching cream, stencil brush, protective gloves, and customizable vinyl stencil patterns. Customize glassware.",
     "desc": "Includes glass etching cream, stencil brush, protective gloves, and customizable vinyl stencil patterns. Customize glassware.",
-    "price": { "low": 32, "medium": 32, "high": 32, "premium": 32 },
+    "price": {
+      "low": 32,
+      "medium": 32,
+      "high": 32,
+      "premium": 32
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "glass etching cream stencil kit starter pack",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-sky-300\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.75 3.104v1.244c0 .41-.195.794-.527 1.036L4.25 9.098a1.5 1.5 0 00-.5 1.13v8.522c0 .828.672 1.5 1.5 1.5h13.5c.828 0 1.5-.672 1.5-1.5v-8.522a1.5 1.5 0 00-.5-1.13l-4.973-3.714a1.296 1.296 0 00-.527-1.036V3.104c0-.83-.672-1.5-1.5-1.5h-3c-.828 0-1.5.672-1.5 1.5z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "wooden-art-organizer",
     "title": "Deluxe Wooden Art Storage Box",
     "description": "A multi-tier solid beechwood box with adjustable dividers, keeping brushes, pencils, and paint tubes beautifully organized.",
     "desc": "A multi-tier solid beechwood box with adjustable dividers, keeping brushes, pencils, and paint tubes beautifully organized.",
-    "price": { "low": 49, "medium": 49, "high": 49, "premium": 49 },
+    "price": {
+      "low": 49,
+      "medium": 49,
+      "high": 49,
+      "premium": 49
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "deluxe wooden art organizer drawer storage box",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-600\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "jewelry-clay-kit",
     "title": "Polymer Clay Earring Jewelry Kit",
     "description": "Includes 36 colors of oven-bake polymer clay, earring cutters, hooks, jump rings, and rolling tool. Sculpt matching jewelry.",
     "desc": "Includes 36 colors of oven-bake polymer clay, earring cutters, hooks, jump rings, and rolling tool. Sculpt matching jewelry.",
-    "price": { "low": 25, "medium": 25, "high": 25, "premium": 25 },
+    "price": {
+      "low": 25,
+      "medium": 25,
+      "high": 25,
+      "premium": 25
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "polymer clay earring jewelry kit cutter set",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-rose-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "cozymeal-art-class",
     "title": "Live Interactive Painting Online Class",
     "description": "Join an online watercolor or sketching class hosted by a professional artist. Paint on a shared screen side-by-side.",
     "desc": "Join an online watercolor or sketching class hosted by a professional artist. Paint on a shared screen side-by-side.",
-    "price": { "low": 39, "medium": 39, "high": 78, "premium": 78 },
+    "price": {
+      "low": 39,
+      "medium": 39,
+      "high": 78,
+      "premium": 78
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "digital",
     "type": "digital",
     "query": "virtual painting class experience voucher",
     "badge": "Digital delivery",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-300\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "drawing-pencils-set",
     "title": "Faber-Castell 9000 Sketching Pencil Set",
     "description": "Features 12 professional graphite pencils ranging from 8B to 2H, ideal for drafting, sketching, and portrait drawing.",
     "desc": "Features 12 professional graphite pencils ranging from 8B to 2H, ideal for drafting, sketching, and portrait drawing.",
-    "price": { "low": 18, "medium": 18, "high": 18, "premium": 18 },
+    "price": {
+      "low": 18,
+      "medium": 18,
+      "high": 18,
+      "premium": 18
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Faber Castell 9000 sketching pencil art set 12",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-slate-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "domestika-art-bundle",
     "title": "Domestika Creative Art Courses Gift Card",
     "description": "Choose three creative courses covering watercolor, digital illustration, and sketching. Learn techniques step-by-step.",
     "desc": "Choose three creative courses covering watercolor, digital illustration, and sketching. Learn techniques step-by-step.",
-    "price": { "low": 29, "medium": 29, "high": 29, "premium": 29 },
+    "price": {
+      "low": 29,
+      "medium": 29,
+      "high": 29,
+      "premium": 29
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "holiday", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "digital",
     "type": "digital",
     "query": "domestika courses gift card",
     "badge": "Digital delivery",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-rose-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h.008v.008H7.5v-.008zm3.75 0h.008v.008h-.008v-.008zm3.75 0h.008v.008h-.008v-.008zm-7.5 3h.008v.008H7.5v-.008zm3.75 0h.008v.008h-.008v-.008zm3.75 0h.008v.008h-.008v-.008z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "acrylic-pour-kit",
     "title": "Acrylic Pour Painting Starter Kit",
     "description": "Includes pre-mixed high-flow paints, silicone oil, cells activator, pouring cups, and canvases. Create stunning abstract cell art.",
     "desc": "Includes pre-mixed high-flow paints, silicone oil, cells activator, pouring cups, and canvases. Create stunning abstract cell art.",
-    "price": { "low": 36, "medium": 36, "high": 36, "premium": 36 },
+    "price": {
+      "low": 36,
+      "medium": 36,
+      "high": 36,
+      "premium": 36
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday", "just-because"],
-    "interests": ["art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday",
+      "just-because"
+    ],
+    "interests": [
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "acrylic pour painting kit liquid cells starter set",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-pink-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.656 48.656 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7C4.547 9.547 4.5 10.768 4.5 12s.047 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.092-1.209.138-2.43.138-3.662z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   }
 ]

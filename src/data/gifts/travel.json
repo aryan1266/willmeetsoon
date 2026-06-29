@@ -4,499 +4,1430 @@
     "title": "Bond Touch Connection Bracelets",
     "description": "Touch your bracelet and your partner's bracelet vibrates and lights up, letting them know they are on your mind instantly.",
     "desc": "Touch your bracelet and your partner's bracelet vibrates and lights up, letting them know they are on your mind instantly.",
-    "price": { "low": 108, "medium": 108, "high": 108, "premium": 108 },
+    "price": {
+      "low": 108,
+      "medium": 108,
+      "high": 108,
+      "premium": 108
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["anniversary", "birthday", "just-because"],
-    "interests": ["travel", "fitness"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "fitness"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Bond Touch Connection Bracelets",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-[#533afd]\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1\" d=\"M12 8.25v-1.5m0 1.5c-1.355 0-2.697-.056-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166zm-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["medium", "high", "premium"],
-    "durations": ["medium", "high", "premium"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "durations": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "trtl-pillow",
     "title": "TRTL Travel Neck Pillow",
     "description": "Scientifically proven neck support pillow for airplanes. Holds neck in an ergonomic position during long-haul flights.",
     "desc": "Scientifically proven neck support pillow for airplanes. Holds neck in an ergonomic position during long-haul flights.",
-    "price": { "low": 45, "medium": 45, "high": 45, "premium": 45 },
+    "price": {
+      "low": 45,
+      "medium": 45,
+      "high": 45,
+      "premium": 45
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "trtl Travel Pillow scientifically proven super soft neck support",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "scratch-world-map",
     "title": "Scratch-Off World Map Poster",
     "description": "A beautiful world map poster to scratch off visited countries. Perfect for planning future travel goals together.",
     "desc": "A beautiful world map poster to scratch off visited countries. Perfect for planning future travel goals together.",
-    "price": { "low": 24, "medium": 24, "high": 24, "premium": 24 },
+    "price": {
+      "low": 24,
+      "medium": 24,
+      "high": 24,
+      "premium": 24
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["anniversary", "birthday", "holiday"],
-    "interests": ["travel", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "travel",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "scratch off world map poster deluxe personalized cartography",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-pink-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 6.75V15m6-6.75V15M3 12h18\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "apple-airtags",
     "title": "Apple AirTag (Pack of 4)",
     "description": "Track checked bags and luggage using Apple's Find My app. Never lose suitcases during flight connections.",
     "desc": "Track checked bags and luggage using Apple's Find My app. Never lose suitcases during flight connections.",
-    "price": { "low": 99, "medium": 99, "high": 99, "premium": 99 },
+    "price": {
+      "low": 99,
+      "medium": 99,
+      "high": 99,
+      "premium": 99
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["travel", "gaming"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "travel",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Apple AirTag 4 Pack Bluetooth tracker tags",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-emerald-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 3a3 3 0 100-6 3 3 0 000 6z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "anker-powerbank",
     "title": "Anker Portable Charger (20,000mAh)",
     "description": "Ultra-high capacity power bank. Keeps phones, tablets, and headphones fully charged during long international transit.",
     "desc": "Ultra-high capacity power bank. Keeps phones, tablets, and headphones fully charged during long international transit.",
-    "price": { "low": 39, "medium": 39, "high": 39, "premium": 39 },
+    "price": {
+      "low": 39,
+      "medium": 39,
+      "high": 39,
+      "premium": 39
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "gaming"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Anker Power Bank 325 portable charger 20000mAh",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-slate-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.75 3.104v1.244\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "electronic-organizer",
     "title": "BAGSMART Travel Electronics Bag",
     "description": "Double-layer storage pouch to keep cables, chargers, USBs, SD cards, and power adaptors organized and tangle-free.",
     "desc": "Double-layer storage pouch to keep cables, chargers, USBs, SD cards, and power adaptors organized and tangle-free.",
-    "price": { "low": 18, "medium": 18, "high": 18, "premium": 18 },
+    "price": {
+      "low": 18,
+      "medium": 18,
+      "high": 18,
+      "premium": 18
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "gaming"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "BAGSMART travel electronics organizer double layer cable bag",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-300\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4 5h16v14H4z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "leather-passport-cover",
     "title": "Custom Leather Passport Holder",
     "description": "Handcrafted genuine leather passport case engraved with custom initials and a world map design. RFID blocking.",
     "desc": "Handcrafted genuine leather passport case engraved with custom initials and a world map design. RFID blocking.",
-    "price": { "low": 24, "medium": 24, "high": 24, "premium": 24 },
+    "price": {
+      "low": 24,
+      "medium": 24,
+      "high": 24,
+      "premium": 24
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["anniversary", "birthday", "holiday"],
-    "interests": ["travel", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "travel",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "personalized custom leather passport holder rfid blocking",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-700\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.253v13m0-13C10.832 5.477\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "toiletry-bag-hanging",
     "title": "BAGSMART Hanging Toiletry Bag",
     "description": "Features 4 separate transparent compartments with zippers and a hanging hook. Keeps bathroom items accessible.",
     "desc": "Features 4 separate transparent compartments with zippers and a hanging hook. Keeps bathroom items accessible.",
-    "price": { "low": 28, "medium": 28, "high": 28, "premium": 28 },
+    "price": {
+      "low": 28,
+      "medium": 28,
+      "high": 28,
+      "premium": 28
+    },
     "budget": "medium",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "BAGSMART hanging toiletry bag travel makeup organizer hook",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-violet-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "packing-cubes-compression",
     "title": "Compression Packing Cubes Set",
     "description": "Set of 6 premium nylon packing bags with double zipper compression. Compresses clothes up to 40%, saving suitcase space.",
     "desc": "Set of 6 premium nylon packing bags with double zipper compression. Compresses clothes up to 40%, saving suitcase space.",
-    "price": { "low": 39, "medium": 39, "high": 39, "premium": 39 },
+    "price": {
+      "low": 39,
+      "medium": 39,
+      "high": 39,
+      "premium": 39
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["travel", "fitness"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "travel",
+      "fitness"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "compression packing cubes for travel suitcases nylon set of 6",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M4 5h16v14H4z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "luggage-scale-digital",
     "title": "Etekcity Digital Luggage Scale",
     "description": "Compact handheld weight scale with high-accuracy sensor. Avoid airport overweight baggage fees.",
     "desc": "Compact handheld weight scale with high-accuracy sensor. Avoid airport overweight baggage fees.",
-    "price": { "low": 12, "medium": 12, "high": 12, "premium": 12 },
+    "price": {
+      "low": 12,
+      "medium": 12,
+      "high": 12,
+      "premium": 12
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Etekcity digital luggage scale hanging weight sensor hook",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-slate-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 18v3m0 0h.01\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "universal-adapter",
     "title": "Universal All-in-One Travel Adapter",
     "description": "Worldwide travel plug adapter covering 150+ countries. Features 4 USB charging ports for simultaneous device charging.",
     "desc": "Worldwide travel plug adapter covering 150+ countries. Features 4 USB charging ports for simultaneous device charging.",
-    "price": { "low": 22, "medium": 22, "high": 22, "premium": 22 },
+    "price": {
+      "low": 22,
+      "medium": 22,
+      "high": 22,
+      "premium": 22
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "gaming"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "universal travel adapter worldwide wall plug usb charger",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-blue-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "jbl-bluetooth-headphones",
     "title": "JBL Tune 510BT Wireless Headphones",
     "description": "Comfortable on-ear headphones with JBL Pure Bass sound. 40 hours battery life and quick charge, ideal for travel.",
     "desc": "Comfortable on-ear headphones with JBL Pure Bass sound. 40 hours battery life and quick charge, ideal for travel.",
-    "price": { "low": 39, "medium": 39, "high": 39, "premium": 39 },
+    "price": {
+      "low": 39,
+      "medium": 39,
+      "high": 39,
+      "premium": 39
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "music"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "music"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "JBL Tune 510BT wireless on ear headphones pure bass",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-[#665efd]\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 19V6l12-3v13\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "luggage-locks-tsa",
     "title": "TSA Approved Cable Luggage Locks",
     "description": "Set of 4 heavy-duty combination lock cables. Keeps zippers securely locked and allows TSA safety inspections.",
     "desc": "Set of 4 heavy-duty combination lock cables. Keeps zippers securely locked and allows TSA safety inspections.",
-    "price": { "low": 20, "medium": 20, "high": 20, "premium": 20 },
+    "price": {
+      "low": 20,
+      "medium": 20,
+      "high": 20,
+      "premium": 20
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "TSA approved travel luggage locks flexible cable combo 4 pack",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-slate-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5c.621 0 1.125-.504 1.125-1.125v-8.25c0-.621-.504-1.125-1.125-1.125H6.75c-.621 0-1.125.504-1.125 1.125v8.25c0 .621.504 1.125 1.125 1.125z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "luggage-cup-holder",
     "title": "Luggage Drink Caddy Cup Holder",
     "description": "Attaches securely to suitcase pull handles. Holds two cups and phone, freeing up hands during airport terminal rushes.",
     "desc": "Attaches securely to suitcase pull handles. Holds two cups and phone, freeing up hands during airport terminal rushes.",
-    "price": { "low": 15, "medium": 15, "high": 15, "premium": 15 },
+    "price": {
+      "low": 15,
+      "medium": 15,
+      "high": 15,
+      "premium": 15
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "coffee"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "coffee"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "luggage cup holder travel drink caddy attaches suitcase handles",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-orange-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.75 3.104v1.244\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "travel-jewelry-box",
     "title": "Vlando Macaron Travel Jewelry Box",
     "description": "Ultra-compact velvet-lined jewelry case. Keeps rings, earrings, and necklaces organized and scratch-free during trips.",
     "desc": "Ultra-compact velvet-lined jewelry case. Keeps rings, earrings, and necklaces organized and scratch-free during trips.",
-    "price": { "low": 14, "medium": 14, "high": 14, "premium": 14 },
+    "price": {
+      "low": 14,
+      "medium": 14,
+      "high": 14,
+      "premium": 14
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Vlando small pocket travel jewelry box velvet liner round",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-pink-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 8.25c0-2.485-2.099-4.5-4.688-4.5\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "airplane-footrest",
     "title": "Sleepy Ride Airplane Footrest Hammock",
     "description": "Memory foam foot hammock that hangs from the tray table. Relieves leg swelling and lower back strain during long flights.",
     "desc": "Memory foam foot hammock that hangs from the tray table. Relieves leg swelling and lower back strain during long flights.",
-    "price": { "low": 22, "medium": 22, "high": 22, "premium": 22 },
+    "price": {
+      "low": 22,
+      "medium": 22,
+      "high": 22,
+      "premium": 22
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "fitness"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "fitness"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Sleepy Ride airplane footrest memory foam hang tray table",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-cyan-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.25 7.5L12.75 15\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "tile-mate-tracker",
     "title": "Tile Mate Bluetooth Tracker",
     "description": "Attaches to keys, backpacks, or wallets. Use the Tile app to ring items or find them on a map. Android and iOS compatible.",
     "desc": "Attaches to keys, backpacks, or wallets. Use the Tile app to ring items or find them on a map. Android and iOS compatible.",
-    "price": { "low": 24, "medium": 24, "high": 24, "premium": 24 },
+    "price": {
+      "low": 24,
+      "medium": 24,
+      "high": 24,
+      "premium": 24
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "gaming"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Tile Mate bluetooth finder key tracker water resistant",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-emerald-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "laptop-backpack-travel",
     "title": "Matein Travel Laptop Backpack",
     "description": "Heavy-duty anti-theft backpack with built-in USB charging port and luggage strap. Perfect carry-on travel bag.",
     "desc": "Heavy-duty anti-theft backpack with built-in USB charging port and luggage strap. Perfect carry-on travel bag.",
-    "price": { "low": 39, "medium": 39, "high": 39, "premium": 39 },
+    "price": {
+      "low": 39,
+      "medium": 39,
+      "high": 39,
+      "premium": 39
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["travel", "gaming"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "travel",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Matein travel laptop backpack anti theft usb charging port",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-violet-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "nanopresso-portable-coffee",
     "title": "Wacaco Nanopresso Portable Espresso",
     "description": "Ergonomic handheld travel espresso maker. Reaches up to 18 bars of stable manual pressure for rich crema shots on hikes.",
     "desc": "Ergonomic handheld travel espresso maker. Reaches up to 18 bars of stable manual pressure for rich crema shots on hikes.",
-    "price": { "low": 69, "medium": 69, "high": 69, "premium": 69 },
+    "price": {
+      "low": 69,
+      "medium": 69,
+      "high": 69,
+      "premium": 69
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["travel", "coffee"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "travel",
+      "coffee"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Wacaco Nanopresso portable espresso maker hand pump",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-slate-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 17.25v1.007\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "leather-luggage-tags",
     "title": "Custom Leather Luggage Tags Set",
     "description": "Set of 2 genuine full-grain leather luggage tags with privacy flap and custom initials engraving.",
     "desc": "Set of 2 genuine full-grain leather luggage tags with privacy flap and custom initials engraving.",
-    "price": { "low": 15, "medium": 15, "high": 15, "premium": 15 },
+    "price": {
+      "low": 15,
+      "medium": 15,
+      "high": 15,
+      "premium": 15
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["travel", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "personalized leather luggage tags set of 2 privacy flap",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-amber-600\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.232 5.232l3.536 3.536\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "windproof-travel-umbrella",
     "title": "Repel Compact Windproof Umbrella",
     "description": "Automatic open-close compact travel umbrella with 9 resin-reinforced fiberglass ribs. Repels heavy storm winds.",
     "desc": "Automatic open-close compact travel umbrella with 9 resin-reinforced fiberglass ribs. Repels heavy storm winds.",
-    "price": { "low": 29, "medium": 29, "high": 29, "premium": 29 },
+    "price": {
+      "low": 29,
+      "medium": 29,
+      "high": 29,
+      "premium": 29
+    },
     "budget": "medium",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Repel Umbrella windproof travel compact double vented",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-sky-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 9v2m0 4h.01\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "money-belt-rfid",
     "title": "RFID Blocking Travel Money Belt",
     "description": "Slim under-clothing waist wallet pack. Blocks RFID signals to protect passport and cards from scanning theft.",
     "desc": "Slim under-clothing waist wallet pack. Blocks RFID signals to protect passport and cards from scanning theft.",
-    "price": { "low": 16, "medium": 16, "high": 16, "premium": 16 },
+    "price": {
+      "low": 16,
+      "medium": 16,
+      "high": 16,
+      "premium": 16
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "RFID blocking travel money belt slim waist wallet",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "sea-summit-towel",
     "title": "Sea to Summit Pocket Quick Dry Towel",
     "description": "Incredibly lightweight micro-fiber pocket towel. Absorbs up to 3 times its weight in water, packs down tiny.",
     "desc": "Incredibly lightweight micro-fiber pocket towel. Absorbs up to 3 times its weight in water, packs down tiny.",
-    "price": { "low": 20, "medium": 20, "high": 20, "premium": 20 },
+    "price": {
+      "low": 20,
+      "medium": 20,
+      "high": 20,
+      "premium": 20
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "fitness"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "fitness"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Sea to Summit pocket dry towel microfibre small",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-blue-300\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.25 7.5L12.75 15\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "travel-leather-journal",
     "title": "Leather-Bound Travel Diary Journal",
     "description": "Handmade vintage leather diary with unlined deckle edge paper. Perfect for journaling travel thoughts.",
     "desc": "Handmade vintage leather diary with unlined deckle edge paper. Perfect for journaling travel thoughts.",
-    "price": { "low": 24, "medium": 24, "high": 24, "premium": 24 },
+    "price": {
+      "low": 24,
+      "medium": 24,
+      "high": 24,
+      "premium": 24
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["travel", "reading"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "handmade vintage leather travel journal unlined deckle",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-600\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.253v13m0-13C10.832 5.477\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "moleskine-voyager-notebook",
     "title": "Moleskine Voyager Travel Notebook",
     "description": "Includes detachable pages, mapping templates, travel planning checklists, and inner pocket folders.",
     "desc": "Includes detachable pages, mapping templates, travel planning checklists, and inner pocket folders.",
-    "price": { "low": 28, "medium": 28, "high": 28, "premium": 28 },
+    "price": {
+      "low": 28,
+      "medium": 28,
+      "high": 28,
+      "premium": 28
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["travel", "reading"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "travel",
+      "reading"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Moleskine voyager travel notebook planner pockets",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-indigo-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6.253v13m0-13C10.832 5.477\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   }
 ]

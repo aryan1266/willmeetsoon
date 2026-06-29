@@ -4,499 +4,1397 @@
     "title": "Premium Wireless Noise-Cancelling Headphones",
     "description": "Bose or Sony noise-cancelling headphones, perfect for crystal-clear long-distance video calls without echo.",
     "desc": "Bose or Sony noise-cancelling headphones, perfect for crystal-clear long-distance video calls without echo.",
-    "price": { "low": 199, "medium": 199, "high": 249, "premium": 349 },
+    "price": {
+      "low": 199,
+      "medium": 199,
+      "high": 249,
+      "premium": 349
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "anniversary", "holiday"],
-    "interests": ["music", "gaming"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "holiday"
+    ],
+    "interests": [
+      "music",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "noise cancelling wireless headphones",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-[#665efd]\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["high", "premium"],
-    "durations": ["high", "premium"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "high",
+      "premium"
+    ],
+    "durations": [
+      "high",
+      "premium"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "spotify-premium-gift",
     "title": "Spotify Premium Gift Card (3 Months)",
     "description": "Give the gift of ad-free music, offline listening, and shared group sessions to listen to playlists together.",
     "desc": "Give the gift of ad-free music, offline listening, and shared group sessions to listen to playlists together.",
-    "price": { "low": 30, "medium": 30, "high": 30, "premium": 30 },
+    "price": {
+      "low": 30,
+      "medium": 30,
+      "high": 30,
+      "premium": 30
+    },
     "budget": "medium",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "holiday", "just-because"],
-    "interests": ["music"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday",
+      "just-because"
+    ],
+    "interests": [
+      "music"
+    ],
     "giftType": "digital",
     "type": "digital",
     "query": "Spotify Premium Gift Card",
     "badge": "Digital delivery",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-emerald-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 19V6l12-3v13M9 10l12-3\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Spotify"
+    ]
   },
   {
     "id": "jbl-go-speaker",
     "title": "JBL Go 4 Portable Speaker",
     "description": "An ultra-compact Bluetooth speaker with punchy bass. Waterproof and dustproof, perfect for outdoor video call strolls.",
     "desc": "An ultra-compact Bluetooth speaker with punchy bass. Waterproof and dustproof, perfect for outdoor video call strolls.",
-    "price": { "low": 49, "medium": 49, "high": 49, "premium": 49 },
+    "price": {
+      "low": 49,
+      "medium": 49,
+      "high": 49,
+      "premium": 49
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music", "travel"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music",
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "JBL Go 4 portable bluetooth speaker",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-orange-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6 7.5h3l3-3v15l-3-3H6v-9z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "victrola-turntable",
     "title": "Victrola Vintage Suitcase Turntable",
     "description": "A classic 3-speed turntable with built-in speakers and bluetooth streaming. Nostalgic listening experience.",
     "desc": "A classic 3-speed turntable with built-in speakers and bluetooth streaming. Nostalgic listening experience.",
-    "price": { "low": 59, "medium": 59, "high": 59, "premium": 59 },
+    "price": {
+      "low": 59,
+      "medium": 59,
+      "high": 59,
+      "premium": 59
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["anniversary", "birthday", "holiday"],
-    "interests": ["music", "art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "music",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Victrola Vintage 3-Speed Suitcase Turntable",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0zM12 12a3 3 0 100-6 3 3 0 000 6z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "custom-spotify-vinyl",
     "title": "Custom Vinyl Record Foil Print",
     "description": "A beautifully framed foil print designed like a vinyl record with your photo and a scannable Spotify code of 'your song'.",
     "desc": "A beautifully framed foil print designed like a vinyl record with your photo and a scannable Spotify code of 'your song'.",
-    "price": { "low": 24, "medium": 24, "high": 24, "premium": 24 },
+    "price": {
+      "low": 24,
+      "medium": 24,
+      "high": 24,
+      "premium": 24
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["anniversary", "birthday"],
-    "interests": ["music", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday"
+    ],
+    "interests": [
+      "music",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "custom vinyl record spotify print frame",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-pink-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 3a3 3 0 100-6 3 3 0 000 6z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Spotify",
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "bluetooth-shower-speaker",
     "title": "Waterproof Bluetooth Shower Speaker",
     "description": "Listen to your shared playlists or talk to your partner during your morning shower with this suction-cup speaker.",
     "desc": "Listen to your shared playlists or talk to your partner during your morning shower with this suction-cup speaker.",
-    "price": { "low": 29, "medium": 29, "high": 29, "premium": 29 },
+    "price": {
+      "low": 29,
+      "medium": 29,
+      "high": 29,
+      "premium": 29
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "waterproof bluetooth shower speaker suction cup",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-cyan-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6 7.5h3l3-3v15l-3-3H6v-9z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "pocket-kalimba",
     "title": "Pocket 17-Key Wooden Kalimba",
     "description": "A miniature wooden thumb piano, incredibly easy to learn and play simple melodies during video chats.",
     "desc": "A miniature wooden thumb piano, incredibly easy to learn and play simple melodies during video chats.",
-    "price": { "low": 22, "medium": 22, "high": 22, "premium": 22 },
+    "price": {
+      "low": 22,
+      "medium": 22,
+      "high": 22,
+      "premium": 22
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "pocket kalimba 17 keys thumb piano",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-600\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M12 9v2m0 4h.01\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "tablet-sheet-music-stand",
     "title": "Desktop Tablet & Lyrics Stand",
     "description": "An adjustable aluminum stand, perfect for holding their iPad/phone while reading sheet music or singing lyrics on call.",
     "desc": "An adjustable aluminum stand, perfect for holding their iPad/phone while reading sheet music or singing lyrics on call.",
-    "price": { "low": 18, "medium": 18, "high": 18, "premium": 18 },
+    "price": {
+      "low": 18,
+      "medium": 18,
+      "high": 18,
+      "premium": 18
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "adjustable aluminum ipad tablet stand desk",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-slate-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "soundcore-space-headphones",
     "title": "Soundcore Space One Wireless Headphones",
     "description": "Hi-Res wireless audio featuring upgraded active noise cancelling and long battery life. Perfect for continuous calling sessions.",
     "desc": "Hi-Res wireless audio featuring upgraded active noise cancelling and long battery life. Perfect for continuous calling sessions.",
-    "price": { "low": 99, "medium": 99, "high": 99, "premium": 99 },
+    "price": {
+      "low": 99,
+      "medium": 99,
+      "high": 99,
+      "premium": 99
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["music", "gaming"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "music",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Anker Soundcore Space One noise cancelling headphones",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-[#665efd]\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "guitar-starter-pack",
     "title": "Fender Acoustic Guitar Starter Pack",
     "description": "Includes a full-size acoustic guitar, gig bag, picks, strap, and spare strings. Learn acoustic cover songs together.",
     "desc": "Includes a full-size acoustic guitar, gig bag, picks, strap, and spare strings. Learn acoustic cover songs together.",
-    "price": { "low": 199, "medium": 199, "high": 199, "premium": 199 },
+    "price": {
+      "low": 199,
+      "medium": 199,
+      "high": 199,
+      "premium": 199
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["music"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "music"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Fender CD-60S acoustic guitar starter pack",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-700\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 19V6l12-3v13M9 10l12-3\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["long"],
-    "durations": ["long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "long"
+    ],
+    "durations": [
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "otamatone-instrument",
     "title": "Otamatone Japanese Toy Synth",
     "description": "A quirky and hilarious musical toy shaped like a musical note. Perform silly, out-of-tune music together on video.",
     "desc": "A quirky and hilarious musical toy shaped like a musical note. Perform silly, out-of-tune music together on video.",
-    "price": { "low": 39, "medium": 39, "high": 39, "premium": 39 },
+    "price": {
+      "low": 39,
+      "medium": 39,
+      "high": 39,
+      "premium": 39
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music", "gaming"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Otamatone Deluxe Japanese electronic musical instrument",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-pink-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "custom-soundwave-print",
     "title": "Custom Soundwave Song Print",
     "description": "Convert a voice recording saying 'I love you' or a snippet of your favorite song into beautiful custom soundwave wall art.",
     "desc": "Convert a voice recording saying 'I love you' or a snippet of your favorite song into beautiful custom soundwave wall art.",
-    "price": { "low": 28, "medium": 28, "high": 28, "premium": 28 },
+    "price": {
+      "low": 28,
+      "medium": 28,
+      "high": 28,
+      "premium": 28
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["anniversary", "birthday"],
-    "interests": ["music", "art"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday"
+    ],
+    "interests": [
+      "music",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "custom sound wave art print framed foil",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-violet-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h.008V13.5m4.492.75h.008v-.008h-.008v.008z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "guitar-picks-pack",
     "title": "Dunlop Variety Guitar Picks Pack",
     "description": "A pack of 12 guitar picks of various materials, shapes, and thicknesses. Essential starter pack for guitarists.",
     "desc": "A pack of 12 guitar picks of various materials, shapes, and thicknesses. Essential starter pack for guitarists.",
-    "price": { "low": 8, "medium": 8, "high": 8, "premium": 8 },
+    "price": {
+      "low": 8,
+      "medium": 8,
+      "high": 8,
+      "premium": 8
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Dunlop guitar picks variety pack 12",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-rose-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.232 5.232l3.536 3.536M9 11l3 3m-3-3l-3 3\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "korg-tuner-metronome",
     "title": "Korg TM-60 Tuner & Metronome",
     "description": "High-accuracy tuner and metronome function can be used simultaneously. Features back-lit LCD screen. Essential.",
     "desc": "High-accuracy tuner and metronome function can be used simultaneously. Features back-lit LCD screen. Essential.",
-    "price": { "low": 29, "medium": 29, "high": 29, "premium": 29 },
+    "price": {
+      "low": 29,
+      "medium": 29,
+      "high": 29,
+      "premium": 29
+    },
     "budget": "medium",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Korg TM-60 combo tuner metronome",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 18v3m0 0h.01\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "marshall-willen-speaker",
     "title": "Marshall Willen Portable Speaker",
     "description": "A heavy-duty portable speaker with classic Marshall design. Built-in microphone to answer calls hands-free while listening.",
     "desc": "A heavy-duty portable speaker with classic Marshall design. Built-in microphone to answer calls hands-free while listening.",
-    "price": { "low": 119, "medium": 119, "high": 119, "premium": 119 },
+    "price": {
+      "low": 119,
+      "medium": 119,
+      "high": 119,
+      "premium": 119
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["music", "travel"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "music",
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Marshall Willen portable bluetooth speaker",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-600\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "audio-technica-turntable",
     "title": "Audio-Technica Automatic Turntable",
     "description": "A premium fully automatic belt-drive stereo turntable, compatible with any sound system to play analog vinyl records.",
     "desc": "A premium fully automatic belt-drive stereo turntable, compatible with any sound system to play analog vinyl records.",
-    "price": { "low": 149, "medium": 149, "high": 149, "premium": 149 },
+    "price": {
+      "low": 149,
+      "medium": 149,
+      "high": 149,
+      "premium": 149
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["anniversary", "birthday", "holiday"],
-    "interests": ["music"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "anniversary",
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "music"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Audio Technica AT-LP60X GM fully automatic turntable",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-slate-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 3a3 3 0 100-6 3 3 0 000 6z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["long"],
-    "durations": ["long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "long"
+    ],
+    "durations": [
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "loop-earplugs",
     "title": "Loop Experience Musician Earplugs",
     "description": "High-fidelity hearing protection that reduces volume while keeping sound quality intact. Ideal for concerts and loud events.",
     "desc": "High-fidelity hearing protection that reduces volume while keeping sound quality intact. Ideal for concerts and loud events.",
-    "price": { "low": 34, "medium": 34, "high": 34, "premium": 34 },
+    "price": {
+      "low": 34,
+      "medium": 34,
+      "high": 34,
+      "premium": 34
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music", "travel"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music",
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Loop Experience high fidelity earplugs musicians",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-teal-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "blue-yeti-mic",
     "title": "Logitech Blue Yeti USB Microphone",
     "description": "The gold standard microphone for crystal-clear voice on calls, gaming chats, or recording vocal covers. Features four pickup patterns.",
     "desc": "The gold standard microphone for crystal-clear voice on calls, gaming chats, or recording vocal covers. Features four pickup patterns.",
-    "price": { "low": 99, "medium": 99, "high": 99, "premium": 99 },
+    "price": {
+      "low": 99,
+      "medium": 99,
+      "high": 99,
+      "premium": 99
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["music", "gaming"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "music",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Blue Yeti USB condenser microphone",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-sky-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "leather-pick-holder",
     "title": "Custom Leather Guitar Pick Keychain",
     "description": "A handmade genuine leather keychain case designed to store and carry up to 5 guitar picks safely.",
     "desc": "A handmade genuine leather keychain case designed to store and carry up to 5 guitar picks safely.",
-    "price": { "low": 15, "medium": 15, "high": 15, "premium": 15 },
+    "price": {
+      "low": 15,
+      "medium": 15,
+      "high": 15,
+      "premium": 15
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["music", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "music",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "custom leather guitar pick holder keychain case",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-amber-700\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M15.232 5.232l3.536 3.536M9 11l3 3\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "akai-midi-keyboard",
     "title": "Akai Wireless LPK25 MIDI Keyboard",
     "description": "Ultra-portable 25-key USB MIDI keyboard controller with velocity-sensitive keys for producing music anywhere.",
     "desc": "Ultra-portable 25-key USB MIDI keyboard controller with velocity-sensitive keys for producing music anywhere.",
-    "price": { "low": 79, "medium": 79, "high": 79, "premium": 79 },
+    "price": {
+      "low": 79,
+      "medium": 79,
+      "high": 79,
+      "premium": 79
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["music", "gaming"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "music",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Akai Professional LPK25 wireless midi keyboard",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-emerald-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "focusrite-audio-interface",
     "title": "Focusrite Scarlett Solo Audio Interface",
     "description": "High-performance converters for recording vocals and guitar. Includes Ableton Live Lite recording software.",
     "desc": "High-performance converters for recording vocals and guitar. Includes Ableton Live Lite recording software.",
-    "price": { "low": 109, "medium": 109, "high": 109, "premium": 109 },
+    "price": {
+      "low": 109,
+      "medium": 109,
+      "high": 109,
+      "premium": 109
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["music"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "music"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Focusrite Scarlett Solo 4th Gen USB audio interface",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-rose-600\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M9.75 3.104v1.244c0 .41-.195.794-.527 1.036\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["long"],
-    "durations": ["long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "long"
+    ],
+    "durations": [
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "sony-portable-speaker",
     "title": "Sony Compact Wireless Speaker",
     "description": "Take powerful surround sound anywhere with this extra-durable, travel-ready Bluetooth speaker. Deep bass notes.",
     "desc": "Take powerful surround sound anywhere with this extra-durable, travel-ready Bluetooth speaker. Deep bass notes.",
-    "price": { "low": 39, "medium": 39, "high": 39, "premium": 39 },
+    "price": {
+      "low": 39,
+      "medium": 39,
+      "high": 39,
+      "premium": 39
+    },
     "budget": "medium",
-    "budgets": ["medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music", "travel"],
+    "budgets": [
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music",
+      "travel"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Sony SRS-XB100 compact bluetooth speaker",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-blue-400\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M19.114 5.636a9 9 0 010 12.728\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "diy-music-box",
     "title": "DIY Hand-Cranked Wooden Music Box",
     "description": "Assemble a vintage hand-cranked music box from pre-cut wooden blocks. Features beautiful mechanical gears.",
     "desc": "Assemble a vintage hand-cranked music box from pre-cut wooden blocks. Features beautiful mechanical gears.",
-    "price": { "low": 19, "medium": 19, "high": 19, "premium": 19 },
+    "price": {
+      "low": 19,
+      "medium": 19,
+      "high": 19,
+      "premium": 19
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "anniversary", "just-because"],
-    "interests": ["music", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "anniversary",
+      "just-because"
+    ],
+    "interests": [
+      "music",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "ROKR wooden diy gear mechanical music box kit",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-amber-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M12 6v14m0-14C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Etsy",
+      "Amazon"
+    ]
   },
   {
     "id": "violin-desktop-holder",
     "title": "Wooden Violin Desktop Organizer",
     "description": "A beautifully finished wooden desk pen and accessory holder crafted in the shape of a miniature violin.",
     "desc": "A beautifully finished wooden desk pen and accessory holder crafted in the shape of a miniature violin.",
-    "price": { "low": 24, "medium": 24, "high": 24, "premium": 24 },
+    "price": {
+      "low": 24,
+      "medium": 24,
+      "high": 24,
+      "premium": 24
+    },
     "budget": "low",
-    "budgets": ["low", "medium", "high", "premium"],
-    "occasions": ["birthday", "just-because"],
-    "interests": ["music", "art"],
+    "budgets": [
+      "low",
+      "medium",
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "just-because"
+    ],
+    "interests": [
+      "music",
+      "art"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "miniature wooden violin desk pencil holder",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-yellow-700\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M20.25 7.5l-.625 10.632\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["new", "mid", "long"],
-    "durations": ["new", "mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "new",
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   },
   {
     "id": "shure-isolating-earphones",
     "title": "Shure SE215 Professional Earphones",
     "description": "Sound-isolating in-ear earphones with detailed sound and enhanced bass. Designed to block external background noises.",
     "desc": "Sound-isolating in-ear earphones with detailed sound and enhanced bass. Designed to block external background noises.",
-    "price": { "low": 99, "medium": 99, "high": 99, "premium": 99 },
+    "price": {
+      "low": 99,
+      "medium": 99,
+      "high": 99,
+      "premium": 99
+    },
     "budget": "high",
-    "budgets": ["high", "premium"],
-    "occasions": ["birthday", "holiday"],
-    "interests": ["music", "gaming"],
+    "budgets": [
+      "high",
+      "premium"
+    ],
+    "occasions": [
+      "birthday",
+      "holiday"
+    ],
+    "interests": [
+      "music",
+      "gaming"
+    ],
     "giftType": "local-delivery",
     "type": "local-delivery",
     "query": "Shure SE215 professional sound isolating earphones",
     "badge": "Ships locally",
     "stars": "⭐⭐⭐⭐⭐",
     "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-slate-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\" d=\"M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" /></svg>",
-    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
-    "relationship": ["mid", "long"],
-    "durations": ["mid", "long"]
+    "countries": [
+      "US",
+      "IN",
+      "CA",
+      "GB",
+      "AU",
+      "SG",
+      "DE",
+      "FR",
+      "JP",
+      "RU"
+    ],
+    "relationship": [
+      "mid",
+      "long"
+    ],
+    "durations": [
+      "mid",
+      "long"
+    ],
+    "stores": [
+      "Amazon"
+    ]
   }
 ]
