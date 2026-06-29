@@ -1,0 +1,88 @@
+---
+// src/pages/tools/movie-night-planner/index.astro
+import ToolLayout from "../../../layouts/ToolLayout.astro";
+---
+
+<ToolLayout
+  title="Movie Night Planner | Will Meet Soon"
+  description="Synchronize your streaming queues and video chats for a seamless lag-free virtual cinema experience."
+  toolName="Movie Night Planner"
+  toolDescription="Synchronize your streaming queues and video chats for a seamless lag-free virtual cinema experience."
+>
+  <span slot="hero-title">
+    Synchronized streams for <span class="bg-gradient-to-r from-[#ea2261] to-[#f96bee] bg-clip-text text-transparent font-medium">shared movie nights</span>
+  </span>
+
+  <div class="max-w-3xl mx-auto">
+    <!-- Premium Preview Warning -->
+    <div class="glow-border rounded-xl p-8 mb-8 text-center relative overflow-hidden">
+      <!-- Ambient Gradient Indicator -->
+      <div class="absolute inset-0 bg-[#ea2261]/5 z-0 pointer-events-none"></div>
+      
+      <div class="relative z-10">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-semibold bg-white/5 border border-white/10 text-neutral-300 uppercase tracking-widest mb-6">
+          Prototype Preview
+        </span>
+        
+        <!-- Mock Streaming Screen -->
+        <div class="bg-[#090a12]/80 border border-white/5 rounded-xl overflow-hidden mb-8 shadow-2xl aspect-video max-w-xl mx-auto flex flex-col justify-between p-4 relative">
+          <!-- Mock Video Poster Background -->
+          <div class="absolute inset-0 bg-neutral-900/90 z-0 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-20 h-20 text-[#61718a]/20">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m-7.5 4.5v-1.5c0-.621.504-1.125 1.125-1.125m0 0h7.5m-7.5 0V9.75c0-.621.504-1.125 1.125-1.125h7.5c.621 0 1.125.504 1.125 1.125v3.375c0 .621-.504 1.125-1.125 1.125M11.25 7.5h7.5c.621 0 1.125.504 1.125 1.125v8.625M16.5 19.5v-1.5c0-.621.504-1.125 1.125-1.125h3.375c.621 0 1.125.504 1.125 1.125v1.5M16.5 19.5h3.375M16.5 15h3.375M16.5 10.5h3.375" />
+            </svg>
+          </div>
+
+          <!-- Top Overlay: Status and Video Channels -->
+          <div class="flex items-start justify-between w-full relative z-10">
+            <span class="text-[9px] bg-red-500/20 text-red-400 font-semibold px-2 py-0.5 border border-red-500/30 rounded flex items-center gap-1 select-none">
+              <span class="w-1.5 h-1.5 bg-red-500 rounded-full animate-ping"></span> Live Synced
+            </span>
+            <!-- Video Feeds -->
+            <div class="flex gap-2">
+              <div class="w-16 h-12 rounded bg-[#0b0c16] border border-white/10 flex items-center justify-center text-[7px] text-[#61718a] font-light">You</div>
+              <div class="w-16 h-12 rounded bg-[#0b0c16] border border-white/10 flex items-center justify-center text-[7px] text-[#61718a] font-light">Partner</div>
+            </div>
+          </div>
+
+          <!-- Middle Play Button -->
+          <div class="self-center relative z-10">
+            <button class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white flex items-center justify-center transition-colors cursor-not-allowed">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 ml-0.5">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Bottom Control Bar -->
+          <div class="w-full relative z-10 bg-black/60 backdrop-blur-sm rounded p-2 flex items-center justify-between text-[10px] text-[#61718a]">
+            <span class="font-mono tabular-nums">00:00 / 02:14:30</span>
+            <div class="w-1/2 h-1 bg-white/15 rounded relative overflow-hidden">
+              <div class="absolute left-0 top-0 bottom-0 w-1/4 bg-[#ea2261]"></div>
+            </div>
+            <span class="uppercase tracking-widest text-[8px] font-semibold text-white">Netflix Synced</span>
+          </div>
+        </div>
+
+        <p class="text-sm text-neutral-300 font-light max-w-lg mx-auto leading-relaxed mb-8">
+          Watch together, cry together. Our planner integrates video feeds alongside synchronized streaming players so you never have to coordinate hitting "play" manually.
+        </p>
+
+        <!-- Search input mock -->
+        <div class="border border-white/5 bg-[#0b0c16]/50 rounded-lg p-5 max-w-md mx-auto text-left shadow-inner mb-8">
+          <label class="block text-[10px] text-[#61718a] uppercase tracking-wider mb-2 font-medium">Search Movie or Paste Video Link</label>
+          <div class="flex gap-2">
+            <input type="text" value="https://www.netflix.com/title/80018499" class="flex-grow bg-[#0b0c16] border border-white/10 rounded px-3 py-2 text-xs font-light text-white cursor-not-allowed" disabled />
+            <button class="bg-[#ea2261] text-white text-xs font-medium px-4 py-2 rounded-lg cursor-not-allowed" disabled>Sync</button>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <a href="/" class="bg-white/5 border border-white/10 hover:bg-white/10 text-xs text-white font-medium px-6 py-2.5 rounded-lg transition-colors focus-ring">
+            ← Back to Tools Dashboard
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ToolLayout>

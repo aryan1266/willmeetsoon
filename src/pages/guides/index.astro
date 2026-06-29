@@ -1,0 +1,96 @@
+---
+// src/pages/guides/index.astro
+import Layout from "../../layouts/Layout.astro";
+
+// Mock articles database
+const articles = [
+  {
+    title: "Surviving the First 6 Months of Long Distance",
+    excerpt: "The initial transition is often the hardest. Here is a survival guide on setting expectations, schedules, and communication habits.",
+    category: "LDR Advice",
+    readTime: "5 min read",
+    date: "June 25, 2026",
+    badgeColor: "bg-[#533afd]/10 text-[#533afd] border-[#533afd]/20"
+  },
+  {
+    title: "10 Creative Ideas for Your Next Virtual Date Night",
+    excerpt: "Bored of FaceTime? Explore interactive activities from online cooking challenges to shared sketch canvases that bring you closer.",
+    category: "Date Rituals",
+    readTime: "4 min read",
+    date: "June 18, 2026",
+    badgeColor: "bg-[#f96bee]/10 text-[#f96bee] border-[#f96bee]/20"
+  },
+  {
+    title: "Closing the Distance: Relocation & Visa Checklist",
+    excerpt: "Closing the distance is the ultimate goal. We map out the legal, financial, and logistical steps to move to the same city.",
+    category: "Relocation",
+    readTime: "8 min read",
+    date: "May 29, 2026",
+    badgeColor: "bg-[#ea2261]/10 text-[#ea2261] border-[#ea2261]/20"
+  },
+  {
+    title: "How to Gift Internationally Without Customs Fees",
+    excerpt: "Unexpected customs duties can ruin a surprise gift. Learn how to source and deliver gifts locally from inside your partner's country.",
+    category: "Gifting Tips",
+    readTime: "6 min read",
+    date: "May 12, 2026",
+    badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+  }
+];
+---
+
+<Layout title="Relationship Guides & Advice | Will Meet Soon" description="Read advice, tips, and guidelines on surviving and thriving in long-distance relationships. Banish the distance.">
+  <div class="py-12">
+    <!-- Header Hero -->
+    <div class="w-full max-w-4xl mx-auto px-6 text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10 mb-6">
+        <span class="text-[10px] md:text-xs font-medium text-neutral-300 tracking-wider uppercase">
+          LDR Articles
+        </span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-[-1.8px] leading-[1.05] mb-6 max-w-3xl mx-auto text-balance">
+        Relationship Guides & <span class="bg-gradient-to-r from-[#533afd] via-[#f96bee] to-[#ea2261] bg-clip-text text-transparent font-medium">LDR Advice</span>
+      </h1>
+      <p class="text-base md:text-lg font-light text-[#64748d] max-w-xl mx-auto leading-relaxed text-pretty">
+        Empowering long-distance couples with strategic resources to navigate communication gaps, timezone offsets, and relocation logistics.
+      </p>
+    </div>
+
+    <!-- Articles Grid -->
+    <div class="w-full max-w-5xl mx-auto px-6 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {articles.map(article => (
+          <article class="glow-border rounded-xl p-8 transition-all duration-300 flex flex-col justify-between group cursor-pointer hover:border-white/20">
+            <div>
+              <!-- Category and Meta -->
+              <div class="flex items-center justify-between mb-4">
+                <span class={`text-[9px] font-semibold tracking-wider uppercase px-2.5 py-0.5 rounded border ${article.badgeColor}`}>
+                  {article.category}
+                </span>
+                <span class="text-[10px] text-[#61718a] font-light">{article.date}</span>
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-lg font-medium text-white mb-3 group-hover:text-[#f96bee] transition-colors">
+                {article.title}
+              </h3>
+
+              <!-- Excerpt -->
+              <p class="text-xs text-[#64748d] font-light leading-relaxed mb-6">
+                {article.excerpt}
+              </p>
+            </div>
+
+            <!-- Read Article link -->
+            <div class="inline-flex items-center text-xs font-semibold text-white group-hover:text-white transition-colors">
+              Read Guide
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 ml-1.5 transition-transform duration-300 group-hover:translate-x-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>

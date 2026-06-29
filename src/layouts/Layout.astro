@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
 	title?: string;
@@ -29,7 +31,7 @@ const {
 		
 		<!-- Fonts: Google Fonts Inter for Vercel/Stripe clean design -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
 		
 		<!-- Open Graph / Facebook -->
@@ -44,7 +46,20 @@ const {
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 	</head>
-	<body class="bg-[#0b0c16] text-[#f6f9fc] selection:bg-[#533afd] selection:text-white">
-		<slot />
+	<body class="bg-[#0b0c16] text-[#f6f9fc] selection:bg-[#533afd] selection:text-white min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+		<!-- Grid overlay and Gradient Mesh Background -->
+		<div class="absolute inset-0 grid-overlay z-0 pointer-events-none"></div>
+		<div class="gradient-blur-mesh"></div>
+
+		<!-- Responsive Global Navbar -->
+		<Navbar />
+
+		<!-- Main Content Slot -->
+		<main class="flex-grow w-full relative z-10 flex flex-col">
+			<slot />
+		</main>
+
+		<!-- Global Footer -->
+		<Footer />
 	</body>
 </html>

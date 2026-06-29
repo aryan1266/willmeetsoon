@@ -1,0 +1,68 @@
+---
+// src/components/Footer.astro
+import { countries } from "../data/countries";
+
+// Generate all 90 long-distance couples routes for SEO directory dynamically
+const countriesList = Object.keys(countries);
+const allCoupleRoutes = [];
+for (const fromC of countriesList) {
+  for (const toC of countriesList) {
+    if (fromC !== toC) {
+      allCoupleRoutes.push({
+        fromCode: fromC.toUpperCase(),
+        toCode: toC.toUpperCase(),
+        path: `/gifts/${fromC.toLowerCase()}-to-${toC.toLowerCase()}`
+      });
+    }
+  }
+}
+---
+
+<footer class="border-t border-white/5 py-12 bg-[#090a12]/80 relative z-10 mt-auto w-full">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="text-xs font-semibold tracking-wider text-white uppercase font-display">Will Meet Soon</span>
+      </div>
+      <p class="text-xs text-[#64748d] max-w-sm leading-relaxed font-light font-sans">
+        Connecting hearts across continents. Helping long distance relationships survive, thrive, and close the distance with premium tools.
+      </p>
+    </div>
+    
+    <div>
+      <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-4 font-display">Resources</h4>
+      <ul class="space-y-2 text-xs text-[#61718a] font-light">
+        <li>Amazon Logistics</li>
+        <li>Paired Couples App</li>
+        <li>Cozymeal Cooking</li>
+      </ul>
+    </div>
+
+    <div>
+      <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-4 font-display">Site Links</h4>
+      <ul class="space-y-2 text-xs text-[#61718a] font-light">
+        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+        <li><a href="/tools/gift-date-planner" class="hover:text-white transition-colors">Gift & Date Planner</a></li>
+        <li><span class="cursor-default hover:text-white transition-colors">Privacy Policy</span></li>
+        <li><a href="https://willmeetsoon.com" class="hover:text-white transition-colors">willmeetsoon.com</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SEO directory of all 90 routes -->
+  <div class="max-w-6xl mx-auto px-6 mt-12 pt-12 border-t border-white/5">
+    <h4 class="text-xs font-medium text-white uppercase tracking-wider mb-6 font-display">Explore Long Distance Portals</h4>
+    <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-x-4 gap-y-3 text-[10px] text-[#61718a] font-light">
+      {allCoupleRoutes.map(route => (
+        <a href={route.path} class="hover:text-white transition-colors whitespace-nowrap">
+          {route.fromCode} → {route.toCode} Couples
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#61718a] font-light">
+    <p>&copy; 2026 Will Meet Soon. All rights reserved.</p>
+    <p class="tabular-nums">Dynamic SEO Routes for 100 couples channels.</p>
+  </div>
+</footer>

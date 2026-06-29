@@ -1,0 +1,186 @@
+---
+// src/components/Navbar.astro
+const currentPath = Astro.url.pathname;
+
+const isActive = (path: string) => {
+  if (path === '/') {
+    return currentPath === '/' ? 'text-white font-semibold' : 'text-[#61718a] hover:text-white';
+  }
+  return currentPath.startsWith(path) ? 'text-white font-semibold' : 'text-[#61718a] hover:text-white';
+};
+---
+
+<header class="sticky top-0 z-50 w-full max-w-none border-b border-white/5 bg-[#0b0c16]/85 backdrop-blur-md transition-all duration-300">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo wordmark -->
+    <a href="/" class="flex items-center gap-2 group focus-ring rounded-md z-50">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-[#533afd] group-hover:text-white transition-colors duration-300" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+      </svg>
+      <span class="text-sm font-semibold tracking-[0.1em] text-white uppercase font-display">
+        Will Meet Soon
+      </span>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-8 text-xs font-light tracking-wide z-50" aria-label="Main Navigation">
+      <a href="/" class={`transition-colors duration-300 ${isActive('/')}`}>Home</a>
+      
+      <!-- Tools Dropdown Trigger -->
+      <div class="relative group py-2">
+        <button class={`flex items-center gap-1 cursor-pointer transition-colors duration-300 ${isActive('/tools')}`} aria-expanded="false" aria-haspopup="true">
+          Tools
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-2.5 h-2.5 opacity-60 group-hover:rotate-180 transition-transform duration-300">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </button>
+        <!-- Dropdown Menu -->
+        <div class="absolute left-0 mt-2 w-56 rounded-lg opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-200 border border-white/10 bg-[#0b0c16]/95 backdrop-blur-xl p-2 shadow-2xl z-50">
+          <a href="/tools/gift-date-planner" class="flex flex-col gap-0.5 px-3 py-2 rounded-md hover:bg-white/5 transition-colors group/item">
+            <span class="text-[11px] font-medium text-white">Gift & Date Planner</span>
+            <span class="text-[9px] text-[#61718a] font-light">Customs-optimized suggestions</span>
+          </a>
+          <a href="/tools/reunion-countdown" class="flex flex-col gap-0.5 px-3 py-2 rounded-md hover:bg-white/5 transition-colors group/item">
+            <span class="text-[11px] font-medium text-white flex items-center justify-between">
+              Reunion Countdown
+              <span class="text-[8px] bg-white/10 text-neutral-300 px-1 py-0.25 rounded">Soon</span>
+            </span>
+            <span class="text-[9px] text-[#61718a] font-light">Countdown & separation tracker</span>
+          </a>
+          <a href="/tools/time-overlap-planner" class="flex flex-col gap-0.5 px-3 py-2 rounded-md hover:bg-white/5 transition-colors group/item">
+            <span class="text-[11px] font-medium text-white flex items-center justify-between">
+              Time Overlap Planner
+              <span class="text-[8px] bg-white/10 text-neutral-300 px-1 py-0.25 rounded">Soon</span>
+            </span>
+            <span class="text-[9px] text-[#61718a] font-light">Visualize local call schedules</span>
+          </a>
+          <a href="/tools/movie-night-planner" class="flex flex-col gap-0.5 px-3 py-2 rounded-md hover:bg-white/5 transition-colors group/item">
+            <span class="text-[11px] font-medium text-white flex items-center justify-between">
+              Movie Night Planner
+              <span class="text-[8px] bg-white/10 text-neutral-300 px-1 py-0.25 rounded">Soon</span>
+            </span>
+            <span class="text-[9px] text-[#61718a] font-light">Sync streaming and calls</span>
+          </a>
+        </div>
+      </div>
+
+      <a href="/guides" class={`transition-colors duration-300 ${isActive('/guides')}`}>Guides</a>
+      <a href="/about" class={`transition-colors duration-300 ${isActive('/about')}`}>About</a>
+    </nav>
+
+    <!-- Desktop Action Badge -->
+    <div class="hidden md:flex items-center gap-4 text-xs font-light text-[#61718a] z-50">
+      <span class="w-1.5 h-1.5 bg-[#533afd] rounded-full animate-ping"></span>
+      <span class="text-emerald-400 font-medium bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 select-none">v1.0 Live</span>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden flex items-center text-[#61718a] hover:text-white transition-colors focus:outline-none z-50" aria-label="Toggle mobile menu" aria-expanded="false">
+      <svg id="hamburger-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+      <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Panel -->
+  <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full min-h-screen bg-[#0b0c16]/98 backdrop-blur-2xl z-40 px-6 pt-24 pb-8 flex flex-col justify-between">
+    <div class="flex flex-col gap-6">
+      <nav class="flex flex-col gap-4 text-base font-light tracking-wide">
+        <a href="/" class={`py-2 border-b border-white/5 ${isActive('/')}`}>Home</a>
+        
+        <!-- Mobile Dropdown Accordion -->
+        <div class="flex flex-col">
+          <button id="mobile-tools-trigger" class={`py-2 border-b border-white/5 flex items-center justify-between text-left ${isActive('/tools')}`}>
+            Tools
+            <svg id="mobile-tools-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4 transition-transform duration-300">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+          <div id="mobile-tools-list" class="hidden flex-col gap-2 pl-4 py-2 mt-1">
+            <a href="/tools/gift-date-planner" class="flex flex-col py-1.5">
+              <span class="text-sm font-medium text-white">Gift & Date Planner</span>
+              <span class="text-[10px] text-[#61718a]">Customs-optimized suggestions</span>
+            </a>
+            <a href="/tools/reunion-countdown" class="flex flex-col py-1.5">
+              <span class="text-sm font-medium text-neutral-300 flex items-center justify-between">
+                Reunion Countdown
+                <span class="text-[9px] bg-white/10 text-neutral-400 px-1 py-0.25 rounded">Soon</span>
+              </span>
+              <span class="text-[10px] text-[#61718a]">Countdown & separation tracker</span>
+            </a>
+            <a href="/tools/time-overlap-planner" class="flex flex-col py-1.5">
+              <span class="text-sm font-medium text-neutral-300 flex items-center justify-between">
+                Time Overlap Planner
+                <span class="text-[9px] bg-white/10 text-neutral-400 px-1 py-0.25 rounded">Soon</span>
+              </span>
+              <span class="text-[10px] text-[#61718a]">Visualize local call schedules</span>
+            </a>
+            <a href="/tools/movie-night-planner" class="flex flex-col py-1.5">
+              <span class="text-sm font-medium text-neutral-300 flex items-center justify-between">
+                Movie Night Planner
+                <span class="text-[9px] bg-white/10 text-neutral-400 px-1 py-0.25 rounded">Soon</span>
+              </span>
+              <span class="text-[10px] text-[#61718a]">Sync streaming and calls</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="/guides" class={`py-2 border-b border-white/5 ${isActive('/guides')}`}>Guides</a>
+        <a href="/about" class={`py-2 border-b border-white/5 ${isActive('/about')}`}>About</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Footer Info -->
+    <div class="flex flex-col items-center gap-4 text-xs font-light text-[#61718a] pt-8 border-t border-white/5">
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 bg-[#533afd] rounded-full animate-ping"></span>
+        <span class="text-emerald-400 font-medium bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">v1.0 Live</span>
+      </div>
+      <p class="text-center font-display uppercase tracking-widest text-[10px] text-white">Will Meet Soon</p>
+    </div>
+  </div>
+</header>
+
+<script>
+  function setupNavbar() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    const mobileToolsTrigger = document.getElementById('mobile-tools-trigger');
+    const mobileToolsList = document.getElementById('mobile-tools-list');
+    const mobileToolsChevron = document.getElementById('mobile-tools-chevron');
+
+    if (mobileMenuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+        mobileMenuBtn.setAttribute('aria-expanded', String(!isExpanded));
+        
+        mobileMenu.classList.toggle('hidden');
+        hamburgerIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        
+        // Prevent body scrolling when mobile menu is open
+        document.body.classList.toggle('overflow-hidden', !isExpanded);
+      });
+    }
+
+    if (mobileToolsTrigger && mobileToolsList && mobileToolsChevron) {
+      mobileToolsTrigger.addEventListener('click', () => {
+        const isHidden = mobileToolsList.classList.contains('hidden');
+        mobileToolsList.classList.toggle('hidden');
+        mobileToolsChevron.classList.toggle('rotate-180', isHidden);
+      });
+    }
+  }
+
+  // Setup on page load
+  setupNavbar();
+
+  // Setup on Astro page navigation (if ViewTransitions are used)
+  document.addEventListener('astro:after-swap', setupNavbar);
+</script>
