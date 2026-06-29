@@ -1,0 +1,18 @@
+[
+  {
+    "id": "fitness-bands",
+    "title": "Resistance Band & Wellness Kit",
+    "desc": "Stackable workout bands with heavy-duty anchors, dynamic instructions, and a virtual couples challenge program.",
+    "price": { "low": 18, "medium": 30, "high": 50, "premium": 80 },
+    "budgets": ["low", "medium", "high", "premium"],
+    "occasions": ["just-because", "birthday"],
+    "interests": ["fitness"],
+    "type": "local-delivery",
+    "query": "heavy duty resistance bands workout set",
+    "badge": "Ships locally",
+    "stars": "⭐⭐⭐⭐⭐",
+    "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-blue-500\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1\" d=\"M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z\" /></svg>",
+    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
+    "durations": ["low", "medium", "high", "premium"]
+  }
+]

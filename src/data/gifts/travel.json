@@ -1,0 +1,18 @@
+[
+  {
+    "id": "touch-bracelets",
+    "title": "Bond Touch Connection Bracelets",
+    "desc": "Touch your bracelet and your partner's bracelet vibrates and lights up, letting them know they are on your mind instantly.",
+    "price": { "low": 108, "medium": 108, "high": 108, "premium": 108 },
+    "budgets": ["high", "premium"],
+    "occasions": ["anniversary", "birthday", "just-because"],
+    "interests": ["travel", "fitness"],
+    "type": "local-delivery",
+    "query": "Bond Touch Connection Bracelets",
+    "badge": "Ships locally",
+    "stars": "⭐⭐⭐⭐⭐",
+    "imgSvg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" class=\"w-12 h-12 text-[#533afd]\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1\" d=\"M12 8.25v-1.5m0 1.5c-1.355 0-2.697-.056-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166zm-4.024-.166C6.845 7.996 6 7.014 6 5.874V5.75L12 3l6 2.75v.124c0 1.14-.845 2.122-1.976 2.21-1.327.11-2.67.166-4.024.166z\" /></svg>",
+    "countries": ["US", "IN", "CA", "GB", "AU", "SG", "DE", "FR", "JP", "RU"],
+    "durations": ["medium", "high", "premium"]
+  }
+]
