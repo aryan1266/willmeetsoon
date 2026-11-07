@@ -2,134 +2,198 @@
 // src/pages/index.astro
 import Layout from "../layouts/Layout.astro";
 
-// Tool card content definition
-const tools = [
-  {
-    id: "gift-date-planner",
-    name: "Gift & Date Planner",
-    description: "Order locally-optimized gifts to bypass shipping custom duties, synchronize remote dates, and countdown to your next reunion.",
-    status: "live",
-    path: "/tools/gift-date-planner",
-    icon: "M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z",
-    color: "from-[#533afd] to-[#f96bee]"
-  },
+// Tool suite definition: Gift & Date Planner is the active centerpiece
+const upcomingTools = [
   {
     id: "reunion-countdown",
     name: "Reunion Countdown",
-    description: "Keep the spark alive and track the exact days, hours, and minutes until you're back in each other's arms.",
-    status: "soon",
-    path: "/tools/reunion-countdown",
-    icon: "M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5",
-    color: "from-[#f96bee] to-[#ea2261]"
+    description: "Track the exact days, hours, and heartbeats until you're finally running into each other's arms at the airport terminal.",
+    icon: "⏳",
+    badge: "Crafting with Love 🌸",
+    badgeColor: "bg-[#FEF9C3] text-[#B45309] border-[#FDE047] dark:bg-[#FBBF24]/15 dark:text-[#FBBF24] dark:border-[#FBBF24]/30",
+    statusNote: "Coming soon for couples"
   },
   {
     id: "time-overlap-planner",
     name: "Time Overlap Planner",
-    description: "Visualize your schedules side-by-side to find the perfect daily windows where both of you are awake and free.",
-    status: "soon",
-    path: "/tools/time-overlap-planner",
-    icon: "M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z",
-    color: "from-[#533afd] to-[#ea2261]"
+    description: "Visualize both daily rhythms side-by-side. Discover that golden window where one is waking to coffee and the other is unwinding.",
+    icon: "☀️",
+    badge: "In Development ☕",
+    badgeColor: "bg-[#FFF1E6] text-[#C2410C] border-[#FED7AA] dark:bg-[#FB923C]/15 dark:text-[#FB923C] dark:border-[#FB923C]/30",
+    statusNote: "Coming soon for couples"
   },
   {
     id: "movie-night-planner",
     name: "Movie Night Planner",
-    description: "Synchronize your streaming queues and video chats for a seamless lag-free virtual cinema experience.",
-    status: "soon",
-    path: "/tools/movie-night-planner",
-    icon: "M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z M9 3.75v16.5M15 3.75v16.5M3.75 9h16.5M3.75 15h16.5",
-    color: "from-[#ea2261] to-[#f96bee]"
+    description: "Couch cuddles across oceans. Synchronize queues and video feeds so you laugh, cry, and react at the exact same millisecond.",
+    icon: "🍿",
+    badge: "In the Works 🎬",
+    badgeColor: "bg-[#F3E8FF] text-[#7E22CE] border-[#E9D5FF] dark:bg-[#A855F7]/15 dark:text-[#C084FC] dark:border-[#A855F7]/30",
+    statusNote: "Coming soon for couples"
   }
 ];
 ---
 
-<Layout title="Will Meet Soon | Multi-Tool Platform for Long-Distance Couples">
-  <div class="py-12">
-    <!-- Hero Section -->
-    <div class="w-full max-w-4xl mx-auto px-6 text-center mb-16">
+<Layout 
+  title="Will Meet Soon | A Lovable Comfort Haven for Long-Distance Couples"
+  description="A gentle haven for couples across distance. Plan customs-free surprise gifts, discover synchronized connection flowcharts, and close the miles."
+>
+  <div class="py-12 md:py-20">
+    <!-- Hero Section with Generous Open Spaces -->
+    <div class="w-full max-w-4xl mx-auto px-6 text-center mb-16 relative">
+      
       <!-- Eyebrow Pill -->
-      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10 mb-6 hover:border-white/20 transition-all">
-        <span class="w-2 h-2 rounded-full bg-[#ea2261]"></span>
-        <span class="text-[10px] md:text-xs font-medium text-neutral-300 tracking-wider uppercase">
-          Banish the Distance
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/90 dark:bg-[#261E2C]/90 rounded-full border border-[#F0E5DC] dark:border-[#3D3145] shadow-sm mb-8 hover:scale-105 transition-all duration-300">
+        <span class="text-sm">💌</span>
+        <span class="text-xs font-medium text-[#78666C] dark:text-[#C4B6BE] tracking-wide">
+          A gentle comfort haven for long-distance love
         </span>
       </div>
 
-      <!-- Headline -->
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-[-1.8px] leading-[1.05] mb-6 max-w-3xl mx-auto text-balance">
-        Stay connected, <span class="bg-gradient-to-r from-[#533afd] via-[#f96bee] to-[#ea2261] bg-clip-text text-transparent font-medium">no matter the distance</span>
+      <!-- Main Headline in Warm Fraunces Serif -->
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-normal text-[#2D2226] dark:text-[#FDFBF7] tracking-tight leading-[1.08] mb-8 max-w-3xl mx-auto text-balance">
+        Stay close in heart, <br class="hidden sm:inline" />
+        <span class="italic bg-gradient-to-r from-[#E15B7B] via-[#FB923C] to-[#F59E0B] bg-clip-text text-transparent font-medium">
+          no matter the distance
+        </span>
       </h1>
 
-      <!-- Subheading -->
-      <p class="text-base md:text-lg font-light text-[#64748d] max-w-xl mx-auto leading-relaxed text-pretty">
-        A premium suite of tools designed to help long-distance couples bridge the gap. Settle timezone borders, sync remote dates, and send customs-optimized gifts.
+      <!-- Heartfelt Subheading -->
+      <p class="text-base sm:text-lg md:text-xl font-light text-[#78666C] dark:text-[#C4B6BE] max-w-2xl mx-auto leading-relaxed text-pretty mb-10">
+        A warm sanctuary built specifically for couples separated by miles and timezones. Zero ads, zero spam, and free forever.
       </p>
+
+      <!-- Primary Action CTA Button -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a 
+          href="/tools/gift-date-planner" 
+          class="btn-lovable px-8 py-4 bg-gradient-to-r from-[#E15B7B] to-[#F472B6] text-white text-sm shadow-md hover:shadow-lg focus-ring text-base font-medium flex items-center gap-3 group"
+        >
+          <span>Open Gift & Date Planner</span>
+          <span class="group-hover:scale-125 transition-transform duration-300">🎁</span>
+        </a>
+      </div>
     </div>
 
-    <!-- Grid of Tools -->
-    <div class="w-full max-w-5xl mx-auto px-6 mb-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {tools.map(tool => (
-          <div class="glow-border rounded-xl p-8 transition-all duration-300 flex flex-col justify-between group">
+    <!-- CENTERPIECE ACTIVE TOOL: Gift & Date Planner Hero Showcase -->
+    <div class="w-full max-w-4xl mx-auto px-6 mb-20">
+      <div class="card-cozy p-8 sm:p-12 relative overflow-hidden bg-gradient-to-br from-[#FFFDF9] via-[#FAF5EE] to-[#FDE8EF]/40 dark:from-[#261E2C] dark:via-[#1F1924] dark:to-[#2B1B2A] border-2 border-[#FDE8EF] dark:border-[#3D3145] shadow-lg">
+        <!-- Soft decorative glow -->
+        <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#E15B7B]/10 dark:bg-[#FBBF24]/10 blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+          <div class="max-w-xl">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E15B7B] text-white text-xs font-semibold shadow-sm mb-4">
+              <span>💖</span>
+              <span>Available Now · Ready to Use</span>
+            </div>
+            
+            <h2 class="font-serif text-3xl sm:text-4xl text-[#2D2226] dark:text-[#FDFBF7] tracking-tight mb-3">
+              Gift & Date Connection Planner
+            </h2>
+
+            <p class="text-sm sm:text-base text-[#78666C] dark:text-[#C4B6BE] font-light leading-relaxed mb-6">
+              Skip 40% customs duty traps and painful courier delays. Powered by our Gemini AI concierge, discover 1 deeply personalized gift sourced locally in their country, plus a synchronized flowchart of your day's calls and dates.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 text-xs text-[#78666C] dark:text-[#C4B6BE] mb-6">
+              <span class="flex items-center gap-1.5">
+                <span class="text-[#E15B7B] dark:text-[#FBBF24]">✔</span> 100% Customs-Free Local Sourcing
+              </span>
+              <span class="flex items-center gap-1.5">
+                <span class="text-[#E15B7B] dark:text-[#FBBF24]">✔</span> Synchronized Dual Timezone Flowchart
+              </span>
+              <span class="flex items-center gap-1.5">
+                <span class="text-[#E15B7B] dark:text-[#FBBF24]">✔</span> No Product Links or Ads
+              </span>
+            </div>
+
+            <a 
+              href="/tools/gift-date-planner" 
+              class="btn-lovable inline-flex items-center gap-2 bg-[#E15B7B] text-white px-7 py-3 text-xs sm:text-sm font-semibold shadow-md hover:bg-[#CC4B6B]"
+            >
+              <span>Launch Planner</span>
+              <span>🌸</span>
+            </a>
+          </div>
+
+          <!-- Cute Visual Graphic -->
+          <div class="w-full md:w-auto flex justify-center">
+            <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-3xl bg-[#FFFDF9] dark:bg-[#1A141F] border border-[#F0E5DC] dark:border-[#3D3145] flex flex-col items-center justify-center p-6 shadow-md text-center">
+              <span class="text-5xl sm:text-6xl mb-2 select-none animate-float">🎁</span>
+              <span class="text-[11px] font-medium text-[#78666C] dark:text-[#C4B6BE]">Free AI Concierge</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- UPCOMING TOOLS SUITE: In Development with Love -->
+    <div id="tools-section" class="w-full max-w-4xl mx-auto px-6 mb-24">
+      <div class="text-center mb-10">
+        <span class="stamp-badge text-xs text-[#FB923C] dark:text-[#FBBF24]">Future Suite for Couples</span>
+        <h2 class="font-serif text-2xl sm:text-3xl text-[#2D2226] dark:text-[#FDFBF7] mt-2">
+          More tools in the works
+        </h2>
+        <p class="text-xs sm:text-sm text-[#78666C] dark:text-[#C4B6BE] font-light max-w-md mx-auto mt-1">
+          We're thoughtfully designing these upcoming tools to make your distance feel shorter every single day.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        {upcomingTools.map(tool => (
+          <div class="card-cozy p-6 sm:p-7 flex flex-col justify-between relative bg-white/70 dark:bg-[#1F1924]/70 border border-[#F0E5DC] dark:border-[#3D3145]">
             <div>
-              <!-- Tool Header -->
-              <div class="flex items-center justify-between mb-6">
-                <!-- Icon and Gradient Blur Background behind it -->
-                <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center relative overflow-hidden">
-                  <div class={`absolute inset-0 bg-gradient-to-br ${tool.color} opacity-10 blur-sm`}></div>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white relative z-10" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d={tool.icon} />
-                  </svg>
+              <div class="flex items-center justify-between mb-4">
+                <div class="w-12 h-12 rounded-2xl bg-[#FAF5EE] dark:bg-[#16131A] border border-[#F0E5DC] dark:border-[#3D3145] flex items-center justify-center text-2xl shadow-inner">
+                  <span>{tool.icon}</span>
                 </div>
-                
-                <!-- Status Badge -->
-                {tool.status === 'live' ? (
-                  <span class="text-[10px] text-emerald-400 font-semibold tracking-wider bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.75 rounded-full uppercase">
-                    Active
-                  </span>
-                ) : (
-                  <span class="text-[10px] text-neutral-400 font-medium tracking-wider bg-white/5 border border-white/10 px-2.5 py-0.75 rounded-full uppercase">
-                    Coming Soon
-                  </span>
-                )}
+                <span class={`text-[10px] font-medium tracking-wide px-2.5 py-1 rounded-full border ${tool.badgeColor}`}>
+                  {tool.badge}
+                </span>
               </div>
 
-              <!-- Title -->
-              <h3 class="text-xl font-medium text-white mb-3 group-hover:text-white transition-colors">
+              <h3 class="font-serif text-lg font-normal text-[#2D2226] dark:text-[#FDFBF7] mb-2">
                 {tool.name}
               </h3>
 
-              <!-- Description -->
-              <p class="text-sm text-[#64748d] font-light leading-relaxed mb-8">
+              <p class="text-xs text-[#78666C] dark:text-[#C4B6BE] font-light leading-relaxed mb-6">
                 {tool.description}
               </p>
             </div>
 
-            <!-- Button / Link -->
-            <a 
-              href={tool.path} 
-              class={`inline-flex items-center justify-center px-4 py-2.5 rounded-lg text-xs font-semibold tracking-wider transition-all duration-300 focus-ring ${
-                tool.status === 'live' 
-                  ? 'bg-[#533afd] text-white hover:bg-[#665efd] shadow-lg shadow-[#533afd]/20' 
-                  : 'bg-white/5 text-[#61718a] hover:bg-white/10 border border-white/5'
-              }`}
-            >
-              {tool.status === 'live' ? 'Open Tool' : 'Preview Tool'}
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 ml-1.5 transition-transform duration-300 group-hover:translate-x-0.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-              </svg>
-            </a>
+            <div class="pt-3 border-t border-[#F0E5DC] dark:border-[#3D3145] flex items-center justify-between text-[11px] text-[#78666C]/70 dark:text-[#C4B6BE]/70 italic">
+              <span>{tool.statusNote}</span>
+              <span>💌</span>
+            </div>
           </div>
         ))}
       </div>
     </div>
 
-    <!-- Dynamic Value Statement (Call to Action placeholder) -->
-    <section class="w-full max-w-5xl mx-auto px-6 py-12 border-t border-white/5 mt-8 text-center">
-      <h4 class="text-sm font-semibold tracking-widest text-[#61718a] uppercase mb-4">Close the distance</h4>
-      <p class="text-xs text-[#64748d] max-w-lg mx-auto font-light leading-relaxed">
-        Will Meet Soon is built on the philosophy that distance is just a temporary state. Our software aids the emotional connection of relationships until you meet next.
-      </p>
+    <!-- Heartwarming Comfort Banner (A Soft Place to Land) -->
+    <section class="w-full max-w-4xl mx-auto px-6 py-8">
+      <div class="card-cozy p-8 sm:p-12 text-center bg-gradient-to-b from-[#FFFDF9] to-[#FAF5EE] dark:from-[#261E2C] dark:to-[#1A141F] border border-[#F0E5DC] dark:border-[#3D3145] relative overflow-hidden">
+        <!-- Decorative heart in background -->
+        <div class="absolute right-6 -bottom-6 text-7xl opacity-10 dark:opacity-5 select-none pointer-events-none">
+          💖
+        </div>
+        <div class="absolute left-6 -top-6 text-7xl opacity-10 dark:opacity-5 select-none pointer-events-none">
+          🕊️
+        </div>
+
+        <span class="text-2xl mb-4 inline-block">🌸</span>
+        <h3 class="font-serif text-2xl sm:text-3xl text-[#2D2226] dark:text-[#FDFBF7] mb-4">
+          "Distance means so little when someone means so much."
+        </h3>
+        <p class="text-xs sm:text-sm text-[#78666C] dark:text-[#C4B6BE] max-w-xl mx-auto font-light leading-relaxed mb-6">
+          Will Meet Soon was created with one simple conviction: love should never feel trapped in logistics. Every tool here exists to protect your warmth, make your days easier, and turn the waiting into gentle anticipation.
+        </p>
+        <div class="inline-flex items-center gap-2 text-xs font-semibold text-[#E15B7B] dark:text-[#FBBF24]">
+          <span>✨</span>
+          <span>You two are closer with every passing second.</span>
+        </div>
+      </div>
     </section>
   </div>
 </Layout>

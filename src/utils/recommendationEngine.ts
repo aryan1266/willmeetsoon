@@ -1,7 +1,8 @@
+// src/utils/recommendationEngine.ts - Enriched recommendation logic with regional awareness and smart multi-attribute scoring
 import { countries, tzOverlapMap } from '../data/countries';
-import { getShippingAdvice } from '../data/shippingRules';
-import { giftsDb } from '../data/giftData';
+import { giftsDb, type Gift } from '../data/giftData';
 import { dateNightsMap } from '../data/dateActivities';
+import { occasionMappings } from '../data/occasionMappings';
 
 export interface GiftRecommendation {
   id: string;
@@ -16,6 +17,8 @@ export interface GiftRecommendation {
   stores: string[];
   isBest: boolean;
   whyBestReasons?: string[];
+  iconEmoji?: string;
+  loveNoteIdea?: string;
 }
 
 export interface ActivityRecommendation {
@@ -50,6 +53,95 @@ export interface RecommendationResult {
   };
 }
 
+// Country-specific shipping & customs intelligence
+export function generateCountryShippingAdvice(countryA: string, countryB: string): string {
+  const cA = countries[countryA.toUpperCase()] || { name: countryA };
+  const cB = countries[countryB.toUpperCase()] || { name: countryB };
+
+  if (countryA.toUpperCase() === countryB.toUpperCase()) {
+    return `Because you both live in <strong>${cA.name}</strong>, delivery is fast with domestic couriers, zero customs screening, and reliable local arrival.`;
+  }
+
+  const codeB = countryB.toUpperCase();
+  const codeA = countryA.toUpperCase();
+
+  if (codeB === "RU" || codeA === "RU") {
+    return `<strong>Customs & Courier Notice for Russia:</strong> International couriers (FedEx, DHL) face suspension and strict parcel holds. <strong>Bespoke Workaround:</strong> Sourcing directly through local Russian city services (local bakeries, flower shops, or domestic marketplaces like Ozon/Yandex) bypasses border screening completely with zero customs fees.`;
+  }
+
+  if (codeB === "CN" || codeA === "CN") {
+    return `<strong>Customs Notice for China:</strong> Parcels sent across borders face intense customs inspections and 20%–40% import taxes. <strong>Bespoke Workaround:</strong> Order directly through local merchants inside China (local city florists, Meituan delivery, or WeChat services) for seamless, duty-free doorstep arrival.`;
+  }
+
+  if (codeB === "IN") {
+    return `<strong>Customs Warning for India:</strong> Foreign gift packages entering India face customs tariffs of 42%+. <strong>Bespoke Workaround:</strong> Never ship packages from abroad; order directly through local Indian merchants (Swiggy, Zomato, local city bakers, or Ferns N Petals) to guarantee duty-free delivery.`;
+  }
+
+  return `<strong>Border-Free Strategy:</strong> Shipping packages from <strong>${cA.name}</strong> to <strong>${cB.name}</strong> risks 20%–40% import duties and postal delays. <strong>Bespoke Workaround:</strong> Order directly through local merchants or domestic couriers inside <strong>${cB.name}</strong> to ensure fresh, zero-tariff arrival.`;
+}
+
+export function getGiftEmoji(gift: Gift | GiftRecommendation, interest: string): string {
+  const t = ((gift.title || "") + " " + (gift.desc || "")).toLowerCase();
+  if (t.includes("lamp") || t.includes("light")) return "💡";
+  if (t.includes("tea") || t.includes("kettle")) return "🍵";
+  if (t.includes("coffee") || t.includes("mug") || t.includes("roast")) return "☕";
+  if (t.includes("book") || t.includes("journal") || t.includes("sketchbook")) return "📖";
+  if (t.includes("paint") || t.includes("art") || t.includes("pencil") || t.includes("canvas") || t.includes("sculpt")) return "🎨";
+  if (t.includes("game") || t.includes("switch") || t.includes("controller") || t.includes("arcade")) return "🎮";
+  if (t.includes("music") || t.includes("vinyl") || t.includes("cassette") || t.includes("song") || t.includes("box")) return "🎵";
+  if (t.includes("cook") || t.includes("baking") || t.includes("recipe") || t.includes("chef") || t.includes("kitchen")) return "🍳";
+  if (t.includes("travel") || t.includes("passport") || t.includes("luggage") || t.includes("map")) return "✈️";
+  if (t.includes("chocolate") || t.includes("candy") || t.includes("sweet") || t.includes("bakery")) return "🍫";
+  if (t.includes("plant") || t.includes("flower") || t.includes("succulent")) return "🌸";
+  if (t.includes("bracelet") || t.includes("ring") || t.includes("necklace") || t.includes("jewelry") || t.includes("token")) return "✨";
+  if (t.includes("blanket") || t.includes("hoodie") || t.includes("pillow") || t.includes("cuddle")) return "🧸";
+  
+  const interestEmojis: Record<string, string> = {
+    art: "🎨",
+    coffee: "☕",
+    cooking: "🍳",
+    gaming: "🎮",
+    music: "🎵",
+    travel: "✈️",
+    books: "📚",
+    fitness: "🏃",
+    movies: "🎬"
+  };
+  return interestEmojis[interest] || "🎁";
+}
+
+export function generateLoveNoteIdea(occasion: string, userNote: string, partnerCountryName: string): string {
+  const noteSnippet = userNote ? userNote.trim() : "";
+  
+  if (occasion === "anniversary") {
+    if (noteSnippet) {
+      return `"Another beautiful year of us. Every mile between here and ${partnerCountryName} disappears when I think of you—especially ${noteSnippet.length > 35 ? noteSnippet.slice(0, 32) + '...' : noteSnippet}. Happy Anniversary, my heart."`;
+    }
+    return `"Distance means so little when someone means so much. Another year closer to our forever together. Happy Anniversary, my love."`;
+  }
+  
+  if (occasion === "birthday") {
+    if (noteSnippet) {
+      return `"Wishing the happiest birthday to my favorite human in the world! I hope this brings you the warmest smile today. Counting every heartbeat until I can celebrate with you in person."`;
+    }
+    return `"Happy Birthday, darling! Even from across the ocean, you brighten every single day of my life. Sending you all my love today."`;
+  }
+  
+  if (occasion === "holiday") {
+    return `"Wishing we were curled up together tonight, but sending all my warmth straight to your doorstep in ${partnerCountryName}. Happy holidays, my love."`;
+  }
+  
+  if (occasion === "first-meet") {
+    return `"Every call, every time-zone calculation, and every countdown has led to this. I cannot wait to hold your hand in person. See you so soon!"`;
+  }
+  
+  // default / just-because
+  if (noteSnippet) {
+    return `"No special holiday on the calendar—just thought of you and wanted to remind you how much you mean to me across the distance. Thinking of you always."`;
+  }
+  return `"A little reminder from across the miles that you are always in my thoughts, in my heart, and worth every second of the wait."`;
+}
+
 function addMinutesToTime(timeStr: string, minsToAdd: number): string {
   if (!timeStr) return "";
   const match = timeStr.match(/(\d+):(\d+)\s*(AM|PM)/i);
@@ -74,13 +166,41 @@ function addMinutesToTime(timeStr: string, minsToAdd: number): string {
   return `${newHour12}:${String(newMin).padStart(2, '0')} ${newAmpm}`;
 }
 
+// Exchange rates relative to 1 USD
+export const exchangeRatesToUSD: Record<string, number> = {
+  US: 1.0,
+  IN: 85.0,
+  CA: 1.38,
+  GB: 0.78,
+  AU: 1.55,
+  SG: 1.34,
+  DE: 0.93,
+  FR: 0.93,
+  JP: 155.0,
+  RU: 95.0
+};
+
+export function formatPriceForCountry(usdPrice: number, countryCode: string): string {
+  const code = countryCode.toUpperCase();
+  const c = countries[code] || countries.US;
+  const rate = exchangeRatesToUSD[code] || 1.0;
+  
+  if (code === "US") {
+    return `$${usdPrice} USD`;
+  }
+  
+  const localVal = Math.round(usdPrice * rate);
+  return `$${usdPrice} USD (~${c.currency}${localVal.toLocaleString()})`;
+}
+
 export function getRecommendations(
   countryA: string,
   countryB: string,
   budget: string,
   occasion: string,
   interest: string,
-  relationshipDuration: string
+  relationshipDuration: string = "mid",
+  userNote: string = ""
 ): RecommendationResult {
   const yourCountryCode = countryA.toUpperCase();
   const partnerCountryCode = countryB.toUpperCase();
@@ -88,36 +208,38 @@ export function getRecommendations(
   const yourCountry = countries[yourCountryCode] || countries.US;
   const partnerCountry = countries[partnerCountryCode] || countries.IN;
 
-  // 1. Calculate Confidence Score (Overall Match)
-  let score = 70;
-  let matchReasons = [];
+  // Confidence Score
+  let score = 85;
+  let matchReasons: string[] = [];
 
   const tzDiff = Math.abs(yourCountry.tzOffset - partnerCountry.tzOffset);
   if (tzDiff <= 4) {
-    score += 10;
-    matchReasons.push("perfect time overlap");
+    score += 8;
+    matchReasons.push("harmonized time overlap");
   } else {
-    matchReasons.push("adjusted call coordination");
+    matchReasons.push("adjusted evening & morning call window");
   }
 
   if (yourCountryCode === partnerCountryCode) {
-    score += 10;
-    matchReasons.push("domestic delivery (no customs)");
+    score += 5;
+    matchReasons.push("domestic local delivery");
   } else {
-    matchReasons.push("digital customs bypass");
+    matchReasons.push("customs-safe domestic ordering strategy");
   }
 
-  score += 10; // Budget fit guaranteed by selection
-  matchReasons.push("strict budget fit");
-  matchReasons.push("partner interest alignment");
+  matchReasons.push(`${budget.toUpperCase()} budget tier`);
+  matchReasons.push(`${occasionMappings[occasion] || occasion} celebration`);
+  if (userNote) {
+    matchReasons.push("personalized partner note");
+  }
 
   score = Math.min(99, score);
   const scoreStars = "⭐⭐⭐⭐⭐";
 
-  // 2. Generate Shipping Logistics Warning
-  const logisticsText = getShippingAdvice(yourCountryCode, partnerCountryCode, yourCountry.name, partnerCountry.name);
+  // Logistics text
+  const logisticsText = generateCountryShippingAdvice(yourCountryCode, partnerCountryCode);
 
-  // 3. Generate Timezones & Overlaps
+  // Timezones & Overlaps
   const key = `${yourCountryCode}-${partnerCountryCode}`;
   const reverseKey = `${partnerCountryCode}-${yourCountryCode}`;
   
@@ -147,52 +269,104 @@ export function getRecommendations(
     note = `Adjusted call hours with a ${diff}h timezone difference.`;
   }
 
-  // 4. Score and Sort Gifts
+  // Category alias mapping (e.g. books -> reading)
+  const interestAliases: Record<string, string[]> = {
+    books: ["reading", "books", "book"],
+    reading: ["reading", "books", "book"],
+    art: ["art", "creativity"],
+    coffee: ["coffee", "tea"],
+    cooking: ["cooking", "food"],
+    gaming: ["gaming", "game"],
+    music: ["music"],
+    travel: ["travel"],
+    fitness: ["fitness", "wellness"],
+    movies: ["movies", "movie", "film"]
+  };
+
+  const allowedInterests = interestAliases[interest] || [interest];
+  const noteLower = userNote.toLowerCase();
+  const stopWords = new Set(["the", "and", "for", "with", "her", "his", "she", "him", "are", "you", "that", "this", "from", "they", "them", "like", "loves", "very", "much", "gets", "when"]);
+  const noteKeywords = noteLower
+    .replace(/[^\w\s]/g, " ")
+    .split(/\s+/)
+    .filter(w => w.length >= 3 && !stopWords.has(w));
+
+  // Score gifts
   const scoredGifts = giftsDb.map(gift => {
     let giftScore = 0;
-    
-    // +3 if occasion matches
-    if (gift.occasions.includes(occasion)) {
-      giftScore += 3;
+    const giftTitleLower = (gift.title || "").toLowerCase();
+    const giftDescLower = (gift.desc || "").toLowerCase();
+    const giftQueryLower = (gift.query || "").toLowerCase();
+    const giftPrice = gift.price[budget] || (gift as any).price?.['medium'] || (gift as any).price?.['low'] || Object.values(gift.price)[0] || 25;
+
+    // 1. Category Alignment (CRITICAL: +100 pts so right category always wins)
+    const matchesCategory = gift.interests && gift.interests.some(i => allowedInterests.includes(i));
+    if (matchesCategory) {
+      giftScore += 100;
     }
-    
-    // +2 if interest matches
-    if (gift.interests.includes(interest)) {
-      giftScore += 2;
+
+    // 2. Occasion Alignment (+25 pts)
+    if (gift.occasions && gift.occasions.includes(occasion)) {
+      giftScore += 25;
     }
-    
-    // +2 if budget matches
-    if (gift.budgets.includes(budget)) {
-      giftScore += 2;
+
+    // 3. Budget Alignment (+25 pts)
+    const primaryBudget = (gift as any).budget || "";
+    if (primaryBudget === budget || (gift.budgets && gift.budgets.includes(budget))) {
+      giftScore += 25;
     }
-    
-    // +2 if shipping is compatible
-    const isShippingCompatible = gift.type === 'digital' || gift.type === 'local-delivery' || yourCountryCode === partnerCountryCode;
-    if (isShippingCompatible) {
-      giftScore += 2;
+    if (budget === "low" && giftPrice <= 25) giftScore += 15;
+    if (budget === "medium" && giftPrice >= 25 && giftPrice <= 75) giftScore += 15;
+    if (budget === "high" && giftPrice >= 70 && giftPrice <= 150) giftScore += 20;
+    if (budget === "premium" && giftPrice >= 120) giftScore += 25;
+
+    // 4. Partner Notes Relevance (+15 pts per keyword)
+    for (const kw of noteKeywords) {
+      if (giftTitleLower.includes(kw) || giftDescLower.includes(kw) || giftQueryLower.includes(kw)) {
+        giftScore += 15;
+      }
     }
-    
-    // +1 if relationship duration matches
-    if (gift.durations && gift.durations.includes(relationshipDuration)) {
-      giftScore += 1;
+
+    // 5. Domestic compatibility
+    if (gift.type === 'digital' || gift.type === 'local-delivery' || yourCountryCode === partnerCountryCode) {
+      giftScore += 5;
     }
-    
-    // +1 if country matches
-    if (gift.countries && gift.countries.includes(partnerCountryCode)) {
-      giftScore += 1;
-    }
-    
-    return { gift, score: giftScore };
+
+    return { gift, score: giftScore, priceVal: giftPrice };
   });
 
-  // Sort by score descending
+  // Sort descending
   scoredGifts.sort((a, b) => b.score - a.score);
 
-  const bestGift = scoredGifts[0].gift;
-  const alternativesToRender = [scoredGifts[1].gift, scoredGifts[2].gift];
+  const bestMatch = scoredGifts[0] || { gift: giftsDb[0], score: 50, priceVal: 25 };
+  const bestGift = bestMatch.gift;
+  const bestPriceVal = bestMatch.priceVal;
+  const bestLocalPrice = formatPriceForCountry(bestPriceVal, partnerCountryCode);
 
-  const bestPriceVal = bestGift.price[budget] || Object.values(bestGift.price)[0];
-  const bestLocalPrice = `${partnerCountry.currency}${bestPriceVal}`;
+  const alternativesToRender = [
+    scoredGifts[1]?.gift || giftsDb[1], 
+    scoredGifts[2]?.gift || giftsDb[2]
+  ];
+
+  const getSourcingBadges = (countryCode: string) => {
+    if (countryCode === "RU") return ["Local City Florist/Courier", "Domestic Delivery"];
+    if (countryCode === "CN") return ["Domestic Service", "City Gift Delivery"];
+    if (countryCode === "IN") return ["Local Bakery/Merchant", "City Courier"];
+    return ["Local City Artisan", "Domestic Online Shop"];
+  };
+
+  const localSourcingTips = getSourcingBadges(partnerCountryCode);
+
+  const whyBestReasons: string[] = [
+    `Directly caters to your partner's love for <strong class="text-[#2D2226] dark:text-[#FDFBF7]">${interest}</strong>.`,
+    `Selected to celebrate your <strong class="text-[#2D2226] dark:text-[#FDFBF7]">${occasionMappings[occasion] || occasion}</strong> across the distance.`,
+    `Fits your <strong class="text-[#2D2226] dark:text-[#FDFBF7]">${budget}</strong> budget target (${bestLocalPrice}).`,
+    `Avoids courier customs tariffs via domestic fulfillment inside <strong class="text-[#2D2226] dark:text-[#FDFBF7]">${partnerCountry.name}</strong>.`
+  ];
+
+  if (userNote) {
+    whyBestReasons.splice(2, 0, `Personalized for your partner's notes: <em class="text-[#E15B7B] dark:text-[#FBBF24]">"${userNote.length > 38 ? userNote.slice(0, 35) + '...' : userNote}"</em>.`);
+  }
 
   const gifts: GiftRecommendation[] = [
     {
@@ -202,22 +376,21 @@ export function getRecommendations(
       priceVal: bestPriceVal,
       localPrice: bestLocalPrice,
       stars: bestGift.stars,
-      badge: bestGift.badge,
+      badge: bestGift.badge || "Top Pick 💕",
       query: bestGift.query,
       imgSvg: bestGift.imgSvg,
-      stores: bestGift.stores || ["Amazon"],
+      stores: localSourcingTips,
       isBest: true,
-      whyBestReasons: [
-        bestGift.interests.includes(interest) ? `Perfect fit for partner's interest in <strong class="text-white">${interest}</strong>.` : `Matches partner's profile interests.`,
-        `Budget optimized at <strong class="text-white">${bestLocalPrice}</strong>.`,
-        `Bypasses international custom taxes via local delivery in <strong class="text-white">${partnerCountry.name}</strong>.`
-      ]
+      whyBestReasons,
+      iconEmoji: getGiftEmoji(bestGift, interest),
+      loveNoteIdea: generateLoveNoteIdea(occasion, userNote, partnerCountry.name)
     }
   ];
 
   alternativesToRender.forEach(gift => {
-    const altPriceVal = gift.price[budget] || Object.values(gift.price)[0];
-    const altLocalPrice = `${partnerCountry.currency}${altPriceVal}`;
+    if (!gift) return;
+    const altPriceVal = gift.price[budget] || (gift as any).price?.['medium'] || Object.values(gift.price)[0] || 20;
+    const altLocalPrice = formatPriceForCountry(altPriceVal, partnerCountryCode);
     gifts.push({
       id: gift.id,
       title: gift.title,
@@ -225,11 +398,12 @@ export function getRecommendations(
       priceVal: altPriceVal,
       localPrice: altLocalPrice,
       stars: gift.stars,
-      badge: gift.badge,
+      badge: gift.badge || "Alternative Pick",
       query: gift.query,
       imgSvg: gift.imgSvg,
-      stores: gift.stores || ["Amazon"],
-      isBest: false
+      stores: localSourcingTips,
+      isBest: false,
+      iconEmoji: getGiftEmoji(gift, interest)
     });
   });
 

@@ -2,57 +2,64 @@
 // src/pages/guides/index.astro
 import Layout from "../../layouts/Layout.astro";
 
-// Mock articles database
+// Mock articles database with cozy themes
 const articles = [
   {
     title: "Surviving the First 6 Months of Long Distance",
-    excerpt: "The initial transition is often the hardest. Here is a survival guide on setting expectations, schedules, and communication habits.",
+    excerpt: "The initial transition is often the hardest. Here is a compassionate guide on setting gentle expectations, routines, and sweet communication habits.",
     category: "LDR Advice",
     readTime: "5 min read",
     date: "June 25, 2026",
-    badgeColor: "bg-[#533afd]/10 text-[#533afd] border-[#533afd]/20"
+    badgeColor: "bg-[#FDE8EF] text-[#E15B7B] border-[#FBCFE8] dark:bg-[#E15B7B]/15 dark:text-[#F472B6] dark:border-[#E15B7B]/30"
   },
   {
     title: "10 Creative Ideas for Your Next Virtual Date Night",
-    excerpt: "Bored of FaceTime? Explore interactive activities from online cooking challenges to shared sketch canvases that bring you closer.",
+    excerpt: "Bored of staring at FaceTime screens? Explore interactive activities from two-player kitchen recipes to shared digital canvas sketching.",
     category: "Date Rituals",
     readTime: "4 min read",
     date: "June 18, 2026",
-    badgeColor: "bg-[#f96bee]/10 text-[#f96bee] border-[#f96bee]/20"
+    badgeColor: "bg-[#FEF9C3] text-[#B45309] border-[#FDE047] dark:bg-[#FBBF24]/15 dark:text-[#FBBF24] dark:border-[#FBBF24]/30"
   },
   {
-    title: "Closing the Distance: Relocation & Visa Checklist",
-    excerpt: "Closing the distance is the ultimate goal. We map out the legal, financial, and logistical steps to move to the same city.",
-    category: "Relocation",
+    title: "Closing the Distance: The Relocation & Visa Roadmap",
+    excerpt: "Closing the miles is the ultimate reunion. We map out the legal, financial, and emotional checkpoints to make your shared home a reality.",
+    category: "Moving Together",
     readTime: "8 min read",
     date: "May 29, 2026",
-    badgeColor: "bg-[#ea2261]/10 text-[#ea2261] border-[#ea2261]/20"
+    badgeColor: "bg-[#FFF1E6] text-[#C2410C] border-[#FED7AA] dark:bg-[#FB923C]/15 dark:text-[#FB923C] dark:border-[#FB923C]/30"
   },
   {
-    title: "How to Gift Internationally Without Customs Fees",
-    excerpt: "Unexpected customs duties can ruin a surprise gift. Learn how to source and deliver gifts locally from inside your partner's country.",
-    category: "Gifting Tips",
+    title: "How to Gift Internationally Without Surprise Customs Taxes",
+    excerpt: "Unexpected customs bills can turn a romantic surprise into an expensive chore. Learn how to source and deliver gifts locally within your partner's country.",
+    category: "Care Packages",
     readTime: "6 min read",
     date: "May 12, 2026",
-    badgeColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
+    badgeColor: "bg-[#E8F7F0] text-[#10B981] border-[#A7F3D0] dark:bg-[#10B981]/15 dark:text-[#34D399] dark:border-[#10B981]/30"
   }
 ];
 ---
 
-<Layout title="Relationship Guides & Advice | Will Meet Soon" description="Read advice, tips, and guidelines on surviving and thriving in long-distance relationships. Banish the distance.">
-  <div class="py-12">
+<Layout 
+  title="Relationship Guides & Comfort Advice | Will Meet Soon" 
+  description="Read comforting advice, creative date night ideas, and practical guides to surviving and thriving in long-distance relationships."
+>
+  <div class="py-16 md:py-24">
     <!-- Header Hero -->
     <div class="w-full max-w-4xl mx-auto px-6 text-center mb-16">
-      <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/5 rounded-full border border-white/10 mb-6">
-        <span class="text-[10px] md:text-xs font-medium text-neutral-300 tracking-wider uppercase">
-          LDR Articles
+      <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/90 dark:bg-[#261E2C]/90 rounded-full border border-[#F0E5DC] dark:border-[#3D3145] shadow-sm mb-8">
+        <span class="text-sm">📖</span>
+        <span class="text-xs font-medium text-[#78666C] dark:text-[#C4B6BE] tracking-wide">
+          Comforting LDR Wisdom
         </span>
       </div>
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-light text-white tracking-[-1.8px] leading-[1.05] mb-6 max-w-3xl mx-auto text-balance">
-        Relationship Guides & <span class="bg-gradient-to-r from-[#533afd] via-[#f96bee] to-[#ea2261] bg-clip-text text-transparent font-medium">LDR Advice</span>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-normal text-[#2D2226] dark:text-[#FDFBF7] tracking-tight leading-[1.1] mb-8 max-w-3xl mx-auto text-balance">
+        Gentle Guides & <br class="hidden sm:inline" />
+        <span class="italic bg-gradient-to-r from-[#E15B7B] via-[#FB923C] to-[#F59E0B] bg-clip-text text-transparent font-medium">
+          Long-Distance Love Advice
+        </span>
       </h1>
-      <p class="text-base md:text-lg font-light text-[#64748d] max-w-xl mx-auto leading-relaxed text-pretty">
-        Empowering long-distance couples with strategic resources to navigate communication gaps, timezone offsets, and relocation logistics.
+      <p class="text-base md:text-lg font-light text-[#78666C] dark:text-[#C4B6BE] max-w-xl mx-auto leading-relaxed text-pretty">
+        Comforting words and practical guides to help you navigate communication rhythms, timezone differences, and your path to closing the distance.
       </p>
     </div>
 
@@ -60,30 +67,30 @@ const articles = [
     <div class="w-full max-w-5xl mx-auto px-6 mb-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {articles.map(article => (
-          <article class="glow-border rounded-xl p-8 transition-all duration-300 flex flex-col justify-between group cursor-pointer hover:border-white/20">
+          <article class="card-cozy p-8 flex flex-col justify-between group cursor-pointer">
             <div>
               <!-- Category and Meta -->
               <div class="flex items-center justify-between mb-4">
-                <span class={`text-[9px] font-semibold tracking-wider uppercase px-2.5 py-0.5 rounded border ${article.badgeColor}`}>
+                <span class={`text-[11px] font-medium tracking-wide px-3 py-1 rounded-full border ${article.badgeColor}`}>
                   {article.category}
                 </span>
-                <span class="text-[10px] text-[#61718a] font-light">{article.date}</span>
+                <span class="text-xs text-[#78666C] dark:text-[#C4B6BE] font-light">{article.date} · {article.readTime}</span>
               </div>
 
               <!-- Title -->
-              <h3 class="text-lg font-medium text-white mb-3 group-hover:text-[#f96bee] transition-colors">
+              <h3 class="font-serif text-xl sm:text-2xl text-[#2D2226] dark:text-[#FDFBF7] mb-3 group-hover:text-[#E15B7B] dark:group-hover:text-[#FBBF24] transition-colors">
                 {article.title}
               </h3>
 
               <!-- Excerpt -->
-              <p class="text-xs text-[#64748d] font-light leading-relaxed mb-6">
+              <p class="text-xs sm:text-sm text-[#78666C] dark:text-[#C4B6BE] font-light leading-relaxed mb-6">
                 {article.excerpt}
               </p>
             </div>
 
             <!-- Read Article link -->
-            <div class="inline-flex items-center text-xs font-semibold text-white group-hover:text-white transition-colors">
-              Read Guide
+            <div class="pt-4 border-t border-[#F0E5DC] dark:border-[#3D3145] inline-flex items-center text-xs font-semibold text-[#E15B7B] dark:text-[#FBBF24] group-hover:underline">
+              <span>Read Guide</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-3.5 h-3.5 ml-1.5 transition-transform duration-300 group-hover:translate-x-1">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
               </svg>

@@ -9,8 +9,8 @@ interface Props {
 }
 
 const { 
-	title = "Will Meet Soon | Gifting & Date Night Planner for Long-Distance Couples",
-	description = "Plan shipping-optimized gifts, virtual date nights, and track timezone overlaps. Banish distance and connect deeply with your partner."
+	title = "Will Meet Soon | A Comfort Corner for Long-Distance Love",
+	description = "A warm, comforting haven for long-distance couples. Plan border-free gifts, find your golden hour connection times, and countdown to airport hugs."
 } = Astro.props;
 ---
 
@@ -29,11 +29,26 @@ const {
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		
-		<!-- Fonts: Google Fonts Inter for Vercel/Stripe clean design -->
+		<!-- Fonts: Google Fonts Fraunces (warm soft serif) & Plus Jakarta Sans (friendly rounded sans) -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Plus+Jakarta+Sans:ital,wght@0,300..700;1,300..600&display=swap" rel="stylesheet" />
 		
+		<!-- Early Theme Script to prevent flash -->
+		<script is:inline>
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				return 'light'; // Default: warm daylight haven
+			})();
+			if (theme === 'dark') {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		</script>
+
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://willmeetsoon.com/" />
@@ -46,20 +61,35 @@ const {
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
 	</head>
-	<body class="bg-[#0b0c16] text-[#f6f9fc] selection:bg-[#533afd] selection:text-white min-h-screen flex flex-col justify-between relative overflow-x-hidden">
-		<!-- Grid overlay and Gradient Mesh Background -->
-		<div class="absolute inset-0 grid-overlay z-0 pointer-events-none"></div>
-		<div class="gradient-blur-mesh"></div>
+	<body class="bg-[#FFFDF9] text-[#2D2226] dark:bg-[#16131A] dark:text-[#FDFBF7] selection:bg-[#FDE8EF] selection:text-[#E15B7B] dark:selection:bg-[#FBBF24]/20 dark:selection:text-[#FBBF24] min-h-screen flex flex-col justify-between relative overflow-x-hidden transition-colors duration-400">
+		
+		<!-- Ambient Atmosphere: Warm Sunlight Blooms & Candlelight Starry Sky -->
+		<div class="sunlight-blooms"></div>
+		<div class="starry-sky-overlay"></div>
 
-		<!-- Responsive Global Navbar -->
+		<!-- Playful Floating Ambient Accents -->
+		<div class="fixed top-28 right-8 pointer-events-none opacity-40 dark:opacity-25 animate-float text-xl select-none z-0 hidden sm:block" aria-hidden="true">
+			✨
+		</div>
+		<div class="fixed bottom-24 left-8 pointer-events-none opacity-30 dark:opacity-20 animate-float-reverse text-lg select-none z-0 hidden sm:block" aria-hidden="true">
+			💌
+		</div>
+		<div class="fixed top-1/2 left-6 pointer-events-none opacity-25 dark:opacity-15 animate-twinkle text-base select-none z-0 hidden lg:block" aria-hidden="true">
+			🌸
+		</div>
+		<div class="fixed top-2/3 right-10 pointer-events-none opacity-30 dark:opacity-20 animate-float text-sm select-none z-0 hidden lg:block" aria-hidden="true">
+			🕊️
+		</div>
+
+		<!-- Friendly Global Navbar -->
 		<Navbar />
 
-		<!-- Main Content Slot -->
+		<!-- Main Content Slot with open breathing space -->
 		<main class="flex-grow w-full relative z-10 flex flex-col">
 			<slot />
 		</main>
 
-		<!-- Global Footer -->
+		<!-- Heartfelt Global Footer -->
 		<Footer />
 	</body>
 </html>
